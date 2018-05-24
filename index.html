@@ -1,748 +1,134 @@
+
 <!DOCTYPE html>
-<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 no-js"><![endif]-->
-<!--[if IE 8]><html class="lt-ie10 lt-ie9 no-js"><![endif]-->
-<!--[if IE 9]><html class="lt-ie10 no-js"><![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Plans > Goal Planner</title>
+<title></title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?import namespace="v" implementation="#default#VML" ?>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=586c3fcda4" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/Content-less-TransientNotifications.css?v=e9487b63ce" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/content-css-layout.css?v=1c7a43b183" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayoutBase.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayout.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Freeze.css?v=a0ca0f2546" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-ClientGoalPlanner.css?v=abe7dfad0c" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Controls.css?v=81b4083505" type="text/css" rel="stylesheet"/>
-<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Firefly.css?v=33321bd7ac" type="text/css" rel="stylesheet"/>
-<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/global-error-logger.js?v=3bea79b822" type="text/javascript"></script>
-<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/bootstrap-ema.event-logger.js?v=9855d47a93" type="text/javascript"></script>
-	<!-- font awesome 5 -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<!-- sticky kit -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
-	<script type="text/javascript">jQuery(document).ready(function($) {
-	$(".stickyrow").stick_in_parent();
-		});
-	</script>
-	<!-- Layout Specific CSS -->
-<style type="text/css">
-	.stickybar {
-		margin-bottom: 15px;
-		/* padding-top: 15px; */
-		padding-bottom: 15px;
-		position: relative;
-	}
-	.stickybar.is_stuck {
-		background: rgba(255, 255, 255, .94);
-		margin: 0px;
-		padding-top: 15px;
-		padding-bottom: 10px;
-		z-index: 5;
-		border-bottom: 1px solid #e2e2e2;
-		
-	}
-	.stickybar h2, .stickybar h3 {
-		margin-top: 0px;
-		padding-top: 0px;
-	}
-	
-	.stickybar h2.inlinehead {
-		display: inline-block;
-		vertical-align: middle;
-		margin: 0px;
-	}
-	
-	.stickybar p {
-		color: #999;
-	}
-	
-	.upcontainer {
-		display: flex;
-		align-items: center;
-  justify-content: center;
-		margin-bottom: 10px;
-	}
-	
-	.upcontainer a.rightbumper {
-		text-align: right;
-	}
-	
-	.upcontainer .one {
-		width: 60%;
-	}
-	
-	.upcontainer .two {
-		width: 40%;
-		padding-left: 5%;
-		text-align: right;
-	}
-	
-	/* Progress Bars */
-	
-	.progbump { 
-	list-style: none;
-	margin-top: 24%;
-}
 
-.progbar { 
-	list-style: none;
-	position: relative;
-	margin: 0px;
-	padding: 0px;
-	width: 80%;
-	margin: 0 auto;
-	max-width: 300px; /* Define hard value so prog bars stay equal widths */
-}
-	
-	.progbar p {
-		margin: 0px;
-		padding: 0px;
-		margin-bottom: 5px;
-	}
-
-.progbar li { 
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
-	position: relative;
-	margin-bottom: 8px;
-}
-	
-	.progbar li:last-child {
-		margin: 0px;
-		padding: 0px;
-	}
-	
-	.progbump li {
-		margin-bottom: 30px;
-	}
-
-.progbar .progress {
-	height: 10px; 
-	background:#e9e9e9;
-	display: block;
-	position: relative;   
-	margin: 0px;
-	margin-bottom: 10px;
-}
-
-.progbar .bar { 
-	height:10px; 
-	background:#ddd;
-	display: block;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-.progbar .highprob {
-	width:90%;
-	-moz-animation: highprob 2s ease-out;
-	-webkit-animation: highprob 2s ease-out;
-	 background: #74CD35;
-}
-
-.progbar .mediumprob {
-	width:75%;
-	-moz-animation: mediumprob 2s ease-out;
-	-webkit-animation: mediumprop 2s ease-out;
-	 background: #FFBC42;
-}
-
-.progbar .lowprob {
-	width:69%;
-	-moz-animation: lowpropb 2s ease-out;
-	-webkit-animation: lowprob 2s ease-out;
-     background: #D43F3A;
-}
-
-
-@-moz-keyframes highprob       { 0%  { width:0px;} 100%{ width:90%;}  }
-@-moz-keyframes mediumprob      { 0%  { width:0px;} 100%{ width:75%;}  }
-@-moz-keyframes lowprob      { 0%  { width:0px;} 100%{ width:69%;}  }
-
-@-webkit-keyframes highprop        { 0%  { width:0px;} 100%{ width:90%;}  }
-@-webkit-keyframes mediumprop        { 0%  { width:0px;} 100%{ width:75%;}  }
-@-webkit-keyframes lowprop      { 0%  { width:0px;} 100%{ width:69%;}  }
-	</style>
 </head>
-<body class="DefaultBody">
-<script type="text/javascript">if (localStorage && localStorage.getItem('presentationMode')) {{ document.body.className += ' present';	}}</script>
-<div class="with-stickyfooter js-page">
-  <div class="navbar navbar-static-top navbar-default hidden-present menubar " role="navigation">
-    <div class="container js-usernav">
-      <button type="button" class="navbar-toggle js-popover js-popover-menu visible-xs visible-sm">MENU</button>
-      <a class="navbar-brand" href="/ema/Redirect/Home"> <img src="https://wealth.emaplan.com/ema/partner/default/Files/Images/Header/AdvisorNavBarLogo.png?v=103291510" /> </a>
-      <ul class="nav navbar-nav hidden-xs hidden-sm">
-        <li> <a href="/ema/Redirect/Home" data-id="Home"> Home </a> </li>
-        <li> <a href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> </li>
-        <li> <a href="/ema/Connections" data-id="Connections"> Connections </a> </li>
-        <li> <a href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="Applications">Applications <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-menu" role="menu">
-            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="https://wealth.emaplan.com/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> </li>
-            <li class="divider"></li>
-            <li> <a href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </li>
-          </ul>
-        </li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="More">More <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-menu" role="menu">
-            <li> <a href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> </li>
-            <li> <a href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> </li>
-            <li> <a href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> </li>
-            <li> <a href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li> <a href="javascript:void(0);" class="js-popover js-popover-alerts"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Alerts" data-placement="bottom"> <span class="badge badge-alerts js-alerts-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-lg fa-bell"></i> </span> </a> </li>
-        <li> <a href="javascript:void(0);" class="js-popover js-popover-tasks"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Tasks" data-placement="bottom"> <span class="badge badge-tasks js-tasks-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-warning badge-tasks-warning js-tasks-warning" style="display: none"></i> <i class="fa fa-lg fa-check-square"></i> </span> </a> </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
-        <li> <a href="/ema/Settings" data-id="Settings"> Settings </a> </li>
-        <li> <a href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> </li>
-        <li> <a href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </li>
-      </ul>
-    </div>
-  </div>
-  <div id="js-menu-title" class="popover-content-title text-center hide">
-    <button data-back class="btn btn-primary btn-sm pull-left hide" style="margin-right: -100%;"> <i class="fa fa-caret-left"></i> Back </button>
-    <strong data-title></strong> </div>
-  <div id="js-menu" class="hide">
-    <div class="popover-content-md">
-      <div class="js-menu-main list-group"> <a class="list-group-item" href="/ema/Redirect/Home" data-id="Home"> Home </a> <a class="list-group-item" href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> <a class="list-group-item" href="/ema/Connections" data-id="Connections"> Connections </a> <a class="list-group-item" href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> <a data-menu="js-menu-Applications" class="list-group-item" href="javascript:void(0);" data-id="Applications">Applications <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a data-menu="js-menu-More" class="list-group-item" href="javascript:void(0);" data-id="More">More <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a class="list-group-item" href="/ema/Settings" data-id="Settings"> Settings </a> <a class="list-group-item" href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> <a class="list-group-item" href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </div>
-      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
-      <div class="js-menu-More list-group hide"> <a class="list-group-item" href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> <a class="list-group-item" href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> <a class="list-group-item" href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> <a class="list-group-item" href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </div>
-    </div>
-  </div>
-  <div class="navbar navbar-client js-clientnav" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <div class="navbar-brand js-popover-contact"> <span class="h1"> <a href="javascript:void(0);" data-pega-id="client-name">Frank and Joanna Miller</a> <i class="fa fa-caret-down navbar-brand-dropdown"></i> </span> </div>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a id="OverviewNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Overview">Overview</a></li>
-        <li><a id="FactsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Facts">Facts</a></li>
-        <li><a id="PlansNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans">Plans</a></li>
-        <li><a id="ReportsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Reports">Reports</a></li>
-        <li><a id="VaultNavBarItem" href="/ema/Vault/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b">Vault</a></li>
-        <li class="navbar-client-crm"><a class="js-popover-crm js-popover" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Notes,&nbsp;Tasks,&nbsp;History"><i class="fa fa-user navbar-client-clienticon"></i></span><span class="hidden">Relationship</span></a></li>
-        <li class="navbar-client-website"><a class="js-popover-clientwebsite" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Client&nbsp;Website"><i class="fa fa-globe"></i></span><span class="hidden">Website</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container">
-    <div id="problem-bar" data-clientid="b5077a53-e6be-458a-97c9-c5045d48af0b" class="hide"></div>
-  </div>
-  <div class="container">
-    <div id="frozen-bar" class="hide"></div>
-  </div>
-  <div class="js-main">
-	  <!-- Content Container -->
-	  
-	  <!-- Page Header -->
-		  <div class="container">
-		<div class="col-md-12">
-			<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/GoalPlanning" class="pull-right page-header-btn js-comparison-event" data-eventname="Planning" data-feature="Chart Settings">Chart Settings</a>
-			<h1 class="page-header page-header-plantool">
-				<span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span>
-				<span class="goals" style="color: #000;"><span class="page-header-plantool-text"><strong>Planning</strong></span></span>
-			</h1>
-		</div>
-		  </div>
-		  
-	  <!-- Sticky subnav -->
-	  <div class="stickybar stickyrow">
-		  <div class="container">
-		  <div class="col-md-3">
-		  
-			  <div class="upcontainer clearfix">
-				  <div class="one">
-			  <h2 class="inlinehead">Plan Scores</h2>
-				  </div>
-				  <div class="two">
-			  <a href="#" class="btn btn-primary">Recalculate</a>
-				  </div>
-			  </div>
-			 <p>This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</p>
-		  
-			  </div>
-			  <div class="col-md-2 text-right"><ul class="progbump"><li><h5>Current Plan <i class="fas fa-caret-right"></i></h5></li><li><h5>Retirement Goal <i class="fas fa-caret-right"></i></h5></li></ul></div>
-			  <div class="col-md-3 text-center">
-			  <h2>Current Situation</h2>
-				  
-				  <ul class="progbar">
-					  <li><p><strong>Overall Plan:</strong> 69%</p><span class="progress"><span class="bar wow lowprob"></span></span></li>
-					  <li><p>19 of 22 Years Funded</p><span class="progress"><span class="bar wow mediumprob"></span></span></li>
-				  </ul>
-			  </div>
-			  <div class="col-md-4 text-center">
-			  <h2>Proposed Changes</h2>
-				  <ul class="progbar">
-				  <li><p><strong>Overall Plan:</strong> 69%</p><span class="progress"><span class="bar wow highprob"></span></span></li>
-				  <li><p>21 of 22 Years Funded</p><span class="progress"><span class="bar wow highprob"></span></span></li>
-				  </ul>
-			  </div>
-			  </div>
-	  </div>
-	
-	  
-	  <!-- Body Content -->
-	  
-	  <div class="container">
-		<div class="col-md-2">
-			<div id="legendHeader" class="col-heading" style="height: 260px;">
-				<div class="hidden-mode-straightline">
-					<small><strong>Probability of Success</strong></small>
-					<ul class="list-unstyled" style="font-size: 95%;">
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								82% - 100%
-							</div>
-						</li>
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #f2e34c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								70% - 81%
-							</div>
-						</li>
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								0% - 69%
-							</div>
-						</li>
-					</ul>
-					<small class="text-muted">
-						This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.
-					</small>
-				</div>
-			</div>
-			
-			
-			<div class="goal goal-labels">
-				<span class="goal-labels-icon pull-left">
-					<span class="text-muted fa fa-fw fa-money"></span>
-				</span>
-				<div class="goal-body">
-					<div class="goal-value text-ellipsis"><strong class="text-muted text-caps">Lifestyle</strong></div>
-					<div class="goal-value text-ellipsis"><strong>Income</strong></div>
-					<div class="goal-value text-ellipsis"><strong>Expenses</strong></div>
-					<div class="goal-value text-ellipsis"><strong>Savings</strong></div>
-				</div>
-			</div>
-			
-			
-			
-				<div class="goal goal-labels">
-					<div class="goal-labels-icon pull-left">
-						<span class="text-muted fa fa-fw fa-sun-o"></span>
-					</div>
-					<div class="goal-body">
-						<div class="goal-value text-ellipsis" title="Retirement"><strong class="text-muted text-caps">Retirement</strong></div>
-						<div class="goal-value text-ellipsis">Retirement Ages</div>
-						
-						<div class="goal-value text-ellipsis">Living Expenses</div>
-						
-					</div>
-				</div>
-				<div class="goal goal-labels">
-					<div class="goal-labels-icon pull-left">
-						<span class="text-muted fa fa-fw fa-graduation-cap"></span>
-					</div>
-					<div class="goal-body">
-						<div class="goal-value text-ellipsis" title="College for Lucas"><strong class="text-muted text-caps">College for Lucas</strong></div>
-						<div class="goal-value text-ellipsis">Years</div>
-						<div class="goal-value">School</div>
-						<div class="goal-value text-ellipsis">Annual Cost</div>
-						
-					</div>
-				</div>
-				<div class="goal goal-labels">
-					<div class="goal-labels-icon pull-left">
-						<span class="text-muted fa fa-fw fa-graduation-cap"></span>
-					</div>
-					<div class="goal-body">
-						<div class="goal-value text-ellipsis" title="College for Mary Beth"><strong class="text-muted text-caps">College for Mary Beth</strong></div>
-						<div class="goal-value text-ellipsis">Years</div>
-						<div class="goal-value">School</div>
-						<div class="goal-value text-ellipsis">Annual Cost</div>
-						
-					</div>
-				</div>
-				<div class="goal goal-labels">
-					<div class="goal-labels-icon pull-left">
-						<span class="text-muted fa fa-fw fa-group"></span>
-					</div>
-					<div class="goal-body">
-						<div class="goal-value text-ellipsis" title="Leave to Heirs"><strong class="text-muted text-caps">Leave to Heirs</strong></div>
-						
-						
-						<div class="goal-value text-ellipsis">Amount</div>
-						
-					</div>
-				</div>
-		</div>
-		<div class="col-md-8 js-scenariocontainercolumn">
-			<div class="row js-scenariocontainer" style="margin-right: 0;">
-				<div class="col-with-border js-scenario scenario col-md-6" data-scenario-id="e6f37577-673e-4daf-882e-66d9f226381f" data-scenario-index="">
-					<div class="scenario-score col-heading" style="height: 260px;">
-						<div class="h5 text-center col-heading-title">
-							<div class="text-ellipsis text-caps">Current Situation</div>
-						</div>
-						<div class="text-center">
-							<div class="montecarlo">
-								<div class="montecarlo-chart js-scenarioscore-chart" data-highcharts-chart="2"><div class="highcharts-container" id="highcharts-8" style="position: relative; overflow: hidden; width: 465px; height: 200px; text-align: left; line-height: normal; z-index: 0; left: 0.833313px; top: 0.333313px;"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="465" height="200"><desc>Created with Highcharts 4.2.6</desc><defs><clipPath id="highcharts-9"><rect x="0" y="0" width="425" height="200"></rect></clipPath></defs><rect x="0" y="0" width="465" height="200" fill="none" class=" highcharts-background"></rect><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-tracker" transform="translate(20,0) scale(1 1)" style=""><path fill="#c24a49" d="M 212.4852336927321 27.500001503750568 A 72.5 72.5 0 0 1 231.0539932457903 170.08565712494368 L 228.49482176361232 160.41866993529626 A 62.5 62.5 0 0 0 212.48727042476906 37.5000012963367 Z" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#e4e4e4" d="M 230.98389832335047 170.10417607227149 A 72.5 72.5 0 1 1 212.3992989544898 27.500069935899703 L 212.41318875387051 37.500060289568715 A 62.5 62.5 0 1 0 228.4343951063366 160.4346345450616 Z" stroke-linejoin="round" transform="translate(0,0)"></path></g><g class="highcharts-markers highcharts-series-0" transform="translate(20,0) scale(1 1)"></g><g class="highcharts-series highcharts-series-1 highcharts-tracker" transform="translate(20,0) scale(1 1)" style=""></g><g class="highcharts-markers highcharts-series-1" transform="translate(20,0) scale(1 1)"></g></g></svg></div></div>
-								<div class="montecarlo-value js-scenarioscore-value h1">46%</div>
-							</div>
-							<div class="hidden-mode-montecarlo h5 text-muted">Percent Funded</div>
-							<div class="hidden-mode-straightline h5 text-muted">Probability of Success</div>
-						</div>
-					</div>
-				
-				
-					<div class=" goal text-center" data-isreadonly="true">
-						<div class="goal-body">
-							<div class="goal-value">&nbsp;</div>
-							<div class="goal-value "><strong>$350,000</strong></div>
-							<div class="goal-value "><strong>$325,312</strong></div>
-							<div class="goal-value "><strong>$28,000</strong></div>
-						</div>
-					</div>
-				
-				
-				
-							<div class="goal text-center clickable js-goal js-comparison-event" data-id="7af3b094-b40f-4ad5-8f98-295974d104eb" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;Retirement&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(194, 74, 73); width: 46%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                65/65
-							            </a>
-							        </div>
-							
-							
-							        <div class="goal-value text-ellipsis ">
-							                            $135,000 / year
-							
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center clickable js-goal js-comparison-event" data-id="2a387e7f-b498-4f34-ac28-2b9212880957" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(158, 216, 108); width: 100%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                2022 - 2025
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                --
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							                            $50,000 / year
-							
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center clickable js-goal js-comparison-event" data-id="1bf706d6-187e-433b-bfc6-0869e42b5575" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(158, 216, 108); width: 100%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                2020 - 2023
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                --
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							                            $50,000 / year
-							
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center " data-scenario-id="e6f37577-673e-4daf-882e-66d9f226381f">
-							    <div class="goal-body">
-							        <div class="goal-value">&nbsp;</div>
-							
-							
-							        <div class="goal-value text-ellipsis ">
-							                            $0
-							
-							        </div>
-							
-							    </div>
-							</div>	<br><br>
-					<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/e6f37577-673e-4daf-882e-66d9f226381f/DecisionCenter" class="btn btn-block btn-default js-comparison-event" data-eventname="Planning" data-feature="Decision Center" data-properties="{&quot;Action&quot;:&quot;Open Planning Tool&quot;,&quot;Source&quot;:&quot;Goal Planner&quot;}">Open in Decision Center</a>
-				</div>		<div class="col-with-border js-scenario scenario col-md-6" data-scenario-id="5f48fedf-0b95-4f5a-87eb-3d605f3a2c79" data-scenario-index="0">
-					<div class="scenario-score col-heading" style="height: 260px;">
-						<div class="h5 text-center col-heading-title">
-							<button type="button" class="close js-comparison-remove">×</button>
-							<div class="dropdown js-changescenariodropdown">
-	<a class="text-ellipsis text-caps js-scenarioname" data-toggle="dropdown" data-id="5f48fedf-0b95-4f5a-87eb-3d605f3a2c79" href="javascript:void(0);">Advanced Plan - May 2018&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
-	<ul class="dropdown-menu" data-for="changeScenario5f48fedf-0b95-4f5a-87eb-3d605f3a2c79">
-		<li data-value="000ffe1d-71fd-4cfe-8292-3a5f0f63e342" data-is-related="true" class="js-comparison-change ">
-			<a href="javascript:void(0);" tabindex="-1">Advanced Plan - May 2018</a>
-		</li>
-		<li data-value="3c3a93e2-9b92-49de-87ad-9e9931c5e0e9" data-is-related="true" class="js-comparison-change ">
-			<a href="javascript:void(0);" tabindex="-1">Delay retirement and Soc Security</a>
-		</li>
-		<li data-value="fd10d501-20f8-4d02-89cb-8b07b7c7c19c" data-is-related="true" class="js-comparison-change ">
-			<a href="javascript:void(0);" tabindex="-1">Retire at 65 with Part-Time Consulting</a>
-		</li>
-		<li class="divider"></li>
-		<li><a href="javascript:void(0);" class="js-comparison-rename">Rename</a></li>
-		<li><a href="javascript:void(0);" class="js-comparison-duplicate" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Create Advanced Plan&quot;,&quot;Source&quot;:&quot;Duplicate&quot;}">Duplicate</a></li>
-		<li><a href="javascript:void(0);" class="js-comparison-delete">Delete</a></li>
-	</ul>
-</div>
 
-						</div>
-						<div class="text-center">
-							<div class="montecarlo">
-								<div class="montecarlo-chart js-scenarioscore-chart" data-highcharts-chart="3"><div class="highcharts-container" id="highcharts-12" style="position: relative; overflow: hidden; width: 464px; height: 200px; text-align: left; line-height: normal; z-index: 0; left: 0px; top: 0.133331px;"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="464" height="200"><desc>Created with Highcharts 4.2.6</desc><defs><clipPath id="highcharts-13"><rect x="0" y="0" width="424" height="200"></rect></clipPath></defs><rect x="0" y="0" width="464" height="200" fill="none" class=" highcharts-background"></rect><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-tracker" transform="translate(20,0) scale(1 1)" style=""><path fill="#c24a49" d="M 211.9852336927321 27.500001503750568 A 72.5 72.5 0 0 1 230.5539932457903 170.08565712494368 L 227.99482176361232 160.41866993529626 A 62.5 62.5 0 0 0 211.98727042476906 37.5000012963367 Z" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#e4e4e4" d="M 230.48389832335047 170.10417607227149 A 72.5 72.5 0 1 1 211.8992989544898 27.500069935899703 L 211.91318875387051 37.500060289568715 A 62.5 62.5 0 1 0 227.9343951063366 160.4346345450616 Z" stroke-linejoin="round" transform="translate(0,0)"></path></g><g class="highcharts-markers highcharts-series-0" transform="translate(20,0) scale(1 1)"></g><g class="highcharts-series highcharts-series-1 highcharts-tracker" transform="translate(20,0) scale(1 1)" style=""></g><g class="highcharts-markers highcharts-series-1" transform="translate(20,0) scale(1 1)"></g></g></svg></div></div>
-								<div class="montecarlo-value js-scenarioscore-value h1">46%</div>
-							</div>
-							<div class="hidden-mode-montecarlo h5 text-muted">Percent Funded</div>
-							<div class="hidden-mode-straightline h5 text-muted">Probability of Success</div>
-						</div>
-					</div>
-				
-				
-					<div class="js-lifestyle clickable js-comparison-event goal text-center" data-isreadonly="false" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;Lifestyle&quot;}">
-						<div class="goal-body">
-							<div class="goal-value">&nbsp;</div>
-							<div class="js-lifestyle goal-value " data-initialview="income"><strong><a href="javascript:void(0);">$350,000</a></strong></div>
-							<div class="js-lifestyle goal-value " data-initialview="expenses"><strong><a href="javascript:void(0);">$325,312</a></strong></div>
-							<div class="js-lifestyle goal-value " data-initialview="savings"><strong><a href="javascript:void(0);">$28,000</a></strong></div>
-						</div>
-					</div>
-				
-				
-				
-							<div class="goal text-center clickable js-goal js-comparison-event" data-id="7af3b094-b40f-4ad5-8f98-295974d104eb" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;Retirement&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(194, 74, 73); width: 46%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                65/65
-							            </a>
-							        </div>
-							
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                $135,000 / year
-							            </a>
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center clickable js-goal js-comparison-event" data-id="2a387e7f-b498-4f34-ac28-2b9212880957" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(158, 216, 108); width: 100%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                2022 - 2025
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                --
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                $50,000 / year
-							            </a>
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center clickable js-goal js-comparison-event" data-id="1bf706d6-187e-433b-bfc6-0869e42b5575" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">
-							            <div class="goal-score js-goalscore">
-							                <div class="goal-score-value" style="background-color: rgb(158, 216, 108); width: 100%;"></div>
-							            </div>
-							        </div>
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                2020 - 2023
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                --
-							            </a>
-							        </div>
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                $50,000 / year
-							            </a>
-							        </div>
-							
-							    </div>
-							</div>			<div class="goal text-center js-leavetoheirs clickable js-comparison-event" data-scenario-id="5f48fedf-0b95-4f5a-87eb-3d605f3a2c79" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Open Modal&quot;,&quot;Name&quot;:&quot;Leave to Heirs&quot;}">
-							    <div class="goal-body">
-							        <div class="goal-value">&nbsp;</div>
-							
-							
-							        <div class="goal-value text-ellipsis ">
-							            <a href="javascript:void(0);">
-							                $0
-							            </a>
-							        </div>
-							
-							    </div>
-							</div>	<br><br>
-					<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/5f48fedf-0b95-4f5a-87eb-3d605f3a2c79/DecisionCenter" class="btn btn-block btn-default js-comparison-event" data-eventname="Planning" data-feature="Decision Center" data-properties="{&quot;Action&quot;:&quot;Open Planning Tool&quot;,&quot;Source&quot;:&quot;Goal Planner&quot;}">Open in Decision Center</a>
-				</div>	</div>
+<style>
+
+body {
+	
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+	
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {  
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {  
+   color: #955;
+   text-align: center;
+}
+
+</style>
+
+<body>
+	
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">				
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-2 js-addscenariocolumn">
-			<div class="dropdown pull-right page-header-btn">
-				<a href="javascript:void(0);" id="add-comparison" data-toggle="dropdown" class="btn btn-primary js-comparison-event" role="menu" title="" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Add Comparison&quot;}">Add Comparison <i class="fa fa-caret-down"></i></a>
-				<ul class="dropdown-menu js-addcomparison-list" data-for="add-comparison">
-	<li data-value="000ffe1d-71fd-4cfe-8292-3a5f0f63e342" data-is-related="true" class="js-comparison-add">
-		<a href="javascript:void(0);" tabindex="-1">Advanced Plan - May 2018</a>
-	</li>
-	<li data-value="3c3a93e2-9b92-49de-87ad-9e9931c5e0e9" data-is-related="true" class="js-comparison-add">
-		<a href="javascript:void(0);" tabindex="-1">Delay retirement and Soc Security</a>
-	</li>
-	<li data-value="fd10d501-20f8-4d02-89cb-8b07b7c7c19c" data-is-related="true" class="js-comparison-add">
-		<a href="javascript:void(0);" tabindex="-1">Retire at 65 with Part-Time Consulting</a>
-	</li>
-	<li role="presentation" class="divider"></li>
-	<li data-is-related="true">
-		<a href="javascript:void(0);" class="js-comparison-create" tabindex="-1" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Create Advanced Plan&quot;,&quot;Source&quot;:&quot;New Scenario&quot;}">New Scenario</a>
-	</li>
-</ul>	</div>
-		</div>	
-	  
-	  
 	</div>
-	  
-	  <!-- End main body container -->
-	  </div>
-</div>
-<div class="page-footer hidden-present hidden-print">
-  <div class="container">
-    <div id="PrintedFactFinderModal" class="modal fade">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header"> Printed Fact Forms </div>
-          <div class="modal-body">
-            <ul class="list-unstyled">
-              <li><a href="/ema/partner/default/Files/Content/QuickFactFinder.pdf?v=103291510" target="_blank">Printed Preliminary Fact Form PDF</a></li>
-              <li><a href="/ema/partner/ema/Files/Content/FactFinder.pdf?v=103291510" target="_blank">Printed Fact Form PDF</a></li>
-              <li><a href="/ema/partner/ema/Files/Content/FactFinder.doc?v=103291510" target="_blank">Printed Fact Form</a></li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-3">
-        <address>
-        <a href="http://www.emoneyadvisor.com" target="_blank"><strong>eMoney Advisor, LLC</strong></a><br />
-        Four Radnor Corporate Center,<br />
-        Suite 300<br />
-        100 Matsonford Road<br />
-        Radnor, PA 19087<br />
-        <ul class="list-inline">
-          <li><a href="https://www.facebook.com/eMoneyAdvisor" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-          <li><a href="http://twitter.com/eMoneyAdvisor" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-          <li><a href="http://www.linkedin.com/company/emoney-advisor" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-          <li><a href="http://www.youtube.com/user/emoneyadvisor" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
-        </ul>
-        </address>
-      </div>
-      <div class="col-sm-3">
-        <h4>Resources</h4>
-        <ul class="list-unstyled">
-          <li><a href="javascript:void(0);" class="js-printedfactfinders">Printed Fact Forms</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h4>Services</h4>
-        <ul class="list-unstyled">
-          <li><a href="http://www.emoneyadvisor.com/Products/Advisor-Branded-Media" target="eMarketing">Advisor Branded Marketing</a></li>
-          <li><a href="http://blog.emoneyadvisor.com/" target="emoneyblog">eMoney Blog</a></li>
-          <li><a href="http://www.emoneyadvisor.com/files/data-entry.pdf" target="eDataEntry">Data Entry Services</a></li>
-          <li><a href="/ema/Advisor/Mimeo">Print on Demand</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h4>Support</h4>
-        <ul class="list-unstyled">
-          <li><a href="tel:(888) 362-8482"><strong>(888) 362-8482</strong></a></li>
-          <li><a href="javascript:void(0);" class="js-contactus">Contact Support</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="text-center text-muted"> <small>&copy; 2018 eMoney Advisor, LLC.</small>&nbsp;&nbsp;|&nbsp;&nbsp;<small class="footer-version text-muted">Software Version: 10.3.291.510</small> </div>
-    <div class="text-center">
-      <ul class="list-inline">
-        <li> <a href="/ema/Legal/Terms"><small>Terms of Service</small></a> </li>
-        <li> · </li>
-        <li> <a href="/ema/Legal/Security"><small>Security</small></a> </li>
-        <li> · </li>
-        <li> <a href="/ema/Legal/Privacy"><small>Privacy Policy</small></a> </li>
-        <li> · </li>
-        <li> <a href="/ema/Legal/Disclaimer"><small>Disclaimer</small></a> </li>
-      </ul>
-    </div>
-    <div class="text-center">
-      <p style="margin:0">www.emoneyadvisor.com</p>
-    </div>
-  </div>
-</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	 
+
+	 <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+
+	function loadPage(pwd) {
+		
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+			
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+			
+
+				parent.location.hash= hash;
+
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+	 
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+			
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+		
+	</script>
+
 </body>
 </html>
