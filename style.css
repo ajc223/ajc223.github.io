@@ -1,0 +1,257 @@
+/* Prototype CSS */
+
+	.no-gutters {
+margin-right: 0 !important;
+margin-left: 0 !important;
+padding-right: 0 !important;
+padding-left: 0 !important;
+}
+	.stickybar {
+		margin-bottom: 15px;
+		/* padding-top: 15px; */
+		/* padding-bottom: 15px; */
+		position: relative;
+	}
+	.stickybar.is_stuck {
+		background: rgba(255, 255, 255, .94);
+		margin: 0px;
+		padding-top: 15px;
+		padding-bottom: 10px;
+		z-index: 5;
+		border-bottom: 1px solid #e2e2e2;
+		
+	}
+	.stickybar h2, .stickybar h3 {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	
+	.stickybar h2.inlinehead {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0px;
+	}
+	
+	.stickybar p {
+		color: #999;
+	}
+	
+	
+	.stickybar ul li .legend-range-label-block {
+		width: auto;
+	}
+	
+	.stickybar ul.list-inline li {
+		display: inline;
+	}
+	.stickybar ul.list-inline li:after {
+		content: "/";
+		color: #ddd;
+		margin: 0px;
+		padding: 0px;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+	
+	.stickybar ul.list-inline li:last-child:after {
+		content: "";
+		margin: 0px;
+	}
+	
+	.upcontainer {
+		display: flex;
+		align-items: center;
+  justify-content: center;
+		margin-bottom: 10px;
+	}
+	
+	.upcontainer a.rightbumper {
+		text-align: right;
+	}
+	
+	.upcontainer .one {
+		width: 60%;
+	}
+	
+	.upcontainer .two {
+		width: 40%;
+		padding-left: 5%;
+		text-align: right;
+	}
+	
+	/* Progress Bars */
+	
+	.progbump { 
+	list-style: none;
+	margin-top: 60px;
+}
+
+.progbar { 
+	list-style: none;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 300px; /* Define hard value so prog bars stay equal widths */
+}
+	
+	.progbar p {
+		margin: 0px;
+		padding: 0px;
+		margin-bottom: 5px;
+	}
+
+.stickybar .progbar li { 
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	position: relative;
+	margin-bottom: 8px;
+}
+	
+	.progbar li:last-child {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.stickybar .progbump li {
+		margin-bottom: 26px;
+	}
+
+.progbar .progress {
+	height: 10px; 
+	background:#e9e9e9;
+	display: block;
+	position: relative;   
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.progbar .bar { 
+	height:10px; 
+	background:#ddd;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.progbar .highprob {
+	width:90%;
+	-moz-animation: highprob 2s ease-out;
+	-webkit-animation: highprob 2s ease-out;
+	 background: #74CD35;
+}
+
+.progbar .mediumprob {
+	width:75%;
+	-moz-animation: mediumprob 2s ease-out;
+	-webkit-animation: mediumprop 2s ease-out;
+	 background: #FFBC42;
+}
+
+.progbar .lowprob {
+	width:69%;
+	-moz-animation: lowpropb 2s ease-out;
+	-webkit-animation: lowprob 2s ease-out;
+     background: #D43F3A;
+}
+	
+	div[class^="col-"] .goal.sp:first-of-type {
+		border-top: 0px;
+	}
+	
+	.goal.sp {
+		border-color: #e2e2e2;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin: 0px;
+	}
+	
+	.currentscenario {
+		background-color: #F4F4F4;
+	}
+	
+	.colborders {
+		border-right: 1px solid #e2e2e2;
+		border-left: 1px solid #e2e2e2;
+	}
+	
+	.row-no-padding {
+	vertical-align: middle;
+		display: table;
+	table-layout: fixed;
+	border: 0px;
+	border-collapse: collapse;
+	outline: none;
+	width: 100%;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	}
+	
+	.row-no-padding .input-group {
+		margin: 0 auto;
+	}
+	
+	.row-no-padding div[class^="col-"], .row-no-padding div[class*=" col-"] {
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+	float: none;
+	min-height: 100%;
+}
+	
+	.row.endcells div[class^="col-"] > .row-no-padding:first-of-type > div[class^="col-"] {
+		padding-top: 30px;
+	}
+	
+	.row.endcells div[class^="col-"] > .row-no-padding:last-of-type > div[class^="col-"] {
+		padding-bottom: 30px;
+	}
+	
+	.row-no-padding div[class^="col-"]:first-of-type {
+		padding-left: 15px;
+		padding-right: 30px;
+	}
+
+	.planningbox > .row.endcells {
+		border-bottom: 1px solid #e2e2e2;
+	}
+	
+	.planningbox > .row.endcells:last-of-type {
+		border: 0px;
+	}
+	
+	.planningbox > .row > div[class^="col-"] > .row > div[class^="col-"]:nth-of-type(2) {
+		background-color: #F4F4F4;
+		border-right: 1px solid #e2e2e2;
+		border-left: 1px solid #e2e2e2;
+	}
+	
+		/* Action Links */
+	
+	.row.links {
+		margin-top: 30px;
+	}
+	
+	.row.links a.btn-block {
+		margin-bottom: 20px !important;
+	}
+	
+	.row.links div[class^="col-"].nopadright {
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+	}
+
+@-moz-keyframes highprob       { 0%  { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes mediumprob      { 0%  { width:0px;} 100%{ width:75%;}  }
+@-moz-keyframes lowprob      { 0%  { width:0px;} 100%{ width:69%;}  }
+
+@-webkit-keyframes highprop        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes mediumprop        { 0%  { width:0px;} 100%{ width:75%;}  }
+@-webkit-keyframes lowprop      { 0%  { width:0px;} 100%{ width:69%;}  }
