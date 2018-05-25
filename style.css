@@ -46,7 +46,7 @@ padding-left: 0 !important;
 		width: auto;
 	}
 	
-	.stickybar ul li:after {
+	.stickybar ul.list-inline li:after {
 		content: "/";
 		color: #ddd;
 		margin: 0px;
@@ -55,7 +55,7 @@ padding-left: 0 !important;
 		margin-left: 5px;
 	}
 	
-	.stickybar ul li:last-child:after {
+	.stickybar ul.list-inline li:last-child:after {
 		content: "";
 		margin: 0px;
 	}
@@ -64,6 +64,7 @@ padding-left: 0 !important;
 		display: flex;
 		align-items: center;
         /* justify-content: center; */
+		margin-bottom: 5px;
 	}
 	
 	.upcontainer a.rightbumper {
