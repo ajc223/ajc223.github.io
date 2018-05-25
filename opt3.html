@@ -29,7 +29,8 @@
 	</script>
 	<script src="progressbar.min.js"></script>
 	    <script>
-     var bar = new ProgressBar.SemiCircle('container', {
+var myEle = document.getElementById("container");
+var bar = new ProgressBar.SemiCircle(myEle, {
   strokeWidth: 6,
   color: '#FFEA82',
   trailColor: '#eee',
