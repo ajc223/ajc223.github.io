@@ -18,8 +18,6 @@
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-ClientGoalPlanner.css?v=abe7dfad0c" type="text/css" rel="stylesheet"/>
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Controls.css?v=81b4083505" type="text/css" rel="stylesheet"/>
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Firefly.css?v=33321bd7ac" type="text/css" rel="stylesheet"/>
-<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/global-error-logger.js?v=3bea79b822" type="text/javascript"></script>
-<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/bootstrap-ema.event-logger.js?v=9855d47a93" type="text/javascript"></script>
 	<!-- font awesome 5 -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<!-- sticky kit -->
@@ -29,16 +27,39 @@
 	$(".stickyrow").stick_in_parent();
 		});
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.min.js"></script>
+	<script src="progressbar.min.js"></script>
 	    <script>
-      var g1 = new JustGage({
-        id: "medium",
-        value: 69,
-        min: 0,
-        max: 100,
-        title: "Probability Of Success"
-      });
+     var bar = new ProgressBar.SemiCircle('#container', {
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#FFEA82'},
+  to: {color: '#ED6A5A'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+    var value = Math.round(bar.value() * 100);
+    if (value === 0) {
+      bar.setText('');
+    } else {
+      bar.setText(value);
+    }
+
+    bar.text.style.color = state.color;
+  }
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+
+bar.animate(1.0);  // Number from 0.0 to 1.0
     </script>
 	<!-- Layout Specific CSS -->
 	<link rel="stylesheet" href="style.css">
@@ -177,8 +198,7 @@
 			  <div class="col-md-4 text-right"><ul class="progbump"><li><h5>Current Plan <i class="fas fa-caret-right"></i></h5></li><li><h5>Retirement Goal <i class="fas fa-caret-right"></i></h5></li></ul></div>
 			  <div class="col-md-4 text-center">
 			  <h2>Current Situation</h2>
-				  
-				      <div id="medium" class="200x160px"></div>
+				  <div id="container"></div>
 				  
 			  </div>
 			  <div class="col-md-4 text-center">
