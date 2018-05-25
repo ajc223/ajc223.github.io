@@ -31,6 +31,13 @@
 	</script>
 	<!-- Layout Specific CSS -->
 <style type="text/css">
+.no-gutters {
+margin-right: 0 !important;
+margin-left: 0 !important;
+padding-right: 0 !important;
+padding-left: 0 !important;
+}
+	
 	.stickybar {
 		margin-bottom: 15px;
 		/* padding-top: 15px; */
@@ -284,18 +291,8 @@
 		color: #fff;
 	}
 	
-	.stickybar .planbarsplit .container > .row {
-		display: table;
-		width: 100%;
-		table-layout: fixed;
-		margin: 0px;
-		padding: 0px;
-	}
-	
-	.stickybar .planbarsplit .container div[class^="col-"] {
-		display: table-cell;
-		vertical-align: middle;
-		height: 100%;
+	.stickybar .planbarsplit h2 {
+		margin-top: 8px;
 	}
 	
 	/* Vertical Center */
@@ -405,7 +402,7 @@
 	  
 	  <!-- Page Header -->
 		  <div class="container">
-		<div class="col-md-12">
+		<div class="col-md-12 no-gutters">
 			<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/GoalPlanning" class="pull-right page-header-btn js-comparison-event" data-eventname="Planning" data-feature="Chart Settings">Chart Settings</a>
 			<h1 class="page-header page-header-plantool">
 				<span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span>
