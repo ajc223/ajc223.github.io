@@ -1,11 +1,12 @@
 /* Prototype CSS */
 
-	.no-gutters {
+.no-gutters {
 margin-right: 0 !important;
 margin-left: 0 !important;
 padding-right: 0 !important;
 padding-left: 0 !important;
 }
+	
 	.stickybar {
 		margin-bottom: 15px;
 		/* padding-top: 15px; */
@@ -36,15 +37,16 @@ padding-left: 0 !important;
 		color: #999;
 	}
 	
+	.stickybar ul li {
+		display: inline;
+		padding: 0px;
+	}
 	
 	.stickybar ul li .legend-range-label-block {
 		width: auto;
 	}
 	
-	.stickybar ul.list-inline li {
-		display: inline;
-	}
-	.stickybar ul.list-inline li:after {
+	.stickybar ul li:after {
 		content: "/";
 		color: #ddd;
 		margin: 0px;
@@ -53,7 +55,7 @@ padding-left: 0 !important;
 		margin-left: 5px;
 	}
 	
-	.stickybar ul.list-inline li:last-child:after {
+	.stickybar ul li:last-child:after {
 		content: "";
 		margin: 0px;
 	}
@@ -61,8 +63,7 @@ padding-left: 0 !important;
 	.upcontainer {
 		display: flex;
 		align-items: center;
-  justify-content: center;
-		margin-bottom: 10px;
+        /* justify-content: center; */
 	}
 	
 	.upcontainer a.rightbumper {
@@ -102,7 +103,7 @@ padding-left: 0 !important;
 		margin-bottom: 5px;
 	}
 
-.stickybar .progbar li { 
+.progbar li { 
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
@@ -115,7 +116,7 @@ padding-left: 0 !important;
 		padding: 0px;
 	}
 	
-	.stickybar .progbump li {
+	.progbump li {
 		margin-bottom: 26px;
 	}
 
@@ -188,8 +189,8 @@ padding-left: 0 !important;
 	border-collapse: collapse;
 	outline: none;
 	width: 100%;
-	margin-right: 0px !important;
-	margin-left: 0px !important;
+		margin-right: 0px !important;
+		margin-left: 0px !important;
 	}
 	
 	.row-no-padding .input-group {
@@ -233,7 +234,47 @@ padding-left: 0 !important;
 		border-left: 1px solid #e2e2e2;
 	}
 	
-		/* Action Links */
+	/* Plan Bar */
+	
+	.stickybar .planbarsplit {
+		display: none;
+		visibility: hidden;
+		background-color: #1f3444;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		color: #fff;
+		margin-top: 10px;
+		-webkit-transition: all ease-in-out 2s;
+		-moz-transition: all ease-in-out 2s;
+		transition: all ease-in-out 2s;
+	}
+	
+	.stickybar.is_stuck {
+		padding-bottom: 0px;
+	}
+	
+	.stickybar.is_stuck .planbarsplit {
+		visibility: visible;
+		display: block;
+	}
+	
+	.stickybar.is_stuck .planbarsplit .progbar p {
+		color: #fff;
+	}
+	
+	.stickybar .planbarsplit h2 {
+		margin-top: 8px;
+	}
+	
+	/* Vertical Center */
+	
+	.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+	
+	/* Action Links */
 	
 	.row.links {
 		margin-top: 30px;
