@@ -27,41 +27,8 @@
 	$(".stickyrow").stick_in_parent();
 		});
 	</script>
-	<script src="progressbar.min.js"></script>
-	    <script>
-var myEle = document.getElementById("container");
-var bar = new ProgressBar.SemiCircle(myEle, {
-  strokeWidth: 6,
-  color: '#FFEA82',
-  trailColor: '#eee',
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  svgStyle: null,
-  text: {
-    value: '',
-    alignToBottom: false
-  },
-  from: {color: '#FFEA82'},
-  to: {color: '#ED6A5A'},
-  // Set default step function for all animate calls
-  step: (state, bar) => {
-    bar.path.setAttribute('stroke', state.color);
-    var value = Math.round(bar.value() * 100);
-    if (value === 0) {
-      bar.setText('');
-    } else {
-      bar.setText(value);
-    }
-
-    bar.text.style.color = state.color;
-  }
-});
-bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '2rem';
-
-bar.animate(1.0);  // Number from 0.0 to 1.0
-    </script>
+<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
 	<!-- Layout Specific CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -154,7 +121,7 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 		  <div class="container">
 		  <div class="col-md-3">
 		  
-			  <div class="upcontainer clearfix">
+			  <div class="upcontainer clearfix bump">
 				  <div class="one">
 			  <h2 class="inlinehead">Plan Scores</h2>
 				  </div>
@@ -196,19 +163,16 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 			  </div>
 			  <div class="col-md-9">
 			  <div class="row">
-			  <div class="col-md-4 text-right"><ul class="progbump"><li><h5>Current Plan <i class="fas fa-caret-right"></i></h5></li><li><h5>Retirement Goal <i class="fas fa-caret-right"></i></h5></li></ul></div>
+			  <div class="col-md-4 text-right">&nbsp;</div>
 			  <div class="col-md-4 text-center">
 			  <h2>Current Situation</h2>
-				  
-				  <div id="container" name="container"></div>
+				  <div data-preset="fan" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="5" data-value="69" ><span class="sub">Probability of Sucess</span></div>
 				  
 			  </div>
 			  <div class="col-md-4 text-center">
 			  <h2>Proposed Changes</h2>
-				  <ul class="progbar">
-				  <li><p><strong>Overall Plan:</strong> 69%</p><span class="progress"><span class="bar wow highprob"></span></span></li>
-				  <li><p>21 of 22 Years Funded</p><span class="progress"><span class="bar wow highprob"></span></span></li>
-				  </ul>
+				 
+				  <div data-preset="fan" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="5" data-value="80" ><span class="sub">Probability of Sucess</span></div>
 			  </div>
 				  </div>
 			  </div>
@@ -263,11 +227,28 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 		
 		  <!-- End First Col -->
 		<div class="col-md-9 planningbox">
+			
+			
+			<div class="row endcells">
+			<div class="col-md-12">
+	
+			<div class="row row-no-padding">
+				<div class="col-md-4">Retirement Goal</div>
+				<div class="col-md-4 text-center">
+				<ul class="progbar"><li><p>21 of 22 Years Funded</p><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+				</div>
+				<div class="col-md-4 text-center"><ul class="progbar"><li><p>21 of 22 Years Funded</p><span class="progress"><span class="bar wow highprob"></span></span></li></ul></div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+			
 			<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-4">
-				<div class="chartpad"><strong>Retirement Ages</strong></div>
+<strong>Retirement Ages</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
 				<div class="col-md-4">&nbsp;</div>
@@ -275,7 +256,7 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 			
 			<div class="row row-no-padding">
 				<div class="col-md-4">
-				<div class="chartpad">John</div>
+				John
 				</div>
 				<div class="col-md-4 text-center">65</div>
 				<div class="col-md-4">	<div class="input-group">
@@ -295,7 +276,7 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 				
 				<div class="row row-no-padding">
 				<div class="col-md-4">
-				<div class="chartpad">Amy</div>
+				Amy
 				</div>
 				<div class="col-md-4 text-center">64</div>
 				<div class="col-md-4">	<div class="input-group">
@@ -320,7 +301,7 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-4">
-				<div class="chartpad"><strong>Annual Expenses During Retirement</strong></div>
+				<strong>Annual Expenses During Retirement</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
 				<div class="col-md-4">&nbsp;</div>
@@ -328,7 +309,7 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 			
 			<div class="row row-no-padding">
 				<div class="col-md-4">
-				<div class="chartpad">Annual Living Expenses</div>
+				Annual Living Expenses
 				</div>
 				<div class="col-md-4 text-center">$80,000</div>
 				<div class="col-md-4">	<div class="input-group">
