@@ -29,7 +29,7 @@
 	</script>
 	<script src="progressbar.min.js"></script>
 	    <script>
-     var bar = new ProgressBar.SemiCircle('#container', {
+     var bar = new ProgressBar.SemiCircle('container', {
   strokeWidth: 6,
   color: '#FFEA82',
   trailColor: '#eee',
@@ -198,7 +198,8 @@ bar.animate(1.0);  // Number from 0.0 to 1.0
 			  <div class="col-md-4 text-right"><ul class="progbump"><li><h5>Current Plan <i class="fas fa-caret-right"></i></h5></li><li><h5>Retirement Goal <i class="fas fa-caret-right"></i></h5></li></ul></div>
 			  <div class="col-md-4 text-center">
 			  <h2>Current Situation</h2>
-				  <div id="container"></div>
+				  
+				  <div id="container" name="container"></div>
 				  
 			  </div>
 			  <div class="col-md-4 text-center">
