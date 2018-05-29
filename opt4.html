@@ -6,7 +6,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<title>Sticky Test | Option 3 - Prototypes</title>
+<title>Sticky Test | Option 4 - Prototypes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=586c3fcda4" type="text/css" rel="stylesheet"/>
@@ -31,6 +31,18 @@
 <script type="text/javascript" src="loading-bar.js"></script>
 	<!-- Layout Specific CSS -->
 	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		.ldBar span.sub {
+			position: static;
+		}
+		.hidescroll {
+			display: none;
+		}
+		
+		.stickybar.is_stuck .hidescroll {
+			display: block;
+		}
+	</style>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -117,62 +129,19 @@
 		  </div>
 		  
 	  <!-- Sticky subnav -->
-	  <div class="stickybar stickyrow combo">
+	  <div class="stickybar stickyrow">
 		  <div class="container">
-		  <div class="col-md-3">
-		  
-			  <div class="upcontainer clearfix bump">
-				  <div class="one">
-			  <h2 class="inlinehead">Plan Scores</h2>
-				  </div>
-				  <div class="two">
-			  <a href="#" class="btn btn-primary">Recalculate</a>
-				  </div>
-			  </div>
-			 <p>This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</p>
-			  
-			  
-			  <ul class="list-unstyled list-inline" style="font-size: 95%;">
-						<li>
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								82% - 100%
-							</div>
-						</li>
-						<li>
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #f2e34c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								70% - 81%
-							</div>
-						</li>
-						<li>
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								0% - 69%
-							</div>
-						</li>
-			  </ul>
-					
-		  
+		  <div class="col-md-3">&nbsp;
+			  <a href="#" class="btn btn-block btn-primary hidescroll"><i class="fas fa-sync"></i> Recalculate</a>
 			  </div>
 			  <div class="col-md-9">
 			  <div class="row">
 			  <div class="col-md-4 text-right">&nbsp;</div>
 			  <div class="col-md-4 text-center">
-			  <h2>Current Situation</h2>
-				  <div data-preset="fan" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="5" data-value="69" ><span class="sub">Probability of Sucess</span></div>
-				  
+			  <h2>Current Situation</h2> 
 			  </div>
 			  <div class="col-md-4 text-center">
-			  <h2>Proposed Changes</h2>
-				 
-				  <div data-preset="fan" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="5" data-value="80" ><span class="sub">Probability of Sucess</span></div>
+				  <h2><a href="#">This is the really long name of my active plan <i class="fas fa-sort-down"></i></a></h2>
 			  </div>
 				  </div>
 			  </div>
@@ -223,6 +192,49 @@
 		</a>
 </div>
 </div>
+			  
+			  <!-- Updates -->
+			  
+			  <h2>Plan Score</h2>
+			  <small><strong>Probability of Success</strong></small><br />
+			   <small class="text-muted">This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</small>
+			  <br /><br />
+			  
+			  
+			  <ul class="list-unstyled" style="font-size: 95%;">
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								82% - 100%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #f2e34c;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								70% - 81%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								0% - 69%
+							</div>
+						</li>
+			  </ul>
+			  
+			  <h3>Current Situation</h3>
+			  <div data-preset="circle" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="5" data-value="69" ><span class="sub">Probability of Sucess</span></div>
+			  
+			  <hr />
+			  <h3>Proposed Changes</h3>
+			  <div data-preset="circle" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="5" data-value="80" ><span class="sub">Probability of Sucess</span></div>
+			  
 		  </div>
 		
 		  <!-- End First Col -->
