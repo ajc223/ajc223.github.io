@@ -240,14 +240,11 @@ padding-left: 0 !important;
 	.stickybar .planbarsplit {
 		display: none;
 		visibility: hidden;
-		background-color: #1f3444;
+		background-color: #ccc;
 		padding-top: 8px;
 		padding-bottom: 8px;
-		color: #fff;
+		color: #333;
 		margin-top: 10px;
-		-webkit-transition: all ease-in-out 2s;
-		-moz-transition: all ease-in-out 2s;
-		transition: all ease-in-out 2s;
 	}
 	
 	.stickybar.is_stuck {
@@ -260,7 +257,7 @@ padding-left: 0 !important;
 	}
 	
 	.stickybar.is_stuck .planbarsplit .progbar p {
-		color: #fff;
+		color: #666;
 	}
 	
 	.stickybar .planbarsplit h2 {
