@@ -248,7 +248,7 @@ padding-left: 0 !important;
 		border-top: 1px solid #e2e2e2;
 	}
 	
-	.combo .stickybar.is_stuck {
+	.combo.stickybar.is_stuck {
 		padding-bottom: 0px;
 	}
 	
