@@ -245,6 +245,7 @@ padding-left: 0 !important;
 		padding-bottom: 8px;
 		color: #333;
 		margin-top: 10px;
+		border-top: 1px solid #e2e2e2;
 	}
 	
 	.stickybar.is_stuck {
