@@ -47,6 +47,14 @@ myBar2.set(80);
 			display: none;
 		}
 		
+		.stickybar {
+			margin-bottom: 30px;
+		}
+		
+		.stickybar.is_stuck {
+			margin-bottom: 0px;
+		}
+		
 		.stickybar.is_stuck .hidescroll {
 			display: inline-block;
 		}
@@ -80,6 +88,13 @@ myBar2.set(80);
 		}
 		.no-percent .ldBar-label {
 			display: none;
+		}
+		.planningbox > .row.endcells:first-of-type {
+			border-top: 1px solid #e2e2e2;
+		}
+		
+		.stickybar h2.nogaps {
+			margin: 0px;
 		}
 	</style>
 </head>
@@ -171,59 +186,18 @@ myBar2.set(80);
 	  <div class="stickybar stickyrow">
 		  <div class="container">
 		  <div class="col-md-3"><h2>Plan Score</h2>
-			  
-			  <div class="hideonscroll">
-			   <small><strong>Probability of Success</strong></small><br />
-			   <small class="text-muted">This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</small>
-			  <br /><br />
-			  
-			  
-			  <ul class="list-unstyled" style="font-size: 95%;">
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								82% - 100%
-							</div>
-						</li>
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #f2e34c;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								70% - 81%
-							</div>
-						</li>
-						<li style="display: table;">
-							<div class="legend-item-holder">
-								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
-							</div>
-							<div class="legend-range-label-block">
-								0% - 69%
-							</div>
-						</li>
-			  </ul>
-				  </div>
-			  
-			  <a href="#" class="btn btn-primary btn-inline hidescroll"><i class="fas fa-sync"></i> Recalculate Plan</a><a href="#" class="btn btn-inline btn-default hidescroll"><i class="fas fa-external-link-alt"></i> Expand Charts</a>
+			  <a href="#" class="btn btn-primary btn-inline"><i class="fas fa-sync"></i> Recalculate Plan</a><a href="#" class="btn btn-inline btn-default"><i class="fas fa-external-link-alt"></i> Expand Charts</a>
 			  </div>
 			  <div class="col-md-9">
 			  <div class="row">
 			  <div class="col-md-4 text-right">&nbsp;</div>
-			  <div class="col-md-4 text-center">
-				  <div data-preset="circle" class="ldBar label-center medium hideonscroll" data-stroke="#FFBC42" data-stroke-width="5" data-value="69" ><span class="sub">Probability of Sucess</span></div>
-				   <ul class="progbar showonscroll">
-					  <li><p><strong>Probability of Success:</strong> 69%</p><span class="progress"><span class="bar wow lowprob"></span></span></li>
-				  </ul>
-			  <h2>Current Situation</h2> 
+			  <div class="col-md-4">
+			  <h2 class="nogaps">Current Situation</h2>
+				  <p>Probability of Success</p>
 			  </div>
-			  <div class="col-md-4 text-center">
-				  <div data-preset="circle" class="ldBar label-center high hideonscroll" data-stroke="#74CD35" data-stroke-width="5" data-value="80" ><span class="sub">Probability of Sucess</span></div>
-				    <ul class="progbar showonscroll">
-				  <li><p><strong>Probability of Success:</strong> 80%</p><span class="progress"><span class="bar wow highprob"></span></span></li>
-				  </ul>
-				  <h2><a href="#">This is the really long name of my active plan <i class="fas fa-sort-down"></i></a></h2>
+			  <div class="col-md-4">
+				  <h2 class="nogaps"><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h2>
+				  <p>Probability of Success</p>
 			  </div>
 				  </div>
 			  </div>
@@ -274,6 +248,36 @@ myBar2.set(80);
 		</a>
 </div>
 </div>
+		
+			  <small><strong>Probability of Success</strong></small><br />
+			   <small class="text-muted">This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</small><br /><br />
+			  
+			  	  <ul class="list-unstyled" style="font-size: 95%;">
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								82% - 100%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #f2e34c;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								70% - 81%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								0% - 69%
+							</div>
+						</li>
+			  </ul>
 			  
 		  </div>
 		
@@ -288,13 +292,13 @@ myBar2.set(80);
 				<div class="col-md-4"><h4>Retirement Goal</h4><small>Base facts compared to your proposed changes</small></div>
 				<div class="col-md-4 text-center">
 					
-					<div id="halfway" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width:80%; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
+					<div id="halfway" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width: 45% !important; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
 					
 					<p>21 of 22 Years Funded</p>
 				</div>
 				<div class="col-md-4 text-center">
 					
-					<div id="eighty" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width:80%; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
+					<div id="eighty" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width: 45% !important; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
 					<p>21 of 22 Years Funded</p></div>
 			</div>
 				
