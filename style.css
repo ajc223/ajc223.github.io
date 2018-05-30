@@ -187,7 +187,7 @@ padding-left: 0 !important;
 		display: table;
 	table-layout: fixed;
 	border: 0px;
-	border-collapse: collapse;
+	/* border-collapse: collapse; */
 	outline: none;
 	width: 100%;
 		margin-right: 0px !important;
