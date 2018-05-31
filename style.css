@@ -159,7 +159,7 @@ padding-left: 0 !important;
 
 .progbar .lowprob {
 	width:69%;
-	-moz-animation: lowpropb 2s ease-out;
+	-moz-animation: lowprob 2s ease-out;
 	-webkit-animation: lowprob 2s ease-out;
      background: #D43F3A;
 }
