@@ -51,8 +51,8 @@ padding-left: 0 !important;
 		color: #ddd;
 		margin: 0px;
 		padding: 0px;
-		margin-right: 5px;
-		margin-left: 5px;
+		margin-right: 2px;
+		margin-left: 2px;
 	}
 	
 	.stickybar ul.list-inline li:last-child:after {
@@ -80,6 +80,10 @@ padding-left: 0 !important;
 		padding-left: 5%;
 		text-align: right;
 	}
+
+.stickybar ul.list-inline {
+	font-size: 1.1rem !important;
+}
 	
 	/* Progress Bars */
 	
