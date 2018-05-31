@@ -325,6 +325,6 @@ padding-left: 0 !important;
 @-moz-keyframes mediumprob      { 0%  { width:0px;} 100%{ width:75%;}  }
 @-moz-keyframes lowprob      { 0%  { width:0px;} 100%{ width:69%;}  }
 
-@-webkit-keyframes highprop        { 0%  { width:0px;} 100%{ width:90%;}  }
-@-webkit-keyframes mediumprop        { 0%  { width:0px;} 100%{ width:75%;}  }
-@-webkit-keyframes lowprop      { 0%  { width:0px;} 100%{ width:69%;}  }
+@-webkit-keyframes highprob        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes mediumprob        { 0%  { width:0px;} 100%{ width:75%;}  }
+@-webkit-keyframes lowprob      { 0%  { width:0px;} 100%{ width:69%;}  }
