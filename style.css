@@ -153,7 +153,7 @@ padding-left: 0 !important;
 .progbar .mediumprob {
 	width:75%;
 	-moz-animation: mediumprob 2s ease-out;
-	-webkit-animation: mediumprop 2s ease-out;
+	-webkit-animation: mediumprob 2s ease-out;
 	 background: #FFBC42;
 }
 
