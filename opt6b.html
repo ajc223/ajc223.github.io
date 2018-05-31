@@ -54,6 +54,7 @@ myBar2.set(85);
 		.stickybar.is_stuck {
 			margin-bottom: 0px;
 			padding-bottom: 0px;
+			border-bottom: 1px solid #bbb;
 		}
 		
 		.stickybar.is_stuck .hidescroll {
@@ -134,13 +135,20 @@ myBar2.set(85);
 		.stickybar .planbarsplit {
 		display: none;
 		visibility: hidden;
-		background-color: #fff;
+		background-color: #f0f8ff;
 		color: #333;
-		margin-top: 8px;
-		border-top: 0px;
+	    padding-top: 8px;
+	    padding-bottom: 8px;
+		border: 0px;
 	}
+		.stickybar .planbarsplit p {
+			color: #333;
+		}
 		.stickybar.is_stuck .showonscroll.inlineshow {
 			display: inline-block !important;
+		}
+		.stickybar .planbarsplit p, .stickybar .planbarsplit h3 {
+			margin: 0px;
 		}
 	</style>
 </head>
