@@ -30,6 +30,8 @@
 	$(".sticky").stick_in_parent();
 		});
 	</script>
+	<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
 	<!-- Layout Specific CSS -->
 	<link rel="stylesheet" href="style.css">
 	<style type="text/css">
@@ -74,9 +76,52 @@
 		.row.is_stuck {
 			background-color: #fff;
 			z-index: 15;
-			border-bottom: 2px solid #333;
+			border-bottom: 2px solid #333 !important;
 			padding-bottom: 10px;
 			padding-top: 10px;
+		}
+		
+		.circlegraphs .ldBar {
+			/* width: 80% !important; */
+			width: auto !important;
+			max-width: 240px;
+			height: auto;
+		}
+			.ldBar.label-center > .ldBar-label {
+			top: 42%;
+			transform: translate(-42%,-42%);
+			-webkit-transform(-42%,-42%);
+		}
+			.ldBar span.sub {
+			z-index: 2;
+			top: 51%;
+			position: absolute;
+			left: 0px;
+			text-align: center;
+		}
+		
+		.planningbox > .row.is_stuck > div[class^="col-"] {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		
+			.planningbox > .row.is_stuck > div[class^="col-"] > .row > div[class^="col-"]:nth-of-type(2) {
+		background-color: #fff;
+		border: 0px;
+	}
+		
+		.row.is_stuck div[class^="col-"] > .row-no-padding:last-of-type > div[class^="col-"], .row.is_stuck div[class^="col-"] > .row-no-padding:first-of-type > div[class^="col-"] {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		ul.list-unstyled li {
+			margin-bottom: 5px !important;
+		}
+		ul.list-unstyled li:last-child {
+			margin: 0px !important;
+		}
+		p.text-muted {
+			line-height: 1.3 !important;
 		}
 	</style>
 </head>
@@ -155,6 +200,7 @@
 	  
 	  <!-- Page Header -->
 		  <div class="container">
+			  <div class="row">
 		<div class="col-md-12">
 			<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/GoalPlanning" class="pull-right page-header-btn js-comparison-event" data-eventname="Planning" data-feature="Chart Settings">Chart Settings</a>
 			<h1 class="page-header page-header-plantool">
@@ -163,13 +209,74 @@
 			</h1>
 		</div>
 		  </div>
+	  </div>
 	
 	  
 	  <!-- Body Content -->
 	  
 	  <div class="container">
+		  
+		  
+		  <!-- Planning Area -->
+		  
+		   <div class="row" style="margin-bottom: 20px; border-bottom: 1px solid #eee;">
+			 <div class="col-md-6"><h2 style="margin: 0px; line-height: 1;">Plan Score</h2></div> 
+			   <div class="col-md-6"><a href="#">Chart Settings</a></div>
+		  </div>
+		  
+		  
+		  <div class="row" style="border-bottom: 2px solid #eee">
+		  
+		  <div class="col-md-3">
+			  <small><strong>Probability of Success</strong></small><br /><br />
+			  
+			  <ul class="list-unstyled" style="font-size: 95%;">
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #9ed86c;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								82% - 100%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #ffbc42;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								70% - 81%
+							</div>
+						</li>
+						<li style="display: table;">
+							<div class="legend-item-holder">
+								<div class="img-circle legend-color-circle" style="background-color: #c24a49;"></div>
+							</div>
+							<div class="legend-range-label-block">
+								0% - 69%
+							</div>
+						</li>
+			  </ul>
+			  
+			   <p class="text-muted">This analysis illustrates the potential results of your financial plan using 1000 randomly generated market returns and volatility called trial runs.</p>
+			  
+			  </div>
+		  <div class="col-md-9 circlegraphs">
+			  <div class="row">
+			  <div class="col-md-3">&nbsp;</div>
+			  <div class="col-md-4 text-center"><div data-preset="circle" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="5" data-stroke-trail-width="5" data-value="70" ><span class="sub">Probability of Sucess</span></div> <h3>Current Situation</h3></div>
+			  <div class="col-md-5 text-center"><div data-preset="circle" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="5" data-stroke-trail-width="5" data-value="80" ><span class="sub">Probability of Sucess</span></div>  <h3><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3></div>
+			  
+			  </div>
+			  </div>
+		  </div>
+		  
+		  
+		  
+		  
+		  <!-- Next Row -->
+		  <div class="row">
 		
-		  <div class="col-md-3 sticky">
+		  <div class="col-md-3 sticky" style="padding-top: 5px;">
 			<div id="panel-left" class="hidden-print"><div class="list-group reviewlist">
 		<a href="javascript:void(0);" class="list-group-item active" data-type="FamilyAndFriends">
 			<div class="media menu-text">
@@ -213,54 +320,43 @@
 		  <!-- End First Col -->
 		<div class="col-md-9 planningbox">
 			
-			<div class="row header sticky">
-			<div class="col-md-4 text-right">&nbsp;</div>
-			  <div class="col-md-4">
-				  <p>18 of 22 Years Funded</p>
-				  <div class="progressbars"><span class="progress"><span class="bar wow mediumprob"></span></span></div>
-			  </div>
-			  <div class="col-md-4">
-				  <p>21 of 22 Years Funded</p>
-						<span class="progressbars"><span class="progress"><span class="bar wow highprob"></span></span></span>
-			  </div>
-			</div>
-			
-			
-				<div class="row endcells">
-			<div class="col-md-12">
+			<div class="row endcells no-gutters header sticky">
+				<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4"><h3 style="margin-bottom: 0px;">Retirement Goal</h3><small style="color:#999;">Base facts compared to your proposed changes</small></div>
-				<div class="col-md-4 text-center">
-					
-					<div id="halfway" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width: 45% !important; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
-					
-					<p>21 of 22 Years Funded</p>
-				</div>
-				<div class="col-md-4 text-center">
-					
-					<div id="eighty" class="ldBar auto no-percent label-center wow" data-value="0" data-duration="5" data-fill-dir="btt" data-type="fill" style="width: 45% !important; height: auto; fill:#ffc70b; stroke: #e9b400; stroke-miterlimit:10; stroke-width:0.50px;" data-fill-background="#ccc" data-fill="#ffc70b" data-fill-background-extrude="0.25" data-path="M82.57,23.44a1.51,1.51,0,0,1-.55,2l-10.39,6a1.5,1.5,0,1,1-1.5-2.6l10.39-6A1.5,1.5,0,0,1,82.57,23.44ZM67.82,45.75a25.61,25.61,0,0,0-51.12,0H1.75a1.5,1.5,0,0,0,0,3H82a1.5,1.5,0,0,0,0-3ZM63.47,7l-6,10.4a1.5,1.5,0,0,0,2.6,1.5l6-10.4A1.5,1.5,0,1,0,63.47,7ZM42.76.25a1.5,1.5,0,0,0-1.5,1.5v12a1.5,1.5,0,0,0,3,0v-12A1.5,1.5,0,0,0,42.76.25ZM21.05,7a1.5,1.5,0,1,0-2.6,1.5l6,10.4a1.5,1.5,0,0,0,2.6-1.5ZM4,22.89a1.5,1.5,0,0,0-2,.55,1.51,1.51,0,0,0,.55,2l10.4,6a1.5,1.5,0,0,0,1.5-2.6Z"></div>
-					<p>21 of 22 Years Funded</p></div>
+				<div class="col-md-3"><h4>Retirement</h4><p><strong>Goal Success</strong></p></div>
+			  <div class="col-md-4 text-center">
+				  <p><strong>Client Facts</strong></p>
+				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+				  <p style="color: #707070;">18 of 22 Years Funded</p>
+				  <p><a href="#" class="hidescroll">View More</a></p>
+			  </div>
+			  <div class="col-md-5 text-center">
+				  <p><strong>Proposed Changes</strong></p>
+						<ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+				  <p style="color: #707070;">21 of 22 Years Funded</p>
+				  <p><a href="#" class="hidescroll">View More</a></p>
+			  </div>
 			</div>
-				
-				</div><!-- end inner container -->
-				</div><!-- end cell row -->	
+				</div>
+			</div>
+			
 			
 			<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
-				<div class="chartpad"><strong>Retirement Ages</strong></div>
+				<div class="col-md-3">
+				<strong>Retirement Ages</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
-				<div class="chartpad">John</div>
+				<div class="col-md-3">
+				John
 				</div>
 				<div class="col-md-4 text-center">65</div>
-				<div class="col-md-4">	<div class="input-group">
+				<div class="col-md-5">	<div class="input-group">
           <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
 								   <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
@@ -276,11 +372,11 @@
 			</div>
 				
 				<div class="row row-no-padding">
-				<div class="col-md-4">
-				<div class="chartpad">Amy</div>
+				<div class="col-md-3">
+				Amy
 				</div>
 				<div class="col-md-4 text-center">64</div>
-				<div class="col-md-4">	<div class="input-group">
+				<div class="col-md-5">	<div class="input-group">
           <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
 								   <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
@@ -301,19 +397,19 @@
 			<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
-				<div class="chartpad"><strong>Annual Expenses During Retirement</strong></div>
+				<div class="col-md-3">
+				<strong>Annual Expenses During Retirement</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
-				<div class="chartpad">Annual Living Expenses</div>
+				<div class="col-md-3">
+				Annual Living Expenses
 				</div>
 				<div class="col-md-4 text-center">$80,000</div>
-				<div class="col-md-4">	<div class="input-group">
+				<div class="col-md-5">	<div class="input-group">
           <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
 								   <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
@@ -334,29 +430,29 @@
 			<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				<strong>Social Security Benefit</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				John's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-5 text-center">
 				<a href="#">Estimated from Income<br />$47,600</a>
 				</div>
 			</div>
 				
 							<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				Amy's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">	
+				<div class="col-md-5 text-center">	
 				<a href="#">Estimated from Income<br />$47,600</a>	
 				</div>
 			</div>
@@ -367,29 +463,29 @@
 				<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				<strong>Social Security Benefit</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				John's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-5 text-center">
 				<a href="#">Estimated from Income<br />$47,600</a>
 				</div>
 			</div>
 				
 							<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				Amy's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">	
+				<div class="col-md-5 text-center">	
 				<a href="#">Estimated from Income<br />$47,600</a>	
 				</div>
 			</div>
@@ -400,29 +496,29 @@
 				<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				<strong>Social Security Benefit</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				John's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-5 text-center">
 				<a href="#">Estimated from Income<br />$47,600</a>
 				</div>
 			</div>
 				
 							<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				Amy's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">	
+				<div class="col-md-5 text-center">	
 				<a href="#">Estimated from Income<br />$47,600</a>	
 				</div>
 			</div>
@@ -433,29 +529,29 @@
 				<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				<strong>Social Security Benefit</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				John's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-5 text-center">
 				<a href="#">Estimated from Income<br />$47,600</a>
 				</div>
 			</div>
 				
 							<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				Amy's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">	
+				<div class="col-md-5 text-center">	
 				<a href="#">Estimated from Income<br />$47,600</a>	
 				</div>
 			</div>
@@ -466,29 +562,29 @@
 				<div class="row endcells">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				<strong>Social Security Benefit</strong>
 				</div>
 				<div class="col-md-4">&nbsp;</div>
-				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
 			</div>
 			
 			<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				John's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">
+				<div class="col-md-5 text-center">
 				<a href="#">Estimated from Income<br />$47,600</a>
 				</div>
 			</div>
 				
 							<div class="row row-no-padding">
-				<div class="col-md-4">
+				<div class="col-md-3">
 				Amy's Annual Amount
 				</div>
 				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
-				<div class="col-md-4 text-center">	
+				<div class="col-md-5 text-center">	
 				<a href="#">Estimated from Income<br />$47,600</a>	
 				</div>
 			</div>
@@ -496,10 +592,10 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-				<div class="row links no-gutters">
+				<div class="row links">
+				<div class="col-md-3"></div>
 				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
-			<div class="col-md-4 text-right nopadright">
+			<div class="col-md-5 text-right nopadright">
 				<a href="#" class="btn btn-block btn-primary js-comparison-event">Recalculate Plan</a>
 				<a href="#" class="btn btn-block btn-default js-comparison-event">Return to Plan Overview</a>
 				</div>
@@ -508,10 +604,13 @@
 			
 			</div><!-- end base col container -->
 			
-		
-	  </div> <!-- End container -->
+		  </div><!-- end row -->
+			  
+	  </div><!-- End container -->
+	  
+	  
 </div><!-- end js main -->
-	</div><!-- with sticky footer -->
+</div><!-- with sticky footer -->
 	  
 <div class="page-footer hidden-present hidden-print">
   <div class="container">
