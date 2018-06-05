@@ -149,6 +149,20 @@
     transition: none;
     display: none;
 }
+		
+		.placeholderow {
+			min-height: 1px;
+			background-color: #fff;
+			z-index: 15;
+		}
+		.hidebar {
+			display: none;
+		}
+	
+		.placeholderow.is_stuck .hidebar {
+			display: block;
+		}
+		
 	</style>
 </head>
 <body class="DefaultBody">
@@ -351,7 +365,43 @@
 		  <!-- End First Col -->
 		<div class="col-md-9 planningbox">
 			
-			<div class="row endcells header sticky">
+			
+			<!-- Show Plan Overview -->
+			<div class="placeholderow sticky">
+			
+				<div class="row endcells header hidebar">
+				<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3"><h4>Plan Score</h4></div>
+			  <div class="col-md-4 text-center">
+				  <p><strong>Client Facts</strong></p>
+			  </div>
+			  <div class="col-md-5 text-center">
+				  <p><strong>Proposed Changes</strong></p>
+			  </div>
+			</div>
+				</div>
+				
+				
+				<div class="col-md-12">
+			<div class="row row-no-padding goaline">
+				<div class="col-md-3">
+					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>
+				</div>
+			  <div class="col-md-4 text-center">
+				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+			  </div>
+			  <div class="col-md-5 text-center">
+						<ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+			  </div>
+			</div>
+				</div>
+				
+			</div>
+				</div>
+			
+			
+			<div class="row endcells header">
 				<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3"><h4>Retirement</h4></div>
