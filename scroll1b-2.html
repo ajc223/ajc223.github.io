@@ -112,7 +112,7 @@
 			padding-bottom: 0px;
 		}
 		
-			.planningbox > .row.is_stuck > div[class^="col-"] > .row > div[class^="col-"]:nth-of-type(2) {
+		.planningbox > .row.is_stuck > div[class^="col-"] > .row > div[class^="col-"]:nth-of-type(2) {
 		background-color: #fff;
 		border: 0px;
 	}
@@ -163,6 +163,15 @@
 			display: block;
 		}
 		
+		.goaline .ldBar {
+			width: 50%;
+			max-width: 80px;
+		}
+		
+		.goaline .ldBar .ldBar-label {
+			font-size: 1.6rem;
+			line-height: 1;
+		}
 	</style>
 </head>
 <body class="DefaultBody">
@@ -367,12 +376,12 @@
 			
 			
 			<!-- Show Plan Overview -->
-			<div class="placeholderow no-gutters sticky">
+			<div class="row placeholderow no-gutters sticky">
 			
 				<div class="row endcells no-gutters header hidebar">
 				<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-3"><h4>Plan Score</h4></div>
+				<div class="col-md-3"><h4>Plan Score</h4><small>Probability of Success</small></div>
 			  <div class="col-md-4 text-center">
 				  <p><strong>Client Facts</strong></p>
 			  </div>
@@ -389,10 +398,10 @@
 					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>
 				</div>
 			  <div class="col-md-4 text-center">
-				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+				  <div data-preset="circle" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="10" data-stroke-trail-width="10" data-value="70" ></div>
 			  </div>
 			  <div class="col-md-5 text-center">
-						<ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+					<div data-preset="circle" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="10" data-stroke-trail-width="10" data-value="80" ></div>
 			  </div>
 			</div>
 				</div>
