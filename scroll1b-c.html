@@ -149,6 +149,35 @@
     transition: none;
     display: none;
 }
+		
+		.placeholderow {
+			min-height: 1px;
+			background-color: #fff;
+			z-index: 15;
+		}
+		.hidebar {
+			display: none;
+		}
+	
+		.placeholderow.is_stuck .hidebar {
+			display: block;
+		}
+		
+		.goaline .ldBar {
+			width: 50%;
+			max-width: 150px;
+		}
+		
+		.goaline .ldBar .ldBar-label {
+			font-size: 2.2rem;
+			line-height: 1;
+			top: 45%;
+		}
+		
+		.goaline h2 {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
 	</style>
 </head>
 <body class="DefaultBody">
@@ -371,7 +400,50 @@
 		  <!-- End First Col -->
 		<div class="col-md-9 planningbox">
 			
-			<div class="row endcells header sticky">
+				<!-- Show Plan Overview -->
+			<div class="row placeholderow no-gutters sticky">
+			
+				<div class="row endcells no-gutters header hidebar">
+				<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3" style="vertical-align: top;"><h3>Retirement</h3>
+	
+				</div>
+			  <div class="col-md-4 text-center" style="vertical-align: top;">
+				  <h3>Current Situation</h3>
+				  <p style="color: #666;"><strong>Client Facts</strong></p>
+			  </div>
+			  <div class="col-md-5 text-center" style="vertical-align: top;">
+				  <h3><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3>
+				  <p style="color: #666;"><strong>Proposed Changes</strong></p>
+			  </div>
+			</div>
+				</div>
+				
+				
+				<div class="col-md-12">
+			<div class="row row-no-padding goaline">
+				<div class="col-md-3">
+						<ul class="progbar" style="max-width: none; width: 100%;"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+				  <p style="color: #707070;">18 of 22 Years Funded</p>
+					
+					<ul class="progbar" style="max-width: none; width: 100%;"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+				  <p style="color: #707070;">21 of 22 Years Funded</p>
+					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>
+				</div>
+			  <div class="col-md-4 text-center">
+				  <div data-preset="circle" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="10" data-stroke-trail-width="10" data-value="70" ></div><small>Probability of Success</small>
+			  </div>
+			  <div class="col-md-5 text-center">
+					<div data-preset="circle" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="10" data-stroke-trail-width="10" data-value="80" ></div><small>Probability of Success</small>
+			  </div>
+			</div>
+				</div>
+				
+			</div>
+				</div>
+			
+			<div class="row endcells header no-gutters">
 				<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3"><h4>Retirement</h4></div>
@@ -387,20 +459,18 @@
 				
 				<div class="col-md-12">
 			<div class="row row-no-padding goaline">
-				<div class="col-md-3"><p class="hideonscroll"><strong>Goal Success</strong></p>
-				
-					<a href="#" class="btn btn-block btn-default js-comparison-event showonscroll">Recalculate</a>
+				<div class="col-md-3"><p><strong>Goal Success</strong></p>
 					
 				</div>
 			  <div class="col-md-4 text-center">
 				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
 				  <p style="color: #707070;">18 of 22 Years Funded</p>
-				  <p><a href="#" class="hideonscroll">View More</a></p>
+				  <p><a href="#">View More</a></p>
 			  </div>
 			  <div class="col-md-5 text-center">
 						<ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
 				  <p style="color: #707070;">21 of 22 Years Funded</p>
-				  <p><a href="#" class="hideonscroll">View More</a></p>
+				  <p><a href="#">View More</a></p>
 			  </div>
 			</div>
 				</div>
@@ -408,7 +478,7 @@
 			</div>
 			
 			
-			<div class="row endcells">
+			<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -461,7 +531,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-			<div class="row endcells">
+			<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -494,7 +564,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-			<div class="row endcells">
+			<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -527,7 +597,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-				<div class="row endcells">
+				<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -560,7 +630,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-				<div class="row endcells">
+				<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -593,7 +663,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-				<div class="row endcells">
+				<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
@@ -626,7 +696,7 @@
 				</div><!-- end inner container -->
 				</div><!-- end cell row -->	
 			
-				<div class="row endcells">
+				<div class="row endcells no-gutters">
 			<div class="col-md-12">
 			<div class="row row-no-padding">
 				<div class="col-md-3">
