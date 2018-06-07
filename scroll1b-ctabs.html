@@ -186,6 +186,27 @@
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
+		
+		ul.nav-item li.nav-item {
+			display: inline-block;
+			margin: 0px;
+			padding: 0px;
+		}
+		.nav.inline-list {
+			margin-bottom: 15px;
+		}
+		.alignvertical {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			-webkit-transform(-50%,-50%);
+		}
+		.row.is_stuck .ldBar {
+			width: 100px !important;
+			height: auto;
+			max-width: 100%;
+		}
 	</style>
 </head>
 <body class="DefaultBody">
@@ -417,40 +438,56 @@
 			<div class="row row-no-padding">
 				<div class="col-md-3" style="vertical-align: top;">
 					
-					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>
+					<a href="#" class="btn btn-block btn-default js-comparison-event alignvertical">Recalculate</a>
 	
 				</div>
 				
 				<div class="col-md-9 text-center">
-				
-					<div class="nav btn-group" role="group" aria-label="pill navigation" data-toggle="btns"><a class="nav-item btn btn-secondary active" aria-pressed="true" data-toggle="tab" hef="#planbar">Plan Score</a><a class="nav-item btn btn-secondary" aria-label="Value two" aria-pressed="false" data-toggle="tab" href="#goalbar">Goal Progress</a></div>
 					
-					<div class="tab-content">
-				<div class="tab-pane row no-gutters active" id="planbar">
+					
+					<div class="nav nav-pills mb-3 btn-group inline-list" id="pills-tab" role="tablist">
+    <button class="nav-item nav-link btn btn-secondary active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" role="tab" aria-controls="pills-home" aria-expanded="true">Plan Score</button>
+      <button class="nav-item nav-link btn btn-secondary" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Goal Success</button>
+  </div>	
+					
+					<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div class="row no-gutters">
 				
-			  <div class="col-md-4 text-center" style="vertical-align: top;">
+			  <div class="col-md-4 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;">Current Situation</h3>
 				  <p style="color: #666;"><strong>Client Facts</strong></p>
+				  <div data-preset="circle" class="ldBar label-center medium" data-stroke="#FFBC42" data-stroke-width="10" data-stroke-trail-width="10" data-value="70" ></div><small>Probability of Success</small>
 			  </div>
-			  <div class="col-md-5 text-center" style="vertical-align: top;">
+			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;"><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3>
 				  <p style="color: #666;"><strong>Proposed Changes</strong></p>
+				  <div data-preset="circle" class="ldBar label-center high" data-stroke="#74CD35" data-stroke-width="10" data-stroke-trail-width="10" data-value="80" ></div><small>Probability of Success</small>
 			  </div>
 					
 					</div><!-- extra row -->
+						</div>
 						
-						<div class="tab-pane row no-gutters" style="margin-bottom: 15px;" id="goalbar">
+						<div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<div class="row no-gutters">
 				
-			  <div class="col-md-4 text-center" style="vertical-align: top;">
-				  <h3 style="margin: 0px;">Current Situationx</h3>
+			  <div class="col-md-4 text-center" style="vertical-align: top; padding-bottom: 0px;">
+				  <h3 style="margin: 0px;">Current Situation</h3>
 				  <p style="color: #666;"><strong>Client Facts</strong></p>
+				  
+				   <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+				  <p style="color: #707070;">18 of 22 Years Funded</p>
 			  </div>
-			  <div class="col-md-5 text-center" style="vertical-align: top;">
+			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;"><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3>
 				  <p style="color: #666;"><strong>Proposed Changes</strong></p>
+				  <ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+				  <p style="color: #707070;">21 of 22 Years Funded</p>
 			  </div>
 					
 					</div><!-- extra row -->
+						</div>
+						
 						
 					</div><!-- end tab content -->
 				</div><!-- end containing tab div -->
@@ -459,7 +496,7 @@
 				</div>
 				
 				
-			</div>
+			</div>			
 				</div>
 			
 			<div class="row endcells header no-gutters">
