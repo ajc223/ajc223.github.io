@@ -32,6 +32,9 @@
   	$this.parent().find('.active').removeClass('active');
     $this.addClass('active');
 });
+			$('#collapseP').on('click', function(e){
+            $('#toggleopt').toggleClass('fa-chevron-down , fa-chevron-up', 200);
+});
 		});
 	</script>
 	<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
@@ -207,6 +210,9 @@
 			height: auto;
 			max-width: 100%;
 		}
+		.arrow-toggle {
+			margin-left: 5px;
+		}
 	</style>
 </head>
 <body class="DefaultBody">
@@ -303,7 +309,9 @@
 		  <!-- Planning Area -->
 		  
 		   <div class="row no-gutters" style="margin-bottom: 20px; border-bottom: 1px solid #eee;">
-			 <div class="col-md-6 no-gutters" style="padding-bottom: 10px;"><h2 style="margin: 0px; padding: 0px; line-height: 1; display: inline-block;">Plan Score</h2> <span class="ctrl-switch" style="margin-left: 15px; line-height: 1; vertical-align: bottom;" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0"><input id="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.0" type="checkbox" data-toggle="collapse" data-target="#planscore" checked="true"><label class="ctrl-switch-slider" for="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.1"></label></span></div>
+			 <div class="col-md-6 no-gutters" style="padding-bottom: 10px;"><h2 style="margin: 0px; padding: 0px; line-height: 1; display: inline-block;">Plan Score</h2> <span class="arrow-toggle" data-toggle="collapse" data-target="#planscore" id="collapseP"><i id="toggleopt" class="fas fa-chevron-down"></i></span>
+				 
+				 
 		  </div>
 		  
 		  
@@ -447,7 +455,7 @@
 					
 					<div class="nav nav-pills mb-3 btn-group inline-list" id="pills-tab" role="tablist">
     <button class="nav-item nav-link btn btn-secondary active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" role="tab" aria-controls="pills-home" aria-expanded="true">Plan Score</button>
-      <button class="nav-item nav-link btn btn-secondary" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Goal Success</button>
+      <button class="nav-item nav-link btn btn-secondary" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Goal Score</button>
   </div>	
 					
 					<div class="tab-content" id="pills-tabContent">
