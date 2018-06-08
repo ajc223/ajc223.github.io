@@ -212,6 +212,20 @@
 		}
 		.arrow-toggle {
 			margin-left: 5px;
+			cursor: pointer;
+		}
+		
+		.row.flexbox {
+		   display: -webkit-box;
+           display: -ms-flexbox;
+           display: flex;
+           -ms-flex-wrap: wrap;
+           flex-wrap: wrap;
+		}
+		.align-items-center {
+		-webkit-box-align: center !important;
+		-ms-flex-align: center !important;
+		align-items: center !important;
 		}
 	</style>
 </head>
@@ -443,71 +457,68 @@
 				<div class="row endcells no-gutters header hidebar">
 				<div class="col-md-12">
 					
-			<div class="row row-no-padding">
+			<div class="row flexbox align-items-center">
 				<div class="col-md-3" style="vertical-align: top;">
 					
-					<a href="#" class="btn btn-block btn-default js-comparison-event alignvertical">Recalculate</a>	
+					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>	
 	
 				</div>
 				
-				<div class="col-md-9 text-center">
+				<div class="col-md-9">
 					
-					
+					<div class="row">
+						<div class="col-md-12 text-center">
 					<div class="nav nav-pills mb-3 btn-group inline-list" id="pills-tab" role="tablist">
     <button class="nav-item nav-link btn btn-secondary active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" role="tab" aria-controls="pills-home" aria-expanded="true">Plan Score</button>
       <button class="nav-item nav-link btn btn-secondary" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-expanded="true">Goal Score</button>
   </div>	
+			</div>
+	</div>
 					
-					<div class="tab-content" id="pills-tabContent">
+					
+					<div class="tab-content row no-gutters" id="pills-tabContent">
 					<div class="tab-pane show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-				<div class="row no-gutters">
-				
-			  <div class="col-md-4 text-center" style="vertical-align: top; padding-bottom: 0px;">
+			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;">Current Situation</h3>
 				  <p style="color: #666;"><strong>Client Facts</strong></p>
 				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
 				  <p style="color: #707070;">70% Probability of Success</p>
 			  </div>
-			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
+			  <div class="col-md-7 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;"><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3>
 				  <p style="color: #666;"><strong>Proposed Changes</strong></p>
 				   <ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
 				  <p style="color: #707070;">80% Probability of Success</p>
 			  </div>
 					
-					</div><!-- extra row -->
-						</div>
+					</div><!--- Tab Div -->
 						
-						<div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-				<div class="row no-gutters">
+					<div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 				
-			  <div class="col-md-4 text-center" style="vertical-align: top; padding-bottom: 0px;">
+			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;">Current Situation</h3>
 				  <p style="color: #666;"><strong>Client Facts</strong></p>
 				  
 				   <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
 				  <p style="color: #707070;">18 of 22 Years Funded</p>
 			  </div>
-			  <div class="col-md-5 text-center" style="vertical-align: top; padding-bottom: 0px;">
+			  <div class="col-md-7 text-center" style="vertical-align: top; padding-bottom: 0px;">
 				  <h3 style="margin: 0px;"><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3>
 				  <p style="color: #666;"><strong>Proposed Changes</strong></p>
 				  <ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
 				  <p style="color: #707070;">21 of 22 Years Funded</p>
 			  </div>
 					
-					</div><!-- extra row -->
-						</div>
+						</div><!-- tab div -->
+						</div><!-- tab content panel -->
 						
 						
-					</div><!-- end tab content -->
 				</div><!-- end containing tab div -->
 					
-			</div>
-				</div>
-				
-				
-			</div>			
-				</div>
+			</div><!-- end row -->
+				</div><!-- end col -->
+			</div><!-- end sticky row -->
+			</div><!-- end placeholder row -->
 			
 			<div class="row endcells header no-gutters">
 				<div class="col-md-12">
@@ -811,8 +822,7 @@
 			  
 	  </div><!-- End container -->
 	  
-	  
-</div><!-- end js main -->
+	  </div><!-- end js main -->
 </div><!-- with sticky footer -->
 	  
 <div class="page-footer hidden-present hidden-print">
