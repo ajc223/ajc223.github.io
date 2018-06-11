@@ -163,6 +163,10 @@
 			display: block;
 		}
 		
+		.row.goaline {
+			padding-bottom: 10px;
+		}
+		
 		.goaline .ldBar {
 			width: 50%;
 			max-width: 80px;
@@ -173,21 +177,22 @@
 			line-height: 1;
 		}
 		
-		.goaline h2, .goaline h3 {
+		.goaline h2, .goaline h3, .goaline h4 {
 			margin-top: 0px;
 			margin-bottom: 0px;
 		}
 		
-		.goaline h3 {
+		.goaline h3, goaline h4 {
 			line-height: 1;
 			vertical-align: middle;
 		}
-		.goalline h3 small {
+		.goalline h3 small, goalline h4 small {
 			line-height: 1;
 			vertical-align: middle;
 		}
-		.goaline div[class^="col-"] h3:first-of-type {
-			margin-bottom: 10px;
+		.btn.push-bottom {
+			position: absolute;
+			bottom: 0px;
 		}
 	</style>
 </head>
@@ -419,12 +424,12 @@
 				<div class="row endcells no-gutters header hidebar">
 				<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-3"><h4>Probability of Success</h4></div>
+				<div class="col-md-3" style="vertical-align: baseline;"><h4>Probability of Success</h4></div>
 			  <div class="col-md-4 text-center">
-				  <p><strong>Client Facts</strong></p>
+				  <p style="margin: 0px;"><strong>Client Facts</strong></p>
 			  </div>
 			  <div class="col-md-5 text-center">
-				  <p><strong>Proposed Changes</strong></p>
+				  <p style="margin: 0px;"><strong>Proposed Changes</strong></p>
 			  </div>
 			</div>
 				</div>
@@ -433,18 +438,33 @@
 				<div class="col-md-12">
 			<div class="row row-no-padding goaline">
 				<div class="col-md-3">
-					<a href="#" class="btn btn-block btn-default js-comparison-event">Recalculate</a>
+					&nbsp;
 				</div>
 			  <div class="col-md-4 text-center">
 				  <h3><small>Plan</small> <span class="img-circle legend-color-circle" style="background-color: #ffbc42; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 70%</h3>
-				  <h3><small>Goal</small> <span class="img-circle legend-color-circle" style="background-color: #ffbc42; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 78%</h3>
 			  </div>
 			  <div class="col-md-5 text-center">
 				  <h3><small>Plan</small> <span class="img-circle legend-color-circle" style="background-color: #9ed86c; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 82%</h3>
-				  <h3><small>Goal</small> <span class="img-circle legend-color-circle" style="background-color: #9ed86c; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 90%</h3>
 			  </div>
 			</div>
 				</div>
+					
+					
+					
+					<div class="col-md-12">
+			<div class="row row-no-padding goaline">
+				<div class="col-md-3">
+					<a href="#" class="btn btn-block btn-default js-comparison-event push-bottom">Recalculate</a>
+				</div>
+			  <div class="col-md-4 text-center">
+				  <h4><small>Goal</small> <span class="img-circle legend-color-circle" style="background-color: #ffbc42; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 78%</h4>
+			  </div>
+			  <div class="col-md-5 text-center">
+				  <h4><small>Goal</small> <span class="img-circle legend-color-circle" style="background-color: #9ed86c; display: inline-block; margin: 0px; vertical-align: middle; margin-right: 5px; line-height: 1; height: 15px; width: 15px;"></span> 90%</h4>
+			  </div>
+			</div>
+				</div>
+					
 				
 			</div>
 				</div>
