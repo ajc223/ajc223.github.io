@@ -163,7 +163,7 @@
 			display: block;
 		}
 		
-		.row.goaline {
+		.row.is_stuck > .row > div[class^="col-"] > .row.goaline {
 			padding-bottom: 10px;
 		}
 		
@@ -186,13 +186,18 @@
 			line-height: 1;
 			vertical-align: middle;
 		}
-		.goalline h3 small, goalline h4 small {
+		.goaline h3 small, goaline h4 small {
 			line-height: 1;
 			vertical-align: middle;
+			display: inline;
 		}
 		.btn.push-bottom {
 			position: absolute;
 			bottom: 0px;
+		}
+		.goaline .legend-color-circle {
+			display: inline;
+			vertical-align: middle;
 		}
 	</style>
 </head>
