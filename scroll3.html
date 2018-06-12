@@ -225,6 +225,34 @@
 			width: 15px;
 			height: 15px;
 		}
+		
+		.atable {
+			display: table;
+			max-width: 70%;
+			table-layout: fixed;
+			margin: 0px;
+			padding: 0px;
+			outline: none;
+			margin: 0 auto;
+		}
+		
+		.atable .cell {
+			display: table-cell;
+		}
+		.atable .cell.one {
+			width: 40%;
+			text-align: right;
+			padding-right: 2%;
+		}
+		.atable .cell.two {
+			width: 20%;
+			text-align: center;
+		}
+		.atable .cell.three {
+			width: 40%;
+			text-align: left;
+			padding-left: 2%;
+		}
 	</style>
 </head>
 <body class="DefaultBody">
@@ -473,10 +501,18 @@
 					&nbsp;
 				</div>
 			  <div class="col-md-4 text-center">
-				  <p>Plan <span class="img-circle legend-color-circle" style="background-color: #ffbc42; height: 15px; width: 15px;"></span></p> <h4>70%</h4>
+				    <div class="atable">
+				  <div class="cell one">Plan</div>
+					  <div class="cell two"><span class="img-circle legend-color-circle" style="background-color: #ffbc42; height: 15px; width: 15px;"></span></div>
+						<div class="cell three"><h4>80%</h4></div>
+				  </div>
 			  </div>
 			  <div class="col-md-5 text-center">
-				  <p>Plan <span class="img-circle legend-color-circle" style="background-color: #9ed86c; height: 15px; width: 15px;"></span></p> <h4>82%</h4>
+				      <div class="atable">
+				  <div class="cell one">Plan</div>
+					  <div class="cell two"><span class="img-circle legend-color-circle" style="background-color: #9ed86c; height: 15px; width: 15px;"></span></div>
+						  <div class="cell three"><h4>95%</h4></div>
+				  </div>
 			  </div>
 			</div>
 				</div>
@@ -486,13 +522,22 @@
 					<div class="col-md-12">
 			<div class="row row-no-padding goaline">
 				<div class="col-md-3">
-					<a href="#" class="btn btn-block btn-default js-comparison-event push-bottom">Recalculate</a>
+					<a href="#" class="btn btn-default js-comparison-event push-bottom">Recalculate</a>
 				</div>
 			  <div class="col-md-4 text-center">
-				  <p>Goal <span class="img-circle legend-color-circle" style="background-color: #ffbc42; height: 15px; width: 15px;"></span> 78%</p>
+				  <div class="atable">
+				  <div class="cell one">Goal</div>
+					  <div class="cell two"><span class="img-circle legend-color-circle" style="background-color: #ffbc42; height: 15px; width: 15px;"></span></div>
+					  <div class="cell three">78%</div>
+				  </div>
+				  
 			  </div>
 			  <div class="col-md-5 text-center">
-				  <p>Goal <span class="img-circle legend-color-circle" style="background-color: #9ed86c; height: 15px; width: 15px;"></span> 90%</p>
+				    <div class="atable">
+				  <div class="cell one">Goal</div>
+					  <div class="cell two"><span class="img-circle legend-color-circle" style="background-color: #9ed86c; height: 15px; width: 15px;"></span></div>
+					  <div class="cell three">90%</div>
+				  </div>
 			  </div>
 			</div>
 				</div>
