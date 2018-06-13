@@ -79,13 +79,18 @@
 		.is_stuck .showonscroll {
 			display: block !important;
 		}
-		
+		.row.nobottom {
+			border-bottom: 0px !important;
+		}
 		.row.is_stuck {
 			background-color: #fff;
 			z-index: 15;
 			border-bottom: 1px solid #e2e2e2 !important;
 			padding-bottom: 10px;
 			padding-top: 10px;
+			transition-timing-function: ease-in;
+            transition: 0.8s;
+            transform: translateY(0);
 		}
 		
 		.circlegraphs .ldBar {
@@ -151,16 +156,17 @@
 }
 		
 		.placeholderow {
-			min-height: 1px;
+			/* min-height: 1px; */
 			background-color: #fff;
-			z-index: 15;
 		}
 		.hidebar {
 			display: none;
+			visibility: hidden;
 		}
 	
 		.placeholderow.is_stuck .hidebar {
 			display: block;
+			visibility: visible;
 		}
 		
 		.row.is_stuck > .row > div[class^="col-"] > .row.goaline {
@@ -500,7 +506,7 @@
 			
 			
 			<!-- Show Plan Overview -->
-			<div class="row placeholderow no-gutters sticky">
+			<div class="row placeholderow no-gutters nobottom sticky">
 			
 				<div class="row endcells no-gutters header hidebar">
 				<div class="col-md-12">
