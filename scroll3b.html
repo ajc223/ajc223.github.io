@@ -82,16 +82,37 @@
 		.row.nobottom {
 			border-bottom: 0px !important;
 		}
-		.row.is_stuck {
-			background-color: #fff;
-			z-index: 15;
-			border-bottom: 1px solid #e2e2e2 !important;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			transition-timing-function: ease-in;
-            transition: 0.8s;
-            transform: translateY(0);
+	
+			.placeholderow {
+		/* min-height: 1px; */
+		/* background-color: #fff; */
+		height: 0px;
+		overflow: hidden;
+		transition-timing-function: ease-out;
+		-webkit-transition-timing-function: ease-out;
+		-moz-transition-timing-function: ease-out;
+        transition: 2s;
+	    -webkit-transition: 2s;
+		-moz-transition: 2s;
+		-webkit-transform: translateY(-110%);
 		}
+		
+		.row.is_stuck {
+			/* background-color: #fff; */
+			z-index: 15;
+			border: 0px !important;
+			height: inherit;
+			overflow: visible;
+			transition-timing-function: ease-in-out;
+			-webkit-transition-timing-function: ease-in-out;
+			-moz-transition-timing-function: ease-in-out;
+            transition: 1.5s;
+			-webkit-transition: 1.5s;
+			-moz-transition: 1.5s;
+			height: auto;
+			-webkit-transform: translateY(0);
+		}
+		
 		
 		.circlegraphs .ldBar {
 			/* width: 80% !important; */
@@ -155,18 +176,17 @@
     display: none;
 }
 		
-		.placeholderow {
-			/* min-height: 1px; */
-			background-color: #fff;
-		}
+		
 		.hidebar {
 			display: none;
-			visibility: hidden;
 		}
 	
 		.placeholderow.is_stuck .hidebar {
-			display: block;
-			visibility: visible;
+					display: block;
+			border-bottom: 1px solid #e2e2e2 !important;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			background-color: #fff;
 		}
 		
 		.row.is_stuck > .row > div[class^="col-"] > .row.goaline {
