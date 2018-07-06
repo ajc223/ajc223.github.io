@@ -357,6 +357,14 @@
 			margin-bottom: 5px !important;
 		}
 		
+		.status.red {
+			color: #c14c46;
+		}
+		
+		.status.green {
+			color: #77cd60;
+		}
+		
 		
 		@-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -573,14 +581,14 @@
 				</div>
 			  <div class="col-md-4 text-center">
 				    <div class="atable">
-						<div class="cell one"><h3>$5k</h3><p>Plan<br />Shortfall</p></div>
-						<div class="cell two"><h3>$40k</h3><p>Goal<br />Shortfall</p></div>
+						<div class="cell one"><h3 class="status red">$5k</h3><p>Plan<br />Shortfall</p></div>
+						<div class="cell two"><h3 class="status red">$40k</h3><p>Goal<br />Shortfall</p></div>
 				  </div>
 			  </div>
 			  <div class="col-md-5 text-center">
 				      <div class="atable">
-				   <div class="cell one"><h3>$80k</h3><p>Plan<br />Surplus</p></div>
-				  <div class="cell two"><h3>$0</h3><p>Goal<br />Surplus</p></div>
+				   <div class="cell one"><h3 class="status green"><i class="fa fa-arrow-circle-up"></i> $80k</h3><p>Plan<br />Surplus</p></div>
+				  <div class="cell two"><h3 class="status green"><i class="fa fa-arrow-circle-up"></i> $0</h3><p>Goal<br />Shortfall</p></div>
 				  </div>
 			  </div>
 			</div>
