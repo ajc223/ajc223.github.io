@@ -6,7 +6,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<title>Lock table and Collapse Plan - Both Scores Anchored - Prototypes</title>
+<title>Plan Score - Header Condensed - Monte Carlo - 3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=586c3fcda4" type="text/css" rel="stylesheet"/>
@@ -293,7 +293,20 @@
 			height: auto;
 		}
 		.atable .ldBar .ldBar-label {
-			font-size: 1.4rem;
+			font-size: 1.4em;
+		}
+		
+		.condensed .atable .ldBar .ldBar-label, .condensed .ldBar .ldBar-label {
+			font-size: 2em;
+		}
+		
+		.condensed .ldBar, .condensed .circlegraphs .ldBar {
+			width: 65% !important;
+			max-width: 200px !important;
+		}
+		
+		.condensed .ldBar span.sub {
+			font-size: 1em;
 		}
 		
 		.atable .ldBar.label-center > .ldBar-label {
@@ -309,6 +322,58 @@
 		.goaline .atable h3, .goaline .atable h2 {
 			margin-bottom: 12px;
 			line-height: 1;
+		}
+		.row.headrow h3 {
+			margin: 0px;
+		}
+		.row.headrow {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		h3 .inlineicon {
+			max-width: 32px;
+			height: auto;
+			vertical-align: middle;
+			line-height: 1;
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			right: 15px;
+			top: 15%;
+		}
+		.pscardbox {
+			/*
+			-webkit-border-radius: 3px;
+			-moz-boder-radius: 3px;
+			border-radius: 3px;
+			-webkit-box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+-moz-box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+			*/
+			margin-bottom: 50px;
+			/* border: 1px solid #e2e2e2; */
+		}
+		
+		.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+			display:         flex;
+		}
+		
+		@media only screen and (max-width : 1540px) {
+			.condensed .ldBar, .condensed .circlegraphs .ldBar {
+				width: 80% !important;
+				max-width: 200px !important;
+			}
+			
+			.condensed .atable .ldBar .ldBar-label, .condensed .ldBar .ldBar-label {
+			 font-size: 1.6em;
+			}
+			
+			.condensed .ldBar span.sub {
+				font-size: .9em;
+			}
 		}
 	</style>
 </head>
@@ -389,6 +454,7 @@
 		  <div class="container">
 			  <div class="row">
 		<div class="col-md-12">
+			<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/GoalPlanning" class="btn btn-default pull-right page-header-btn js-comparison-event" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Go to Presentation&quot;}">Chart Options</a>
 			<h1 class="page-header page-header-plantool">
 				<span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span>
 				<span class="goals" style="color: #000;"><span class="page-header-plantool-text"><strong>Planning</strong></span></span>
@@ -405,13 +471,10 @@
 		  
 		  <!-- Planning Area -->
 		  
-		   <div class="row no-gutters" style="margin-bottom: 20px; border-bottom: 1px solid #eee;">
-			 <div class="col-md-6 no-gutters" style="padding-bottom: 10px;"><h2 style="margin: 0px; padding: 0px; line-height: 1; display: inline-block;">Plan Score</h2> <span class="ctrl-switch" style="margin-left: 15px; line-height: 1; vertical-align: bottom; display: none !important;" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0"><input id="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.0" type="checkbox" data-toggle="collapse" data-target="#planscore" checked="true"><label class="ctrl-switch-slider" for="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.1"></label></span></div>
-			   <div class="col-md-6 no-gutter text-right"><a href="#">Chart Options</a></div>
-		  </div>
 		  
 		  
-		  <div class="collapse in" id="planscore">
+		  <!-- Flip Card, Condensed 80/20 Split -->
+		  
 		  <div class="row no-gutters">
 		  
 			  <div class="col-md-12 no-gutters">
@@ -462,7 +525,9 @@
 		  </div>
 			  </div>
 		  </div>
-		  </div><!-- end collapse div -->
+		  
+		  <!-- End flip card 80/20 split top -->
+		  
 		  
 		    <!-- New row for the category headings -->
 		  
@@ -559,14 +624,14 @@
 				</div>
 			  <div class="col-md-4 text-center">
 				    <div class="atable">
-						<div class="cell one"><h3>55%</h3><ul class="progbar"><li><span class="progress"><span class="bar wow lowprob"></span></span></li></ul><p>Plan Score</p></div>
-						<div class="cell two"><h3>81%</h3><ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul><p>Years Funded</p></div>
+						<div class="cell one"><h3 style="margin-bottom: 5px;">81%</h3><p>18 of 22<br />Years Funded</p></div>
+						<div class="cell two"><h3 style="margin-bottom: 5px;">55%</h3><p>Plan<br />Score</p></div>
 				  </div>
 			  </div>
 			  <div class="col-md-5 text-center">
 				      <div class="atable">
-				   <div class="cell one"><h3>84%</h3><ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul><p>Plan Score</p></div>
-				  <div class="cell two"><h3>95%</h3><ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul><p>Years Funded</p></div>
+				  <div class="cell one"><h3 style="margin-bottom: 5px;">95%</h3><p>21 of 22<br />Years Funded</p></div>
+				  <div class="cell two"><h3 style="margin-bottom: 5px;">84%</h3><p>Plan<br />Score</p></div>
 				  </div>
 			  </div>
 			</div>
@@ -577,41 +642,22 @@
 				</div>
 			
 			
-			<div class="row endcells header no-gutters">
-				<div class="col-md-12">
+			<!-- Goal Funding Inline Alt -->
+			
+			<div class="row endcells no-gutters">
+			<div class="col-md-12">
 			<div class="row row-no-padding">
-				<div class="col-md-3"><h4>Retirement</h4></div>
-			  <div class="col-md-4 text-center">
-				  <p><strong>Client Facts</strong></p>
-			  </div>
-			  <div class="col-md-5 text-center">
-				  <p><strong>Proposed Changes</strong></p>
-			  </div>
-			</div>
+				<div class="col-md-3">
+				<strong>Goal Success</strong>
+				</div>
+				<div class="col-md-4 text-center">
+			    <ul class="progbar" style="max-width: none; width: auto;"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul><p style="margin: 0px; padding: 0px; font-size: 1em;"><span style="color: #666;">18 of 22 Years Funded</span><br /><a href="#">View More</a></p></div>
+				<div class="col-md-5 text-center">
+			  	<ul class="progbar" style="max-width: none; width: auto;"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul><p style="margin: 0px; padding: 0px; font-size: 1em;"><span style="color: #666;">21 of 22 Years Funded</span><br /><a href="#">View More</a></p></div>
 				</div>
 				
-				
-				<div class="col-md-12">
-			<div class="row row-no-padding goaline">
-				<div class="col-md-3"><p class="hideonscroll"><strong>Goal Success</strong></p>
-				
-					<a href="#" class="btn btn-block btn-default js-comparison-event showonscroll">Recalculate</a>
-					
-				</div>
-			  <div class="col-md-4 text-center">
-				  <ul class="progbar"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
-				  <p style="color: #707070;">18 of 22 Years Funded</p>
-				  <p><a href="#" class="hideonscroll">View More</a></p>
-			  </div>
-			  <div class="col-md-5 text-center">
-						<ul class="progbar"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
-				  <p style="color: #707070;">21 of 22 Years Funded</p>
-				  <p><a href="#" class="hideonscroll">View More</a></p>
-			  </div>
-			</div>
-				</div>
-				
-			</div>
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
 			
 			
 			<div class="row endcells no-gutters">
