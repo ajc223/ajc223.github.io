@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 no-js"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9 no-js"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 no-js"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<title>Goal Funding - Header Condensed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=586c3fcda4" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/Content-less-TransientNotifications.css?v=e9487b63ce" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/content-css-layout.css?v=1c7a43b183" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayoutBase.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayout.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Freeze.css?v=a0ca0f2546" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-ClientGoalPlanner.css?v=abe7dfad0c" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Controls.css?v=81b4083505" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Firefly.css?v=33321bd7ac" type="text/css" rel="stylesheet"/>
+<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/global-error-logger.js?v=3bea79b822" type="text/javascript"></script>
+<script src="https://wealth.emaplan.com/ema/wwwroot/scripts/bootstrap-ema.event-logger.js?v=9855d47a93" type="text/javascript"></script>
+	<!-- font awesome 5 -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<!-- sticky kit -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+	$(".sticky").stick_in_parent();
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
+	<!-- Layout Specific CSS -->
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		.progbar li:after {
+			  height: 1px;
+			  margin: 0 auto;
+			  text-align: center;
+              display: block;
+              width: 25%;
+              background: #ddd;
+              content: '';
+		      margin-top: 10px;
+			  margin-bottom: 10px;
+		}
+		
+		.progbar li:last-child:after {
+			content: "";
+			height: 0px;
+			display: none;
+			margin: 0px;
+		}
+		
+		.progbar .progress {
+			margin-bottom: 5px;
+		}
+		
+		.progbump {
+			margin-top: 35px;
+		}
+		
+		.stickybar .progbump li {
+			display: block;
+			margin-bottom: 40px;
+		}
+		.hidescroll {
+			display:  none;
+		}
+		.showonscroll {
+			display: none !important;
+		}
+		.stickybar.is_stuck .showonscroll {
+			display: inline-block !important;
+		}
+		.is_stuck .showonscroll {
+			display: block !important;
+		}
+		.row.nobottom {
+			border-bottom: 0px !important;
+		}
+	
+			.placeholderow {
+		/* min-height: 1px; */
+		/* background-color: #fff; */
+		height: 0px;
+		overflow: hidden;
+		transition-timing-function: ease-out;
+		-webkit-transition-timing-function: ease-out;
+		-moz-transition-timing-function: ease-out;
+        transition: 2s;
+	    -webkit-transition: 2s;
+		-moz-transition: 2s;
+		-webkit-transform: translateY(-110%);
+		}
+		
+		.row.is_stuck {
+			/* background-color: #fff; */
+			z-index: 15;
+			border: 0px !important;
+			height: inherit;
+			overflow: visible;
+			transition-timing-function: ease-in-out;
+			-webkit-transition-timing-function: ease-in-out;
+			-moz-transition-timing-function: ease-in-out;
+            transition: 1.5s;
+			-webkit-transition: 1.5s;
+			-moz-transition: 1.5s;
+			height: auto;
+			-webkit-transform: translateY(0);
+		}
+		
+		
+		.circlegraphs .ldBar {
+			/* width: 80% !important; */
+			width: auto !important;
+			max-width: 240px;
+			height: auto;
+		}
+			.ldBar.label-center > .ldBar-label {
+			top: 42%;
+			transform: translate(-42%,-42%);
+			-webkit-transform(-42%,-42%);
+		}
+			.ldBar span.sub {
+			z-index: 2;
+			top: 51%;
+			position: absolute;
+			left: 0px;
+			text-align: center;
+		}
+		
+		.planningbox > .row.is_stuck > div[class^="col-"] {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		
+		.planningbox > .row.is_stuck > div[class^="col-"] > .row > div[class^="col-"]:nth-of-type(2) {
+		background-color: #fff;
+		border: 0px;
+	}
+		
+		.planningbox > .row.header > div[class^="col-"] > .row > div[class^="col-"] {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		
+		.row.is_stuck div[class^="col-"] > .row-no-padding:last-of-type > div[class^="col-"], .row.is_stuck div[class^="col-"] > .row-no-padding:first-of-type > div[class^="col-"] {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		ul.list-unstyled li {
+			margin-bottom: 5px !important;
+		}
+		ul.list-unstyled li:last-child {
+			margin: 0px !important;
+		}
+		p.text-muted {
+			line-height: 1.3 !important;
+		}
+		.row.is_stuck .hideonscroll {
+			display: none;
+		}
+		
+		/* this is reverse because of the toggle. just leave it for now */
+		.collapse.show {
+		display: none !important;
+		}
+		
+		.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+		
+		
+		.hidebar {
+			display: none;
+		}
+	
+		.placeholderow.is_stuck .hidebar {
+					display: block;
+			border-bottom: 1px solid #e2e2e2 !important;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			background-color: #fff;
+		}
+		
+		.row.is_stuck > .row > div[class^="col-"] > .row.goaline {
+			padding-bottom: 15px;
+		}
+		
+		.row.is_stuck > .row > div[class^="col-"] > .row.goaline p {
+			display: block;
+		}
+		
+		.goaline .ldBar {
+			width: 50%;
+			max-width: 80px;
+		}
+		
+		.goaline .ldBar .ldBar-label {
+			font-size: 1.6rem;
+			line-height: 1;
+		}
+		
+		.goaline h2, .goaline h3, .goaline h4, .goaline h5 {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			line-height: 1;
+			vertical-align: middle;
+		}
+		
+		
+		.goaline ul {
+			margin-bottom: 10px;
+		}
+		
+		.goaline p {
+			font-size: 1.3rem;
+			line-height: 1.3 !important;
+			color: #666;
+		}
+		/*
+		.goaline h4, .goaline h5 {
+			color: #666;
+		}
+		*/
+		.goaline h3 small, .goaline h4 small, .goaline h5 small {
+			line-height: 1;
+			vertical-align: middle;
+			display: inline;
+		}
+		.row.is_stuck > .row > div[class^="col-"] > .row.goaline h3, .row.is_stuck > .row > div[class^="col-"] > .row.goaline h4 {
+			display: block;
+		}
+		.btn.push-bottom {
+			position: absolute;
+			bottom: 0px;
+		}
+		.goaline .legend-color-circle {
+			margin: 0px;
+			display: inline-block;
+			vertical-align: text-top;
+			margin-right: 5px;
+			margin-left: 5px;
+			line-height: 1;
+			width: 15px;
+			height: 15px;
+		}
+		
+		.atable {
+			display: table;
+			width: 90%;
+			max-width: 200px;
+			table-layout: fixed;
+			margin: 0px;
+			padding: 0px;
+			outline: none;
+			margin: 0 auto;
+			vertical-align: middle;
+		}
+		
+		.atable .cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.atable .cell.one {
+			width: 50%;
+			padding-right: 2%;
+			padding-left: 2%;
+			border-right: 1px solid #e2e2e2;
+		}
+		.atable .cell.two {
+			width: 50%;
+			padding-left: 2%;
+			padding-right: 2%;
+		}
+		.atable .cell.three {
+			width: 40%;
+			text-align: left;
+			padding-left: 2%;
+		}
+		.ldBar.no-label .ldBar-label {
+           display: none;
+}
+		.atable .ldBar {
+			width: 100px !important;
+			max-width: 100%;
+			height: auto;
+		}
+		.atable .ldBar .ldBar-label {
+			font-size: 1.4em;
+		}
+		
+		.condensed .atable .ldBar .ldBar-label, .condensed .ldBar .ldBar-label {
+			font-size: 2em;
+		}
+		
+		.condensed .ldBar, .condensed .circlegraphs .ldBar {
+			width: 65% !important;
+			max-width: 100% !important;
+		}
+		
+		.condensed .ldBar span.sub {
+			font-size: 1em;
+		}
+		
+		.atable .ldBar.label-center > .ldBar-label {
+			top: 45%;
+			transform: translate(-45%,-45%);
+			-webkit-transform: translate(-45%,-45%);
+		}
+		.goaline .atable p {
+			display: block;
+			margin-bottom: 0px;
+			line-height: 1;
+		}
+		.goaline .atable h3, .goaline .atable h2 {
+			margin-bottom: 12px;
+			line-height: 1;
+		}
+		.row.headrow h3 {
+			margin: 0px;
+		}
+		.row.headrow {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		h3 .inlineicon {
+			max-width: 32px;
+			height: auto;
+			vertical-align: middle;
+			line-height: 1;
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			right: 15px;
+			top: 15%;
+		}
+		.pscardbox {
+			/*
+			-webkit-border-radius: 3px;
+			-moz-boder-radius: 3px;
+			border-radius: 3px;
+			-webkit-box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+-moz-box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+box-shadow: 0px 4px 6px 0px rgba(51,51,51,0.22);
+			*/
+			margin-bottom: 50px;
+			/* border: 1px solid #e2e2e2; */
+			overflow: hidden;
+		}
+		
+		.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+			display:         flex;
+		}
+		
+		@media only screen and (max-width : 1540px) {
+			.condensed .ldBar, .condensed .circlegraphs .ldBar {
+				width: 80% !important;
+			}
+			
+			.condensed .atable .ldBar .ldBar-label, .condensed .ldBar .ldBar-label {
+			 font-size: 1.6em;
+			}
+			
+			.condensed .ldBar span.sub {
+				font-size: .9em;
+			}
+		}
+	</style>
+</head>
+<body class="DefaultBody">
+<div class="with-stickyfooter js-page">
+  <div class="navbar navbar-static-top navbar-default hidden-present menubar" role="navigation">
+    <div class="container js-usernav">
+      <button type="button" class="navbar-toggle js-popover js-popover-menu visible-xs visible-sm">MENU</button>
+      <a class="navbar-brand" href="/ema/Redirect/Home"> <img src="https://wealth.emaplan.com/ema/partner/default/Files/Images/Header/AdvisorNavBarLogo.png?v=103291510" /> </a>
+      <ul class="nav navbar-nav hidden-xs hidden-sm">
+        <li> <a href="/ema/Redirect/Home" data-id="Home"> Home </a> </li>
+        <li> <a href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> </li>
+        <li> <a href="/ema/Connections" data-id="Connections"> Connections </a> </li>
+        <li> <a href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="Applications">Applications <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="https://wealth.emaplan.com/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> </li>
+            <li class="divider"></li>
+            <li> <a href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="More">More <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> </li>
+            <li> <a href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> </li>
+            <li> <a href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> </li>
+            <li> <a href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-alerts"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Alerts" data-placement="bottom"> <span class="badge badge-alerts js-alerts-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-lg fa-bell"></i> </span> </a> </li>
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-tasks"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Tasks" data-placement="bottom"> <span class="badge badge-tasks js-tasks-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-warning badge-tasks-warning js-tasks-warning" style="display: none"></i> <i class="fa fa-lg fa-check-square"></i> </span> </a> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+        <li> <a href="/ema/Settings" data-id="Settings"> Settings </a> </li>
+        <li> <a href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> </li>
+        <li> <a href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="js-menu-title" class="popover-content-title text-center hide">
+    <button data-back class="btn btn-primary btn-sm pull-left hide" style="margin-right: -100%;"> <i class="fa fa-caret-left"></i> Back </button>
+    <strong data-title></strong> </div>
+  <div id="js-menu" class="hide">
+    <div class="popover-content-md">
+      <div class="js-menu-main list-group"> <a class="list-group-item" href="/ema/Redirect/Home" data-id="Home"> Home </a> <a class="list-group-item" href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> <a class="list-group-item" href="/ema/Connections" data-id="Connections"> Connections </a> <a class="list-group-item" href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> <a data-menu="js-menu-Applications" class="list-group-item" href="javascript:void(0);" data-id="Applications">Applications <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a data-menu="js-menu-More" class="list-group-item" href="javascript:void(0);" data-id="More">More <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a class="list-group-item" href="/ema/Settings" data-id="Settings"> Settings </a> <a class="list-group-item" href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> <a class="list-group-item" href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </div>
+      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
+      <div class="js-menu-More list-group hide"> <a class="list-group-item" href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> <a class="list-group-item" href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> <a class="list-group-item" href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> <a class="list-group-item" href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </div>
+    </div>
+  </div>
+  <div class="navbar navbar-client js-clientnav" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand js-popover-contact"> <span class="h1"> <a href="javascript:void(0);" data-pega-id="client-name">Frank and Joanna Miller</a> <i class="fa fa-caret-down navbar-brand-dropdown"></i> </span> </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="OverviewNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Overview">Overview</a></li>
+        <li><a id="FactsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Facts">Facts</a></li>
+        <li><a id="PlansNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans">Plans</a></li>
+        <li><a id="ReportsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Reports">Reports</a></li>
+        <li><a id="VaultNavBarItem" href="/ema/Vault/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b">Vault</a></li>
+        <li class="navbar-client-crm"><a class="js-popover-crm js-popover" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Notes,&nbsp;Tasks,&nbsp;History"><i class="fa fa-user navbar-client-clienticon"></i></span><span class="hidden">Relationship</span></a></li>
+        <li class="navbar-client-website"><a class="js-popover-clientwebsite" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Client&nbsp;Website"><i class="fa fa-globe"></i></span><span class="hidden">Website</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div id="problem-bar" data-clientid="b5077a53-e6be-458a-97c9-c5045d48af0b" class="hide"></div>
+  </div>
+  <div class="container">
+    <div id="frozen-bar" class="hide"></div>
+  </div>
+  <div class="js-main">
+	  <!-- Content Container -->
+	  
+	  <!-- Page Header -->
+		  <div class="container">
+			  <div class="row">
+		<div class="col-md-12">
+			<a href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/GoalPlanning" class="btn btn-default pull-right page-header-btn js-comparison-event" data-eventname="Planning" data-feature="Goal Planner" data-properties="{&quot;Action&quot;:&quot;Go to Presentation&quot;}">Chart Options</a>
+			<h1 class="page-header page-header-plantool">
+				<span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span>
+				<span class="goals" style="color: #000;"><span class="page-header-plantool-text"><strong>Planning</strong></span></span>
+			</h1>
+		</div>
+		  </div>
+	  </div>
+	
+	  
+	  <!-- Body Content -->
+	  
+	  <div class="container">
+		  
+		  
+		  <!-- Planning Area -->
+		  
+		  
+		  
+		  <!-- Flip Card, Condensed 80/20 Split -->
+		  <div class="pscardbox" id="planscore">
+		  <div class="row no-gutters row-eq-height">
+			  		  <div class="col-md-3" style="border-right: 1px solid #e2e2e2; padding-bottom: 10px;">
+			  <div class="row headrow" style="margin-bottom: 15px;">
+				  <div class="col-md-12">
+			  <h3>Goal Success <img src="sunlight.svg" class="inlineicon" /></h3>
+					  </div>
+			  </div>
+			  
+			  <p style="margin: 0px; padding: 0px; margin-bottom: 5px; font-size: 1em;"><strong>Current Situation</strong><br /><span style="color: #666;">18 of 22 Years Funded</span></p>
+			    <ul class="progbar" style="max-width: none; width: auto;"><li><span class="progress"><span class="bar wow mediumprob"></span></span></li></ul>
+			  
+			  <hr />
+			  
+			  <p style="margin: 0px; padding: 0px; margin-bottom: 5px; font-size: 1em;"><strong>Proposed Changes</strong><br /><span style="color: #666;">21 of 22 Years Funded</span></p>
+			  	<ul class="progbar" style="max-width: none; width: auto;"><li><span class="progress"><span class="bar wow highprob"></span></span></li></ul>
+			  
+			  
+			  </div>
+		  <div class="col-md-9 condensed" style="margin: 0px;">
+			  <div class="row headrow row-eq-height" style="margin-bottom: 15px; padding-right: 15px; padding-left: 15px;">
+				  <div class="col-md-6">
+			  <h3>Available Goal Funding</h3>
+				  </div>
+				  <div class="col-md-6 text-right">
+			  <a href="#" style="display: inline-block;">Expand <i class="fas fa-expand-arrows-alt"></i></a>
+				  </div>
+			  </div>
+			  
+			   <div class="row no-gutters">
+				   <div class="col-md-12">
+			 <div id="containerbig" style="min-width: 100%; height: 220px; margin: 0 auto"></div>
+				   </div>
+			  </div>
+			  
+			  
+			  </div>
+		  </div>
+		  </div>
+		  <!-- End flip card 80/20 split top -->
+		  
+		  
+		    <!-- New row for the category headings -->
+		  
+		  
+		   <div class="row no-gutters" style="border-bottom: 2px solid #eee">
+		  
+			  <div class="col-md-12 no-gutters">
+				  <div class="row">
+		  <div class="col-md-3">&nbsp;</div>
+		  <div class="col-md-9 circlegraphs">
+			  <div class="row no-gutters">
+			  <div class="col-md-3">&nbsp;</div>
+			  <div class="col-md-4 text-center"><h3>Current Situation</h3></div>
+			  <div class="col-md-5 text-center"><h3><a href="#">Proposed Plan <i class="fas fa-sort-down"></i></a></h3></div>
+			  </div>
+			  </div>
+			  
+			  
+		  </div>
+			  </div>
+		  </div>
+		  
+		  
+		  
+		  <!-- Next Row -->
+		  <div class="row">
+		
+		  <div class="col-md-3 sticky" style="padding-top: 5px;">
+			<div id="panel-left" class="hidden-print"><div class="list-group reviewlist">
+		<a href="javascript:void(0);" class="list-group-item active" data-type="FamilyAndFriends">
+			<div class="media menu-text">
+					Retirement
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="FinancialPriorities">
+			<div class="media menu-text">
+					Education
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="Goals">
+			<div class="media menu-text">
+					Spending
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="NetWorth">
+			<div class="media menu-text">
+					Net Worth
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="Income">
+			<div class="media menu-text">
+					Life Insurance
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="Expenses">
+			<div class="media menu-text">
+					Asset Allocation
+			</div>
+		</a>
+		<a href="javascript:void(0);" class="list-group-item" data-type="Observations">
+			<div class="media menu-text">
+					Technique
+			</div>
+		</a>
+</div>
+</div>
+		  </div>
+		
+		  <!-- End First Col -->
+		<div class="col-md-9 planningbox">
+			
+			
+			<!-- Show Plan Overview -->
+			<div class="row placeholderow no-gutters nobottom sticky">
+			
+				<div class="row endcells no-gutters header hidebar">
+				<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3" style="vertical-align: baseline;">&nbsp;</div>
+			  <div class="col-md-4 text-center">
+				  <h4>Client Facts</h4>
+			  </div>
+			  <div class="col-md-5 text-center">
+				  <h4>Proposed Changes</h4>
+			  </div>
+			</div>
+				</div>
+				
+				
+				<div class="col-md-12">
+			<div class="row row-no-padding goaline">
+				<div class="col-md-3">
+					<a href="#" class="btn btn-default js-comparison-event push-bottom">Recalculate <i class="fas fa-sync-alt"></i></a>
+				</div>
+			  <div class="col-md-4 text-center">
+				    <div class="atable">
+						<div class="cell one"><h3 style="margin-bottom: 5px;">81%</h3><p>18 of 22<br />Years Funded</p></div>
+						<div class="cell two"><h3 style="margin-bottom: 5px;">55%</h3><p>Plan<br />Score</p></div>
+				  </div>
+			  </div>
+			  <div class="col-md-5 text-center">
+				      <div class="atable">
+				   <div class="cell one"><h3 style="margin-bottom: 5px;">95%</h3><p>21 of 22<br />Years Funded</p></div>
+				   <div class="cell two"><h3 style="margin-bottom: 5px;">84%</h3><p>Plan<br />Score</p></div>
+				  </div>
+			  </div>
+			</div>
+				</div>
+					
+				
+			</div>
+				</div>
+			
+			
+			<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Retirement Ages</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John
+				</div>
+				<div class="col-md-4 text-center">65</div>
+				<div class="col-md-5">	<div class="input-group">
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+								   <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-minus"></span>
+              </button>
+          </span>
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-plus"></span>
+              </button>
+          </span>
+      </div></div>
+			</div>
+				
+				<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy
+				</div>
+				<div class="col-md-4 text-center">64</div>
+				<div class="col-md-5">	<div class="input-group">
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+								   <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-minus"></span>
+              </button>
+          </span>
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-plus"></span>
+              </button>
+          </span>
+      </div></div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+			<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Annual Expenses During Retirement</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				Annual Living Expenses
+				</div>
+				<div class="col-md-4 text-center">$80,000</div>
+				<div class="col-md-5">	<div class="input-group">
+          <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+								   <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-minus"></span>
+              </button>
+          </span>
+          <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                  <span class="glyphicon fas fa-plus"></span>
+              </button>
+          </span>
+      </div></div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+			<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Social Security Benefit</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">
+				<a href="#">Estimated from Income<br />$47,600</a>
+				</div>
+			</div>
+				
+							<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">	
+				<a href="#">Estimated from Income<br />$47,600</a>	
+				</div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+				<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Social Security Benefit</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">
+				<a href="#">Estimated from Income<br />$47,600</a>
+				</div>
+			</div>
+				
+							<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">	
+				<a href="#">Estimated from Income<br />$47,600</a>	
+				</div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+				<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Social Security Benefit</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">
+				<a href="#">Estimated from Income<br />$47,600</a>
+				</div>
+			</div>
+				
+							<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">	
+				<a href="#">Estimated from Income<br />$47,600</a>	
+				</div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+				<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Social Security Benefit</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">
+				<a href="#">Estimated from Income<br />$47,600</a>
+				</div>
+			</div>
+				
+							<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">	
+				<a href="#">Estimated from Income<br />$47,600</a>	
+				</div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+				<div class="row endcells no-gutters">
+			<div class="col-md-12">
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				<strong>Social Security Benefit</strong>
+				</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-5">&nbsp;</div>
+			</div>
+			
+			<div class="row row-no-padding">
+				<div class="col-md-3">
+				John's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">
+				<a href="#">Estimated from Income<br />$47,600</a>
+				</div>
+			</div>
+				
+							<div class="row row-no-padding">
+				<div class="col-md-3">
+				Amy's Annual Amount
+				</div>
+				<div class="col-md-4 text-center"><a href="#">Estimated from Income<br />$47,600</a></div>
+				<div class="col-md-5 text-center">	
+				<a href="#">Estimated from Income<br />$47,600</a>	
+				</div>
+			</div>
+				
+				</div><!-- end inner container -->
+				</div><!-- end cell row -->	
+			
+				<div class="row links no-gutters">
+				<div class="col-md-3"></div>
+				<div class="col-md-4"></div>
+			<div class="col-md-5 text-right nopadright">
+				<a href="#" class="btn btn-block btn-primary js-comparison-event">Recalculate Plan</a>
+				<a href="#" class="btn btn-block btn-default js-comparison-event">Return to Plan Overview</a>
+				</div>
+			</div>
+			
+			
+			</div><!-- end base col container -->
+			
+		  </div><!-- end row -->
+			  
+	  </div><!-- End container -->
+	  
+	  
+</div><!-- end js main -->
+</div><!-- with sticky footer -->
+	  
+<div class="page-footer hidden-present hidden-print">
+  <div class="container">
+    <div id="PrintedFactFinderModal" class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"> Printed Fact Forms </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li><a href="/ema/partner/default/Files/Content/QuickFactFinder.pdf?v=103291510" target="_blank">Printed Preliminary Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.pdf?v=103291510" target="_blank">Printed Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.doc?v=103291510" target="_blank">Printed Fact Form</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <address>
+        <a href="http://www.emoneyadvisor.com" target="_blank"><strong>eMoney Advisor, LLC</strong></a><br />
+        Four Radnor Corporate Center,<br />
+        Suite 300<br />
+        100 Matsonford Road<br />
+        Radnor, PA 19087<br />
+        <ul class="list-inline">
+          <li><a href="https://www.facebook.com/eMoneyAdvisor" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="http://twitter.com/eMoneyAdvisor" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="http://www.linkedin.com/company/emoney-advisor" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="http://www.youtube.com/user/emoneyadvisor" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+        </ul>
+        </address>
+      </div>
+      <div class="col-sm-3">
+        <h4>Resources</h4>
+        <ul class="list-unstyled">
+          <li><a href="javascript:void(0);" class="js-printedfactfinders">Printed Fact Forms</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Services</h4>
+        <ul class="list-unstyled">
+          <li><a href="http://www.emoneyadvisor.com/Products/Advisor-Branded-Media" target="eMarketing">Advisor Branded Marketing</a></li>
+          <li><a href="http://blog.emoneyadvisor.com/" target="emoneyblog">eMoney Blog</a></li>
+          <li><a href="http://www.emoneyadvisor.com/files/data-entry.pdf" target="eDataEntry">Data Entry Services</a></li>
+          <li><a href="/ema/Advisor/Mimeo">Print on Demand</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Support</h4>
+        <ul class="list-unstyled">
+          <li><a href="tel:(888) 362-8482"><strong>(888) 362-8482</strong></a></li>
+          <li><a href="javascript:void(0);" class="js-contactus">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-muted"> <small>&copy; 2018 eMoney Advisor, LLC.</small>&nbsp;&nbsp;|&nbsp;&nbsp;<small class="footer-version text-muted">Software Version: 10.3.291.510</small> </div>
+    <div class="text-center">
+      <ul class="list-inline">
+        <li> <a href="/ema/Legal/Terms"><small>Terms of Service</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Security"><small>Security</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Privacy"><small>Privacy Policy</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Disclaimer"><small>Disclaimer</small></a> </li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <p style="margin:0">www.emoneyadvisor.com</p>
+    </div>
+  </div>
+</div>
+	<!-- High Charts -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script type="text/javascript">
+		Highcharts.setOptions({
+    lang: {
+        numericSymbols: ['k', 'mm'],
+		thousandsSep: ','
+    }
+});
+		Highcharts.chart('containerbig', {
+    chart: {
+        type: 'column'
+    },
+
+		 credits: {
+        enabled: false
+    },
+    title: {
+        text: '',
+		enabled: false,
+    },
+
+    yAxis: {
+        allowDecimals: false,
+        min: 0,
+        title: {
+            text: 'Dollars'
+        }
+    },
+
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            pointPadding: .1,
+            groupPadding: 0,
+            borderWidth: 0,
+        },
+		series: {
+		pointStart: 2018,
+		gapSize: 1,
+	}
+    },
+			
+	exporting: { enabled: false },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+		width: 200,
+		padding: 0,
+		 itemMarginTop: 5,
+        itemMarginBottom: 5,
+        itemStyle: {
+            lineHeight: '14px'
+        }
+    },
+
+    series: [{
+        name: 'Current Assets',
+        data: [100000,125000,150000,175000,200000,225000,250000,275000,300000,325000,350000,375000,400000,425000,450000,475000,500000,525000,550000,530000,510000,490000,470000,450000,430000,410000,390000,370000,350000,330000,310000],
+    },
+		{
+        name: 'Proposed Assets',
+        data: [100000,135000,170000,205000,240000,275000,310000,345000,380000,415000,450000,485000,520000,555000,590000,625000,660000,695000,730000,710000,690000,670000,650000,630000,610000,590000,570000,550000,530000,510000,490000],
+    }]
+});
+	</script>
+</body>
+</html>
