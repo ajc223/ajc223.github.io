@@ -165,7 +165,6 @@
 	/* Progress Bars */
 
 .successbar {
-	list-style: none;
 	position: relative;
 	margin: 0px;
 	padding: 0px;
@@ -200,6 +199,30 @@
 .successbar .lowprob {
 	width: 69%;
 	background: #D43F3A;
+}
+	
+	.successbar .keybar {
+		position: absolute;
+		bottom: -20px;
+		font-size: .850em;
+		text-transform: uppercase;
+		color: #666;
+		display: block;
+		width: 100%;
+	}
+	
+	.successbar .keybar .sideright {
+		right: 0px;
+		position: absolute;
+	}
+	
+	.successbar .triangle {
+	position: absolute;
+	bottom: 5px;
+	z-index: 50;
+	right: 0px;
+	font-size: 1.5em;
+	left: 72.5%;
 }
 	
 	.container.cardgrid > .row > div[class^="col-"] > .row {
@@ -266,7 +289,37 @@
 	}
 	
 	.ownerbar {
+		padding-bottom: 30px;
 		margin-bottom: 30px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #ccc;
+	}
+	
+	.ownerbar p {
+		margin: 0px;
+		padding: 0px;
+		line-height: 1.2;
+	}
+	
+	.ownerbar p.extraspace {
+		margin-bottom: 8px;
+	}
+	
+	.ownerbar h2 {
+		margin: 0px;
+		paddin: 0px;
+		line-height: 1;
+	}
+	
+	.ownerbar img.userava {
+		width: 100px;
+		max-width: 100%;
+		height: auto;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		vertical-align: middle;
 	}
 </style>
 </head>
@@ -362,9 +415,11 @@
     <div class="container cardgrid"> 
 		
 		<div class="row ownerbar no-gutters">
-			<div class="col-md-4">Frank Miller</div>
-			<div class="col-md-4">Probability of Success</div>
-			<div class="col-md-4">Confidence Age</div>
+			<div class="col-md-1"><img class="userava" src="placeholder-headshot.jpg" alt="Profile image" /></div>
+			<div class="col-md-2"><h2>Frank Miller</h2><p>Owner</p></div>
+			<div class="col-md-3"><p class="extraspace"><strong>Probability of Success</strong> &ndash; 65%</p><div class="successbar"><span class="progress"><span class="bar highprob"></span></span></div></div>
+			<div class="col-md-3"><p class="extraspace"><strong>Confidence Age</strong> &ndash; 83</p><div class="successbar"><span class="triangle"><i class="fas fa-sort-down"></i></span><span class="progress"><span class="bar mediumprob"></span></span><span class="keybar">Today <span class="sideright">Age 100</span></span></div></div>
+			<div class="col-md-3">&nbsp;</div>
 		</div>
       
       <!-- Add Button Absolute Positioned? --> 
