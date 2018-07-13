@@ -405,9 +405,11 @@ animation-delay: .15s;
             window.addEventListener('beforeunload', function () {
                 html.classList.add('page-off', 'page-changing');
             });
-        })();
-		(function () {
-var el = document.querySelector(".cardstack");
+         })();
+    </script>
+	<script>
+	(function () {
+var el = document.querySelector("body");
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
@@ -418,7 +420,7 @@ function( event ) { alert( "Finished transition!" ); }, false );
 function navigateTo() {
   location.href=this.href;
 }
-			})();
+  })();
     </script>
 </head>
 <body class="DefaultBody">
