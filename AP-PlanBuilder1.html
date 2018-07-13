@@ -301,6 +301,17 @@
 		vertical-align: middle;
 	}
 </style>
+		<!-- We need something to watch the state of the pages -->
+	<script>
+        (function () {
+            // fade in body
+            var html = document.documentElement;
+            html.classList.add('page-on', 'page-changing');
+            window.addEventListener('beforeunload', function () {
+                html.classList.add('page-off', 'page-changing');
+            });
+        })();
+    </script>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -372,6 +383,20 @@
   <div class="container">
     <div id="frozen-bar" class="hide"></div>
   </div>
+		<!-- stash this before this container? or bump up higher. let's see -->
+	<script>
+        (function () {
+            var html = document.documentElement;
+            var timer;
+            var show = function () {
+                html.classList.remove('page-on', 'page-changing');
+                clearTimeout(timer);
+            };
+
+            timer = setTimeout(show, 250);
+//            window.addEventListener('DOMContentLoaded', show);
+        })();
+    </script>
   <div class="js-main"> 
     <!-- Content Container --> 
     

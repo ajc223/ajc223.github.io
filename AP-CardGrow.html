@@ -80,9 +80,19 @@
 	display: block;
 	color: #333;
 	padding: 15px;
+	/* 
 	-webkit-transition: all ease 500ms;
 	-moz-transition: all ease 500ms;
 	transition: all ease 500ms;
+	*/
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-animation: card .3s forwards;
+	animation: card .3s forwards;
+	transition: transform .2s, box-shadow .2s, filter .2s;
+	transition: transform .2s, box-shadow .2s, filter .2s, -webkit-transform .2s, -webkit-filter .2s;
+	background-visibility: hidden;
 	cursor: pointer;
 }
 	.cardstack a.card:hover {
@@ -94,6 +104,11 @@
 	-moz-box-shadow: 0px 2px 4px 0px rgba(102,174,233,1);
 	box-shadow: 0px 2px 4px 0px rgba(102,174,233,1);
 	backface-visibility: hidden;
+	}
+	
+	.cardstack a.card:target {
+	-webkit-animation-name: cardReversed;
+	animation-name: cardReversed
 	}
 
 .cardstack h3 {
@@ -300,7 +315,90 @@
 		border-radius: 50%;
 		vertical-align: middle;
 	}
+	
+	/* Fade Out Card Styles. Still need a trigger to add the class on click? */
+	
+	@-webkit-keyframes card {
+0% {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+to {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+}
+@keyframes card {
+0% {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+to {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+}
+@-webkit-keyframes cardReversed {
+0% {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+to {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+}
+@keyframes cardReversed {
+0% {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+to {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+}
+	
+.cardstack a.card:nth-child(1) {
+-webkit-animation-delay: .05s;
+animation-delay: .05s;
+}
+.cardstack a.card:nth-child(2) {
+-webkit-animation-delay: .2s;
+animation-delay: .2s;
+}
+.cardstack a.card:nth-child(3) {
+-webkit-animation-delay: .1s;
+animation-delay: .1s;
+}
+.cardstack a.card:nth-child(4) {
+-webkit-animation-delay: .25s;
+animation-delay: .25s;
+}
+.cardstack a.card:nth-child(5) {
+-webkit-animation-delay: .15s;
+animation-delay: .15s;
+}
 </style>
+	<!-- We need something to watch the state of the pages -->
+	<script>
+        (function () {
+            // fade in body
+            var html = document.documentElement;
+            html.classList.add('page-on', 'page-changing');
+            window.addEventListener('beforeunload', function () {
+                html.classList.add('page-off', 'page-changing');
+            });
+        })();
+    </script>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -372,6 +470,20 @@
   <div class="container">
     <div id="frozen-bar" class="hide"></div>
   </div>
+	<!-- stash this before this container? or bump up higher. let's see -->
+	<script>
+        (function () {
+            var html = document.documentElement;
+            var timer;
+            var show = function () {
+                html.classList.remove('page-on', 'page-changing');
+                clearTimeout(timer);
+            };
+
+            timer = setTimeout(show, 250);
+//            window.addEventListener('DOMContentLoaded', show);
+        })();
+    </script>
   <div class="js-main"> 
     <!-- Content Container --> 
     
