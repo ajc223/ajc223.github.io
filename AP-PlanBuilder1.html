@@ -312,7 +312,7 @@
     </script>
 	<script>
 	(function () {
-var el = document.querySelector(".cardstack a.card");
+var el = document.documentElement;
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
