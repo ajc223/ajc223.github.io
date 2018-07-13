@@ -316,8 +316,7 @@ var el = document.documentElement;
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
-
-el.addEventListener( 'webkitTransitionEnd', 
+el.addEventListener("webkitTransitionEnd", function() {el.onclick = navigateTo;}, false);
 
 function navigateTo() {
   location.href=this.href;
