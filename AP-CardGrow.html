@@ -413,7 +413,6 @@ var el = document.querySelectorAll("page-off .cardstack a.card");
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
-el.addEventListener("webkitTransitionEnd", function() {el.onclick = navigateTo;}, false);
 
 function navigateTo() {
   location.href=this.href;
