@@ -409,13 +409,11 @@ animation-delay: .15s;
     </script>
 	<script>
 	(function () {
-var el = document.documentElement;
+var el = document.querySelector(".cardstack"); 
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
-
 el.addEventListener( 'webkitTransitionEnd', 
-function( event ) { alert( "Finished transition!" ); }, false );
 
 function navigateTo() {
   location.href=this.href;
