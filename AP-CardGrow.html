@@ -387,6 +387,16 @@ animation-delay: .25s;
 -webkit-animation-delay: .15s;
 animation-delay: .15s;
 }
+	
+	body.page-off.page-changing:not(.to-hp) .cardstack a.card {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-animation-name: cardReversed;
+	animation-name: cardReversed
+}
+	
 </style>
 	<!-- We need something to watch the state of the pages -->
 	<script>
