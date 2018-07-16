@@ -402,13 +402,13 @@ animation-delay: .15s;
             var html = document.documentElement;
             html.classList.add('page-on', 'page-changing');
             window.addEventListener('beforeunload', function () {
-                html.classList.add('page-off', 'page-changing');
+            html.classList.add('page-off', 'page-changing');
             });
          })();
     </script>
 	<script>
 	(function () {
-var el = document.querySelector(".cardstack a.card");
+var el = document.querySelector("a.card");
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
