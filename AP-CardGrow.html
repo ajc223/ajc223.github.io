@@ -78,16 +78,16 @@
 	display: block;
 	color: #333;
 	padding: 15px;
-	/*
 	-webkit-transition: all ease 500ms;
 	-moz-transition: all ease 500ms;
 	transition: all ease 500ms;
-	*/
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
+	/*
 	-webkit-animation: card .3s forwards;
 	animation: card .3s forwards;
+	*/
 	transition: transform .2s, box-shadow .2s, filter .2s;
 	transition: transform .2s, box-shadow .2s, filter .2s, -webkit-transform .2s, -webkit-filter .2s;
 	background-visibility: hidden;
@@ -318,25 +318,25 @@
 	@-webkit-keyframes card {
 0% {
 opacity:0;
--webkit-transform:scale(1.05);
-transform:scale(1.05)
+-webkit-transform:scale(.8);
+transform:scale(.8)
 }
 to {
 opacity:1;
--webkit-transform:scale(2);
-transform:scale(2)
+-webkit-transform:scale(1);
+transform:scale(1)
 }
 }
 @keyframes card {
 0% {
 opacity:0;
--webkit-transform:scale(1.05);
-transform:scale(1.05)
+-webkit-transform:scale(.8);
+transform:scale(.8)
 }
 to {
 opacity:1;
--webkit-transform:scale(2);
-transform:scale(2)
+-webkit-transform:scale(1);
+transform:scale(1)
 }
 }
 @-webkit-keyframes cardReversed {
