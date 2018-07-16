@@ -408,7 +408,7 @@ animation-delay: .15s;
     </script>
 	<script>
 	(function () {
-var el = getElementsByClassName(".card");
+var el = document.getElementsByClassName(".card");
 el.addEventListener("animationstart", function() {}, false);
 el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
 el.addEventListener("animationiteration", function() {}, false);
