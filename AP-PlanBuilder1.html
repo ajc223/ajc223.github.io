@@ -298,6 +298,78 @@
 		border-radius: 50%;
 		vertical-align: middle;
 	}
+	
+	.js-main {
+		transform: 
+	}
+	
+	.page-on.page-changing .js-main {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-animation-name: pagefader;
+	animation-name: pagefader;
+	-webkit-animation-delay: .05s;
+    animation-delay: .05s;
+}
+	
+	.fader {
+	opacity: 1;
+	animation-name: pagefader;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+	-webkit-animation-delay: .05s;
+    animation-delay: .05s;
+	}
+	
+	@-webkit-keyframes pagefader {
+0% {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+to {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+}
+@keyframes pagefader {
+0% {
+opacity:0;
+-webkit-transform:scale(.8);
+transform:scale(.8)
+}
+to {
+opacity:1;
+-webkit-transform:scale(1);
+transform:scale(1)
+}
+}
+
+	
+.page-off.page-changing .anim-slide {
+	transition: .6s;
+	-webkit-transform: translate3d(0, 150%, 0);
+	transform: translate3d(0, 150%, 0)
+}
+.anim-fade, .anim-slide, .anim-slide-left, .anim-slide-right {
+	transition: .6s
+}
+.page-off .anim-fade {
+	opacity: 0
+}
+.page-off.page-changing .anim-slide-right {
+	-webkit-transform: translate3d(60px, 0, 0);
+	transform: translate3d(60px, 0, 0)
+}
+.page-off.page-changing .anim-slide-left {
+	-webkit-transform: translate3d(-60px, 0, 0);
+	transform: translate3d(-60px, 0, 0)
+}
+	
 </style>
 		<!-- We need something to watch the state of the pages -->
 		<script>
@@ -443,7 +515,9 @@ function navigateTo() {
       
       <!-- Card Stack -->
       
+		<div class="anim-fade">
 		Placeholder page
+		</div>
 		
     </div>
     <!-- End container --> 

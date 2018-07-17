@@ -394,6 +394,26 @@ animation-delay: .15s;
 	animation-name: cardReversed
 }
 	
+.page-off.page-changing .anim-slide {
+	transition: .6s;
+	-webkit-transform: translate3d(0, 150%, 0);
+	transform: translate3d(0, 150%, 0)
+}
+.anim-fade, .anim-slide, .anim-slide-left, .anim-slide-right {
+	transition: .6s
+}
+.page-off .anim-fade {
+	opacity: 0
+}
+.page-off.page-changing .anim-slide-right {
+	-webkit-transform: translate3d(60px, 0, 0);
+	transform: translate3d(60px, 0, 0)
+}
+.page-off.page-changing .anim-slide-left {
+	-webkit-transform: translate3d(-60px, 0, 0);
+	transform: translate3d(-60px, 0, 0)
+}
+	
 </style>
 	<!-- We need something to watch the state of the pages -->
 	<script>
