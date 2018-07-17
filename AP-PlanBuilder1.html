@@ -359,7 +359,7 @@ transform:scale(1)
 	transition: .6s
 }
 .page-off .anim-fade {
-	opacity: 0
+	opacity: 0;
 }
 .page-off.page-changing .anim-slide-right {
 	-webkit-transform: translate3d(60px, 0, 0);
@@ -378,22 +378,9 @@ transform:scale(1)
             var html = document.documentElement;
             html.classList.add('page-on', 'page-changing');
             window.addEventListener('beforeunload', function () {
-                html.classList.add('page-off', 'page-changing');
+            html.classList.add('page-off', 'page-changing');
             });
          })();
-    </script>
-	<script>
-	(function () {
-var el = document.querySelectorAll(".page-off");
-el.addEventListener("animationstart", function() {}, false);
-el.addEventListener("animationend", function() {el.onclick = navigateTo;}, false);
-el.addEventListener("animationiteration", function() {}, false);
-el.addEventListener("webkitTransitionEnd", function() {el.onclick = navigateTo;}, false);
-
-function navigateTo() {
-  location.href=this.href;
-}
-  })();
     </script>
 </head>
 <body class="DefaultBody">

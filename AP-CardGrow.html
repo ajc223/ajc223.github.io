@@ -394,7 +394,7 @@ animation-delay: .15s;
 	animation-name: cardReversed
 }
 	
-.page-off.page-changing .anim-slide {
+.page-off.-changing .anim-slide {
 	transition: .6s;
 	-webkit-transform: translate3d(0, 150%, 0);
 	transform: translate3d(0, 150%, 0)
@@ -426,24 +426,6 @@ animation-delay: .15s;
             });
          })();
     </script>	
-<script>
-var myButton = $('a.card');
-
-function navigateTo() {
-  location.href=this.href;
-}
-
-myButton.click(function () { 
-myButton.addClass('change-size');
-myButton.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
-function(e) {
-     myButton.onclick = navigateTo;
-    // code to execute after animation ends
-   // myBox.removeClass('change-size');
-});
-});
-</script>
-	
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
