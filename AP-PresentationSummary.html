@@ -78,7 +78,7 @@ a.card {
 	transition: all ease 500ms;
 	cursor: pointer;
 }
-a.card:hover {
+a.card:hover, a.current {
  translate3d(0, 0, 0);
 	-moz-transition: translateZ(0) scale(1.05);
 	-webkit-transition: translateZ(0) scale(1.05);
@@ -202,7 +202,8 @@ ul.tabmenu li small {
 }
 a.absoluteadd {
 	position: absolute;
-	top: 6px;
+	top: 50%;
+	right: 35%;
 	font-size: 4rem;
 	display: block;
 	text-align: center;
@@ -307,10 +308,15 @@ transform:scale(1)
 }
 	.row.cardbar {
 		position: relative;
+		margin-bottom: 30px;
 	}
 	
 	.row.cardbar a:hover {
 		text-decoration: none;
+	}
+	
+	.row.cardbar .row {
+		position: relative;
 	}
 </style>
 <!-- We need something to watch the state of the pages -->
@@ -435,13 +441,15 @@ transform:scale(1)
     <div class="container anim-fade">
       <div class="row cardbar">
 		  <div class="col-md-11">
+			  <div class="row">
 			  <div class="col-md-3">
-				  <a class="card" href="AP-PlanBuilder1.html"><h4 style="margin: 0px; padding: 0px; line-height: 1;">Advanced Plan - June 2018</h4>Active Plan</a>
+				  <a class="card current" href="AP-PlanBuilder1.html"><h4 style="margin: 0px; padding: 0px; line-height: 1;">Advanced Plan - June 2018</h4>Active Plan</a>
 			  </div>
 			  <div class="col-md-3"><a class="card" href="AP-PlanBuilder1.html"><h4 style="margin: 0px; padding: 0px; line-height: 1;">Scenario A</h4>Scenario</a></div>
 			  <div class="col-md-3"><a class="card" href="AP-PlanBuilder1.html"><h4 style="margin: 0px; padding: 0px; line-height: 1;">Scenario B</h4>Scenario</a></div>
 			  <div class="col-md-3"><a class="card" href="AP-PlanBuilder1.html"><h4 style="margin: 0px; padding: 0px; line-height: 1;">Scenario C</h4>Scenario</a></div>
 			  </div>
+		  </div>
 			  <div class="col-md-1">
 			  <a class="absoluteadd" href="#"><i class="fas fa-plus-circle"></i></a>
 			  </div>
