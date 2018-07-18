@@ -324,30 +324,30 @@ transform:scale(1)
 	}
 	
 	.collapsecol {
-		-webkit-transition: all ease 500ms;
-		-moz-transition: all ease 500ms;
-		transition: all ease 500ms;
-		visibility: visible;
+		-webkit-transition: all ease-in-out 350ms;
+		-moz-transition: all ease-in-out 350ms;
+		transition: all ease-in-out 350ms;
 		opacity: 1;
-		transform: scaleX(1);
+		visibility: visible;
+		/* transform: scaleX(1); */
 	}
 	
 	.collapsecol.collapsecolwidth {
-		visbility: hidden;
+		transform: translateX(-100%);
+		overflow: hidden;
+		position: absolute;
 		opacity: 0;
-		transform: scaleX(0);
+		visbility: hidden;
+		background-color: #fff;
+		/* transform: scaleX(0); */
 	}
 	
 	.colgrow.expanded {
-		width: 96%;
-		-webkit-transition: all ease 500ms;
-		-moz-transition: all ease 500ms;
-		transition: all ease 500ms;
-		z-index: 20;
-		background-color: #fff;
-		position: relative;
-		top: 0px;
-		left: 0px;
+		width: 99%;
+		-webkit-transition: all ease-in-out 400ms;
+		-moz-transition: all ease-in-out 400ms;
+		transition: all ease-in-out 400ms;
+		float: right;
 	}
 	
 	span.gocollapse {
@@ -378,6 +378,7 @@ transform:scale(1)
 	$("#nochrome").click(function(){
     $(".collapsecol").toggleClass("collapsecolwidth");
 	$(".colgrow").toggleClass("expanded");
+	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
 	});
 	</script>
