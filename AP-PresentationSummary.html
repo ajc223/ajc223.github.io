@@ -319,14 +319,41 @@ transform:scale(1)
 		position: relative;
 	}
 	
+	.chromebar {
+		border-left: 1px solid #e2e2e2;
+	}
+	
 	.collapsecol {
-		border-right: 1px solid #e2e2e2;
+		-webkit-transition: all ease 500ms;
+		-moz-transition: all ease 500ms;
+		transition: all ease 500ms;
+		visibility: visible;
+		opacity: 1;
+		transform: scaleX(1);
+	}
+	
+	.collapsecol.collapsecolwidth {
+		visbility: hidden;
+		opacity: 0;
+		transform: scaleX(0);
+	}
+	
+	.colgrow.expanded {
+		width: 96%;
+		-webkit-transition: all ease 500ms;
+		-moz-transition: all ease 500ms;
+		transition: all ease 500ms;
+		z-index: 20;
+		background-color: #fff;
+		position: relative;
+		top: 0px;
+		left: 0px;
 	}
 	
 	span.gocollapse {
 		position: absolute;
 		top: 50%;
-		right: -10px;
+		left: -10px;
 		z-index: 5;
 		font-size: 1.4em;
 		color: #999;
@@ -335,7 +362,7 @@ transform:scale(1)
 	}
 </style>
 <!-- We need something to watch the state of the pages -->
-<script>
+<script type="text/javascript">
         (function () {
             // fade in body
             var html = document.documentElement;
@@ -345,6 +372,15 @@ transform:scale(1)
             });
          })();
     </script>
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+	$("#nochrome").click(function(){
+    $(".collapsecol").toggleClass("collapsecolwidth");
+	$(".colgrow").toggleClass("expanded");
+});
+	});
+	</script>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -471,7 +507,6 @@ transform:scale(1)
       </div>
       <div class="row">
         <div class="col-md-4 collapsecol">
-			<span class="gocollapse"><i class="fas fa-chevron-circle-left"></i></span>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
               <div class="h3"> <small>Selected Plan</small><br>
@@ -543,7 +578,8 @@ transform:scale(1)
             </div>
           </div>
         </div>
-        <div class="col-md-8 col-with-separator">
+        <div class="col-md-8 col-with-separator chromebar colgrow">
+			<span class="gocollapse" id="nochrome"><i class="fas fa-chevron-circle-left"></i></span>
           <div id="panel-right-wrapper">
             <div id="panel-right">
               <div class="comparison-header table-header">
