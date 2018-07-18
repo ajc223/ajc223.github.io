@@ -318,6 +318,21 @@ transform:scale(1)
 	.row.cardbar .row {
 		position: relative;
 	}
+	
+	.collapsecol {
+		border-right: 1px solid #e2e2e2;
+	}
+	
+	span.gocollapse {
+		position: absolute;
+		top: 50%;
+		right: -10px;
+		z-index: 5;
+		font-size: 1.4em;
+		color: #999;
+		background-color: #fff;
+		cursor: pointer;
+	}
 </style>
 <!-- We need something to watch the state of the pages -->
 <script>
@@ -455,7 +470,8 @@ transform:scale(1)
 			  </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 collapsecol">
+			<span class="gocollapse"><i class="fas fa-chevron-circle-left"></i></span>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
               <div class="h3"> <small>Selected Plan</small><br>
