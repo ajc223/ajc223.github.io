@@ -324,9 +324,9 @@ transform:scale(1)
 	}
 	
 	.collapsecol {
-		-webkit-transition: all ease-in-out 600ms;
-		-moz-transition: all ease-in-out 600ms;
-		transition: all ease-in-out 600ms;
+		-webkit-transition: all linear 600ms;
+		-moz-transition: all linear 600ms;
+		transition: all linear 600ms;
 		opacity: 1;
 		visibility: visible;
 		/* transform: scaleX(1); */
@@ -336,6 +336,7 @@ transform:scale(1)
 		transform: translateX(-100%);
 		overflow: hidden;
 		position: absolute;
+		left: 0px;
 		opacity: 0;
 		visbility: hidden;
 		background-color: #fff;
@@ -347,7 +348,8 @@ transform:scale(1)
 		-webkit-transition: all ease-in-out 650ms;
 		-moz-transition: all ease-in-out 650ms;
 		transition: all ease-in-out 650ms;
-		float: left;
+		background-color: #fff;
+		float: right;
 	}
 	
 	span.gocollapse {
