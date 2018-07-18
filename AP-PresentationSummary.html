@@ -329,7 +329,13 @@ transform:scale(1)
 		transition: all linear 600ms;
 		opacity: 1;
 		visibility: visible;
-		/* transform: scaleX(1); */
+	}
+	
+	.row.pers {
+		-webkit-perspective: 1000;
+		perspective: 1000;
+		-webkit-perspective-origin: left;
+		perspective-origin: left;
 	}
 	
 	.collapsecol.collapsecolwidth {
@@ -341,7 +347,6 @@ transform:scale(1)
 		visbility: hidden;
 		z-index: -5;
 		background-color: #fff;
-		/* transform: scaleX(0); */
 	}
 	
 	.colgrow.expanded {
@@ -509,7 +514,7 @@ transform:scale(1)
 			  <a class="absoluteadd" href="#"><i class="fas fa-plus-circle"></i></a>
 			  </div>
       </div>
-      <div class="row">
+      <div class="row pers">
         <div class="col-md-4 collapsecol">
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
