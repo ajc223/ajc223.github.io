@@ -393,6 +393,15 @@ transform:scale(1)
 		font-size: 1.3em;
 	    font-family: 'Open Sans', sans-serif;
 	    font-weight: 400;
+		padding-right: 10%;
+		padding-left: 10%;
+		position: relative;
+		margin-bottom: 30px;
+		-webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
 	}
 	
 	.statsbar {
@@ -403,10 +412,11 @@ transform:scale(1)
   -ms-transition: all 800ms ease;  
   transition: all 800ms ease;
   /* font-family: 'Open Sans', sans-serif; */
+		margin-bottom: 60px;
 	}
 	
 	.statsbar div {
-		 -webkit-transition: all 1s ease;  
+   -webkit-transition: all 1s ease;  
   -moz-transition: all 1s ease;  
   -o-transition: all 1s ease;  
   -ms-transition: all 1s ease;  
@@ -424,9 +434,9 @@ transform:scale(1)
 	/* Lets try moving everything with a reshuffle */
 	
 	.reshuffle-active .statsbar {
-		 -webkit-transform: translateY(-150px);
-		 -moz-transform: translateY(-150px);
-		 transform: translateY(-150px);
+		 -webkit-transform: translateY(-70%);
+		 -moz-transform: translateY(-70%);
+		 transform: translateY(-70%);
 		
 	}
 	
@@ -453,14 +463,21 @@ transform:scale(1)
 	}
 	
 	.reshuffle-active .containerflex {
-		width: 0px !important;
-		height: auto !important;
+		width: 0px;
+		height: 0px;
 		min-width: none !important;
 		opacity: 0;
 		visibility: hidden;
 		-webkit-transform: translateY(125%);
 		 -moz-transform: translateY(125%);
 		 transform: translateY(125%);
+	}
+	
+	.reshuffle-active .summarytext {
+		-webkit-transform: translateY(-50%);
+		 -moz-transform: translateY(-50%);
+		 transform: translateY(-50%);
+		margin-bottom: 25px;
 	}
 </style>
 <!-- We need something to watch the state of the pages -->
@@ -707,9 +724,11 @@ transform:scale(1)
 				<h4>Summary</h4>
 				<div id="containerbig" class="containerflex"></div>
 					
-					<div class="summarytext">Based upon the levels of income and spending in Base Facts, 100% of your<br />Mandatory Expenses are covered by Guaranteed Income.</div>
+					<div class="summarytext">Based upon the levels of income and spending in Base Facts, 100% of your Mandatory Expenses are covered by Guaranteed Income.</div>
 				
 				
+				<button id="expandedinfo">Shuffle the Deck</button>
+					
 				<div class="row statsbar">
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">34%</span><br />of expenses covered by<br/><strong>Pension Income</strong></p></div>
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">44%</span><br />of expenses covered by<br/><strong>Other Income</strong></p></div>
@@ -762,8 +781,6 @@ transform:scale(1)
 						
 					</div>
 				</div>
-					
-					<button id="expandedinfo">Shuffle the Deck</button>
 				
 				</div><!-- End Reshuffle -->
             </div>
