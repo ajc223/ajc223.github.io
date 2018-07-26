@@ -1087,8 +1087,15 @@ span.absoluteadd:hover {
 		<script type="text/javascript">
 		// Push off the sidebar and hide other chrome elements when in presentation mode
 		jQuery(document).ready(function($) {
+			
+	 function reflowChart() {
+        $('.containersimple').Highcharts().reflow();
+		$('.containerbig').Highcharts().reflow();
+    }
+    window.reflowChart = reflowChart;
+			
 	$("#nochrome").click(function(){
-	setTimeout( reflowChart, 200);
+	setTimeout(reflowChart, 200);
     $(".collapsecol").toggleClass("collapsecolwidth");
 	$(".colgrow").toggleClass("expanded");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
@@ -1097,11 +1104,6 @@ span.absoluteadd:hover {
 	$("#expandedinfo").click(function() {
   $('.reshuffle').toggleClass('reshuffle-active');
 });
-	  function reflowChart() {
-        $('.containersimple').highcharts().reflow();
-		$('.containerbig').highcharts().reflow();
-    }
-    window.reflowChart = reflowChart;
 	});
 	</script>
 </body>
