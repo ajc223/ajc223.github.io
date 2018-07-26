@@ -567,7 +567,7 @@ span.absoluteadd:hover {
         <li> <a href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> </li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="Applications">Applications <i class="fa fa-caret-down"></i></a>
           <ul class="dropdown-menu" role="menu">
-            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="https://wealth.emaplan.com/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> </li>
+            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake">Research &amp; News </a> </li>
             <li class="divider"></li>
             <li> <a href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </li>
           </ul>
@@ -598,7 +598,7 @@ span.absoluteadd:hover {
   <div id="js-menu" class="hide">
     <div class="popover-content-md">
       <div class="js-menu-main list-group"> <a class="list-group-item" href="/ema/Redirect/Home" data-id="Home"> Home </a> <a class="list-group-item" href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> <a class="list-group-item" href="/ema/Connections" data-id="Connections"> Connections </a> <a class="list-group-item" href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> <a data-menu="js-menu-Applications" class="list-group-item" href="javascript:void(0);" data-id="Applications">Applications <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a data-menu="js-menu-More" class="list-group-item" href="javascript:void(0);" data-id="More">More <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a class="list-group-item" href="/ema/Settings" data-id="Settings"> Settings </a> <a class="list-group-item" href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> <a class="list-group-item" href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </div>
-      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
+      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake">Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
       <div class="js-menu-More list-group hide"> <a class="list-group-item" href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> <a class="list-group-item" href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> <a class="list-group-item" href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> <a class="list-group-item" href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </div>
     </div>
   </div>
@@ -935,7 +935,9 @@ span.absoluteadd:hover {
 		thousandsSep: ','
     }
 });
-		Highcharts.chart('containerbig', {
+		
+	$(function () { 
+    var myCharta = new Highcharts.chart('containerbig', {
     chart: {
         type: 'column',
 		backgroundColor: null
@@ -994,11 +996,12 @@ span.absoluteadd:hover {
         data: [100000,135000,170000,205000,240000,275000,310000,345000,380000,415000,450000,485000,520000,555000,590000,625000,660000,695000,730000,710000,690000,670000,650000,630000,610000,590000,570000,550000,530000,510000,490000],
     }]
 });
+			});
 	</script>
 	
 	<script type="text/javascript">
-	Highcharts.chart('containersimple', {
-
+	$(function () { 
+    var myChartb = new Highcharts.chart('containersimple', {
     title: {
         text: ''
     },
@@ -1083,14 +1086,15 @@ span.absoluteadd:hover {
     }
 
 });
+			});
 	</script>
 		<script type="text/javascript">
 		// Push off the sidebar and hide other chrome elements when in presentation mode
 		jQuery(document).ready(function($) {
 			
 	 function reflowChart() {
-        $('.containersimple').Highcharts().reflow();
-		$('.containerbig').Highcharts().reflow();
+        $('#containersimple').highcharts().reflow();
+		$('#containerbig').highcharts().reflow();
     }
     window.reflowChart = reflowChart;
 			
