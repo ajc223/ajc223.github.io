@@ -381,14 +381,14 @@ transform:scale(1)
 	/* Set the default states for the reshuffling area */
 	
 	.chartarea {
-		max-height: 200px;
+		max-height: 150px;
 		overflow: hidden;
 	}
 	
 	.containerflex {
 		width: 100%;
-		min-height: 200px;
-		margin-bottom: 30px;
+		/* min-height: 200px; */
+		/* margin-bottom: 30px; */
 		vertical-align: middle;
 		display: flex;
 		align-items: center;
@@ -449,7 +449,7 @@ span.absoluteadd:hover {
   -o-transition: all 1s ease;  
   -ms-transition: all 1s ease;  
   transition: all 1s ease;
-  height: 150px;
+  height: 130px;
 	}
 	
 		.containerflexdetailed {
@@ -466,11 +466,15 @@ span.absoluteadd:hover {
 	transform: translateY(400%);
 	}
 	
-	.reshuffle h4.hideshow {
+	.reshuffle h4.hideshow, .reshuffle h3.hideshow {
 		display: none;
 	}
 	
 	.reshuffle .showdetails.advanced {
+		display: none;
+	}
+	
+	.reshuffle .hideshow {
 		display: none;
 	}
 	
@@ -482,11 +486,11 @@ span.absoluteadd:hover {
 		 transform: translateY(-200%);
 	}
 	
-	.reshuffle-active h4.showhide {
+	.reshuffle-active h4.showhide, .reshuffle-active h3.showhide {
 		display: none;
 	}
 	
-	.reshuffle-active h4.hideshow {
+	.reshuffle-active h4.hideshow, .reshuffle-active h3.hideshow {
 		display: block;
 	}
 	
@@ -545,9 +549,9 @@ span.absoluteadd:hover {
 		height: 200px;
 		opacity: 1;
 		visibility: visible;
-		-webkit-transform: translateY(-100%);
-   -moz-transform: translateY(-100%);
-	transform: translateY(-100%);
+		-webkit-transform: translateY(-85%);
+   -moz-transform: translateY(-85%);
+	transform: translateY(-85%);
 		z-index: -1;
 	}
 	
@@ -556,6 +560,10 @@ span.absoluteadd:hover {
 		 -moz-transform: translateY(-350%);
 		 transform: translateY(-350%);
 		margin-bottom: 25px;
+	}
+	
+	.reshuffle-active .hideshow {
+		display: block !important;
 	}
 </style>
 <!-- We need something to watch the state of the pages -->
@@ -786,7 +794,25 @@ span.absoluteadd:hover {
 				
 				<div class="reshuffle">
 				
-				<h3>Summary</h3>
+				<h3 class="showhide" style="line-height: 1; margin: 0px; padding: 0px;">Summary</h3>
+					
+					<ul class="hideshow link-menu link-menu-estate nav nav-pills nav-justified" data-for="step-link" data-hashkey="step">
+	<li class="active" data-value="NetWorth">
+		<a href="javascript:void(0);">Summary</a>
+	</li>
+	<li class="" data-value="FirstDeath">
+		<a href="javascript:void(0);">Expenses</a>
+	</li>
+	<li class="" data-value="SurvivorIncome">
+		<a href="javascript:void(0);">Income</a>
+	</li>
+	<li class="" data-value="LastDeath">
+		<a href="javascript:void(0);">Withdrawals</a>
+	</li>
+	<li class="" data-value="Overview">
+		<a href="javascript:void(0);">Comparison</a>
+	</li>
+</ul>
 					
 					<div class="chartarea">
 				<div id="containersimple" class="containerflex"></div>
