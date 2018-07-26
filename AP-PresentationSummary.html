@@ -996,6 +996,16 @@ span.absoluteadd:hover {
         data: [100000,135000,170000,205000,240000,275000,310000,345000,380000,415000,450000,485000,520000,555000,590000,625000,660000,695000,730000,710000,690000,670000,650000,630000,610000,590000,570000,550000,530000,510000,490000],
     }]
 });
+		
+			$('#nochrome').click(function() {
+        $('body').toggleClass('toggle-sidebar');
+        setTimeout( reflowChart, 600);
+    })
+		
+		function reflowChart() {
+        $('#containerbig').highcharts().reflow();
+    }
+    window.reflowCharta = reflowChart;
 			});
 	</script>
 	
@@ -1086,20 +1096,23 @@ span.absoluteadd:hover {
     }
 
 });
+		
+		$('#nochrome').click(function() {
+        $('body').toggleClass('toggle-sidebar');
+        setTimeout( reflowChart, 600);
+    })
+		
+		function reflowChart() {
+        $('#containersimple').highcharts().reflow();
+    }
+    window.reflowChart = reflowChart;
+		
 			});
 	</script>
 		<script type="text/javascript">
-		// Push off the sidebar and hide other chrome elements when in presentation mode
 		jQuery(document).ready(function($) {
-			
-	 function reflowChart() {
-        $('#containersimple').highcharts().reflow();
-		$('#containerbig').highcharts().reflow();
-    }
-    window.reflowChart = reflowChart;
-			
+			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#nochrome").click(function(){
-	setTimeout(reflowChart, 200);
     $(".collapsecol").toggleClass("collapsecolwidth");
 	$(".colgrow").toggleClass("expanded");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
@@ -1107,6 +1120,7 @@ span.absoluteadd:hover {
 			// Throw a class on the simple and detailed chart area to trigger the animations and movement
 	$("#expandedinfo").click(function() {
   $('.reshuffle').toggleClass('reshuffle-active');
+ $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
 });
 	});
 	</script>
