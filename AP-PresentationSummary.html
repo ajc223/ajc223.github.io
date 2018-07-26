@@ -24,12 +24,6 @@
 <!-- sticky kit -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
-<script type="text/javascript">
-		jQuery(document).ready(function($) {
-	$(".sticky").stick_in_parent();
-		});
-	</script>
 <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
 <script type="text/javascript" src="loading-bar.js"></script>
 <!-- Layout Specific CSS -->
@@ -382,10 +376,18 @@ transform:scale(1)
 	
 	/* Set the default states for the reshuffling area */
 	
+	.chartarea {
+		max-height: 200px;
+		overflow: hidden;
+	}
+	
 	.containerflex {
 		width: 100%;
-		height: 240px;
+		min-height: 200px;
 		margin-bottom: 30px;
+		vertical-align: middle;
+		display: flex;
+		align-items: center;
 	}
 	
 	.summarytext {
@@ -402,7 +404,21 @@ transform:scale(1)
   -o-transition: all 1s ease;  
   -ms-transition: all 1s ease;  
   transition: all 1s ease;
+		margin-left: 30px;
 	}
+	
+	span.absoluteadd {
+	position: absolute;
+	top: 0%;
+	left: 30px;
+	font-size: 4rem;
+	display: block;
+	text-align: center;
+	color: #999;
+}
+span.absoluteadd:hover {
+	color: #3272a9;
+}
 	
 	.statsbar {
   position: relative;
@@ -429,15 +445,41 @@ transform:scale(1)
   -o-transition: all 1s ease;  
   -ms-transition: all 1s ease;  
   transition: all 1s ease;
+  height: 150px;
+	}
+	
+		.containerflexdetailed {
+  -webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
+  height: 200px;
+  visibility: hidden;
+  opacity: 0;
+   -webkit-transform: translateY(400%);
+   -moz-transform: translateY(400%);
+	transform: translateY(400%);
+	}
+	
+	.reshuffle h4.hideshow {
+		display: none;
 	}
 	
 	/* Lets try moving everything with a reshuffle */
 	
 	.reshuffle-active .statsbar {
-		 -webkit-transform: translateY(-70%);
-		 -moz-transform: translateY(-70%);
-		 transform: translateY(-70%);
-		
+		 -webkit-transform: translateY(-200%);
+		 -moz-transform: translateY(-200%);
+		 transform: translateY(-200%);
+	}
+	
+	.reshuffle-active h4.showhide {
+		display: none;
+	}
+	
+	.reshuffle-active h4.hideshow {
+		display: block;
 	}
 	
 	.reshuffle-active .statsbar > div:nth-of-type(3) {
@@ -468,15 +510,35 @@ transform:scale(1)
 		min-width: none !important;
 		opacity: 0;
 		visibility: hidden;
+		display: none;
 		-webkit-transform: translateY(125%);
 		 -moz-transform: translateY(125%);
 		 transform: translateY(125%);
 	}
 	
+		.reshuffle-active .chartarea {
+		-webkit-transform: translateY(200%);
+        -moz-transform: translateY(200%);
+	    transform: translateY(200%);
+		max-height: 300px;
+		overflow: visible;
+	}
+	
+	.reshuffle-active .containerflexdetailed {
+		width: 100%;
+		height: 200px;
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(-100%);
+   -moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+		z-index: -1;
+	}
+	
 	.reshuffle-active .summarytext {
-		-webkit-transform: translateY(-50%);
-		 -moz-transform: translateY(-50%);
-		 transform: translateY(-50%);
+		-webkit-transform: translateY(-350%);
+		 -moz-transform: translateY(-350%);
+		 transform: translateY(-350%);
 		margin-bottom: 25px;
 	}
 </style>
@@ -491,19 +553,6 @@ transform:scale(1)
             });
          })();
     </script>
-	
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-	$("#nochrome").click(function(){
-    $(".collapsecol").toggleClass("collapsecolwidth");
-	$(".colgrow").toggleClass("expanded");
-	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
-});
-			$("#expandedinfo").click(function() {
-  $('.reshuffle').toggleClass('reshuffle-active');
-});
-	});
-	</script>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -721,19 +770,21 @@ transform:scale(1)
 				
 				<div class="reshuffle">
 				
-				<h4>Summary</h4>
-				<div id="containerbig" class="containerflex"></div>
+				<h4 class="showhide">Summary</h4><h4 class="hideshow">Details</h4>
 					
-					<div class="summarytext">Based upon the levels of income and spending in Base Facts, 100% of your Mandatory Expenses are covered by Guaranteed Income.</div>
-				
-				
-				<button id="expandedinfo">Shuffle the Deck</button>
+					<div class="chartarea">
+				<div id="containersimple" class="containerflex"></div>
+					<div id="containerbig" class="containerflexdetailed"></div>
+					</div>
+					
+					<div class="summarytext"><span class="absoluteadd" id="expandedinfo"><i class="fas fa-plus-circle"></i></span> Based upon the levels of income and spending in Base Facts, 100% of your Mandatory Expenses are covered by Guaranteed Income.</div>
 					
 				<div class="row statsbar">
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">34%</span><br />of expenses covered by<br/><strong>Pension Income</strong></p></div>
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">44%</span><br />of expenses covered by<br/><strong>Other Income</strong></p></div>
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">22%</span><br />of expenses covered by<br/><strong>Supplemental Withdrawals</strong></p></div>
 				</div>
+					
 				
 				<div class="row">
 				<div class="col-md-6"><h4>Mandatory Expenses</h4>
@@ -943,6 +994,115 @@ transform:scale(1)
         data: [100000,135000,170000,205000,240000,275000,310000,345000,380000,415000,450000,485000,520000,555000,590000,625000,660000,695000,730000,710000,690000,670000,650000,630000,610000,590000,570000,550000,530000,510000,490000],
     }]
 });
+	</script>
+	
+	<script type="text/javascript">
+	Highcharts.chart('containersimple', {
+
+    title: {
+        text: ''
+    },
+
+    subtitle: {
+        text: ''
+    },
+    
+    yAxis: {
+        title: {
+            text: ''
+        },
+		labels: {enabled:false},
+		gridLineWidth: 0,
+         minorGridLineWidth: 0
+    },
+    exporting: { enabled: false },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'middle'
+    },
+		
+		xAxis: {
+        title: {
+            text: ''
+        },
+		labels: {enabled:false},
+		gridLineWidth: 0,
+        minorGridLineWidth: 0,
+		visible: false,
+    },
+    exporting: { enabled: false },
+    legend: {
+		enabled: false,
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+				enabled: false,
+            },
+            pointStart: 2018
+        }
+    },
+		
+		 credits: {
+        enabled: false
+    },
+		
+		 tooltip: {
+        enabled: false
+    },
+
+    series: [{
+        name: 'Current Assets',
+		color: '#3272a9',
+        data: [100, 200, 300, 400, 500, 510, 515, 520, 530, 540, 590, 600, 450, 400, 300]
+    }, {
+        name: 'Proposed Assets',
+		color: '#66afe9',
+        data: [100, 250, 400, 500, 600, 615, 630, 660, 680, 700, 650, 625, 550, 500, 425]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+	</script>
+		<script type="text/javascript">
+		// Push off the sidebar and hide other chrome elements when in presentation mode
+		jQuery(document).ready(function($) {
+	$("#nochrome").click(function(){
+	setTimeout( reflowChart, 200);
+    $(".collapsecol").toggleClass("collapsecolwidth");
+	$(".colgrow").toggleClass("expanded");
+	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
+});
+			// Throw a class on the simple and detailed chart area to trigger the animations and movement
+	$("#expandedinfo").click(function() {
+  $('.reshuffle').toggleClass('reshuffle-active');
+});
+	  function reflowChart() {
+        $('.containersimple').highcharts().reflow();
+		$('.containerbig').highcharts().reflow();
+    }
+    window.reflowChart = reflowChart;
+	});
 	</script>
 </body>
 </html>
