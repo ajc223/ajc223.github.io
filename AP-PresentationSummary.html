@@ -374,6 +374,10 @@ transform:scale(1)
 		font-size: 2em;
 	}
 	
+	.row.below {
+		margin-bottom: 30px;
+	}
+	
 	/* Set the default states for the reshuffling area */
 	
 	.chartarea {
@@ -466,6 +470,10 @@ span.absoluteadd:hover {
 		display: none;
 	}
 	
+	.reshuffle .showdetails.advanced {
+		display: none;
+	}
+	
 	/* Lets try moving everything with a reshuffle */
 	
 	.reshuffle-active .statsbar {
@@ -502,6 +510,14 @@ span.absoluteadd:hover {
 		-webkit-transform: translateX(200%);
 		 -moz-transform: translateX(200%);
 		 transform: translateX(200%);
+	}
+	
+	.reshuffle-active .showdetails.basic {
+		display: none;
+	}
+	
+	.reshuffle-active .showdetails.advanced {
+		display: block;
 	}
 	
 	.reshuffle-active .containerflex {
@@ -770,7 +786,7 @@ span.absoluteadd:hover {
 				
 				<div class="reshuffle">
 				
-				<h4 class="showhide">Summary</h4><h4 class="hideshow">Details</h4>
+				<h3>Summary</h3>
 					
 					<div class="chartarea">
 				<div id="containersimple" class="containerflex"></div>
@@ -785,7 +801,9 @@ span.absoluteadd:hover {
 					<div class="col-md-4 pullout text-center"><p><span class="bignumber">22%</span><br />of expenses covered by<br/><strong>Supplemental Withdrawals</strong></p></div>
 				</div>
 					
-				
+			
+					<!-- basic details -->
+					<div class="showdetails basic">
 				<div class="row">
 				<div class="col-md-6"><h4>Mandatory Expenses</h4>
 					
@@ -832,6 +850,138 @@ span.absoluteadd:hover {
 						
 					</div>
 				</div>
+				</div>
+					<!-- end basic details -->
+					
+					<!-- advanced details -->
+					
+					<div class="showdetails advanced">
+									<div class="row below">
+					<div class="col-md-12">
+						<h4>Income</h4>
+					<div id="chart-details-contentc" class="chart-details-content">
+			<table id="chart-details-tablec" class="table chart-details-table">
+				<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th>Guarenteed Income</th>
+					<th>Other Income</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="font-size-tiny">Annuity</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny">Social Security</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny">Pension</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+										<tr>
+						<td><span class="font-size-tiny">Real Estate</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+									<tr>
+						<td><span class="font-size-tiny">Investment</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny"><strong>TOTAL</strong></span></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+						
+					</div>
+				</div>
+						
+						<div class="row below">
+					<div class="col-md-12">
+						<h4>Expenses</h4>
+					<div id="chart-details-contentd" class="chart-details-content">
+			<table id="chart-details-tabled" class="table chart-details-table">
+				<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th>2035</th>
+					<th>% of Total Expenses</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="font-size-tiny">Mandatory</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny">Discretionary</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny"><strong>TOTAL</strong></span></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+						
+					</div>
+				</div>
+					
+						<div class="row">
+					<div class="col-md-12">
+						<h4>Withdrawals</h4>
+					<div id="chart-details-contente" class="chart-details-content">
+			<table id="chart-details-tablee" class="table chart-details-table">
+				<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th>Base Facts</th>
+					<th>Scenario 1</th>
+					<th>Supplemental Withdrawals</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="font-size-tiny">Planned Withdrawals</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+						<td><span class="font-size-small">$5,248</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny">Discretionary</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+						<td><span class="font-size-small">$85,626</span></td>
+					</tr>
+					<tr>
+						<td><span class="font-size-tiny"><strong>TOTAL</strong></span></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+						<td><strong><span class="text"><span class="small-dollar">$</span>90,405</span></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+						
+					</div>
+				</div>
+						
+					</div>
+					<!-- end advanced -->
 				
 				</div><!-- End Reshuffle -->
             </div>
