@@ -1268,5 +1268,11 @@ span.gocollapse {
 });
 	});
 	</script>
+	<script>
+	function(e) {
+  hashState.SetKey('technique', null);
+  $document.trigger('hashchange-technique');
+}
+	</script>
 </body>
 </html>
