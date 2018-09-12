@@ -1244,16 +1244,16 @@ span.gocollapse {
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			
-			// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
-			$(".editlink").click(function(){
-			$.get("/formsample.html", function(data) {
+		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
+		$(".editlink").click(function(){
+		$.get("/formsample.html", function(data) {
      $("#js-techniquelistsection").replaceWith(data);
 });
 				});
 			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#nochrome").click(function(){
     $(".collapsecol").toggleClass("collapsecolwidth");
-	$(".colgrow").toggleClass("expanded");
+	$(".colgrow").toggleClass("expanded"); 
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
 			// Throw a class on the simple and detailed chart area to trigger the animations and movement
