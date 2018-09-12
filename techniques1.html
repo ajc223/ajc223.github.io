@@ -246,7 +246,7 @@ span.gocollapse {
                       <input id="ema-switch-fe89545d-4409-4179-afe4-623b7112f0c7" checked="" data-reactid=".0.1.$EditLifeEvents.0.0.0" type="checkbox">
                       <label class="ctrl-switch-slider" for="ema-switch-fe89545d-4409-4179-afe4-623b7112f0c7" data-reactid=".0.1.$EditLifeEvents.0.0.1"></label>
                     </div>
-                    <div class="menu-text" data-reactid=".0.1.$EditLifeEvents.0.1"><a class="editlink" data-reactid=".0.1.$EditLifeEvents.0.1.0">Retire 3 Years Later - Age 68/67</a></div>
+                    <div class="menu-text" data-reactid=".0.1.$EditLifeEvents.0.1"><a class="editlinka" data-reactid=".0.1.$EditLifeEvents.0.1.0">Retire 3 Years Later - Age 68/67</a></div>
                   </div>
                 </li>
                 <li class="list-group-item technique-list-item" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a">
@@ -1247,6 +1247,11 @@ span.gocollapse {
 		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
 		$(".editlink").click(function(){
 		$.get("/formsample.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+			$(".editlinka").click(function(){
+		$.get("/formsampleadvanced.html", function(data) {
      $("#js-techniquelistsection").replaceWith(data);
 });
 				});
