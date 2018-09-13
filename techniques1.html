@@ -242,12 +242,16 @@ span.gocollapse {
       </div>
       
       <!-- DC Output pulled from lifetime cash flow as of september 12 -->
-      
-      <div class="row row-eq-height">
-		  <div class="advpanel">
-		  Put contents here
+		
+		<!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
+		
+		  <div class="row row-eq-height advpanel">
+		  <div class="col-md-9">Put advanced form and tabs here</div>
+		  <div class="col-md-3">Put mini chart &amp; data here</div>
 		  </div>
-		  
+      
+		<!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
+      <div class="row row-eq-height fadeout">		  
         <div class="col-md-4 push chromebar padright"> <span class="gocollapse" id="expanded"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
