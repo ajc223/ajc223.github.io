@@ -114,6 +114,23 @@ span.gocollapse {
 		padding-left: 30px;
 	}
 	
+	/* Start Panel */
+	
+	.fadeout {
+		 -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeout 2s; /* Firefox < 16 */
+        -ms-animation: fadeout 2s; /* Internet Explorer */
+         -o-animation: fadeout 2s; /* Opera < 12.1 */
+            animation: fadeout 2s;
+		-moz-animation-delay: 3s;
+		-webkit-animation-delay: 3s;
+		animation-delay: 3s;
+	}
+	
+	.fadeout.hidden {
+		opacity: 0;
+	}
+	
 	/* hidden panel */
 	
 	.advpanel {
@@ -156,6 +173,29 @@ span.gocollapse {
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+	
+	@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
 
 </style>
@@ -1049,9 +1089,10 @@ span.gocollapse {
 				});
 			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#expanded").click(function(){
-    $(".push").toggleClass("pushed");
-	$(".datacol").toggleClass("datashrunk");
-		$(".advpanel").toggleClass("shown"); 
+	$(".fadeout").toggleClass("hidden");
+	$(".advpanel").toggleClass("shown"); 
+    // $(".push").toggleClass("pushed");
+	// $(".datacol").toggleClass("datashrunk");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
 			// Throw a class on the simple and detailed chart area to trigger the animations and movement
