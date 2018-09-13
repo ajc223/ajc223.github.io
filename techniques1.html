@@ -113,6 +113,51 @@ span.gocollapse {
 	.padleft {
 		padding-left: 30px;
 	}
+	
+	/* hidden panel */
+	
+	.advpanel {
+	  display: none;
+	  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+		width: 100%;
+		height: 500px;
+		background-color: #fff;
+		z-index: 25;
+	}
+	
+	.advpanel.shown {
+		display: block;
+	}
+	
+	/* fader */
+	
+	@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 </style>
 </head>
 <body class="DefaultBody">
@@ -199,6 +244,10 @@ span.gocollapse {
       <!-- DC Output pulled from lifetime cash flow as of september 12 -->
       
       <div class="row row-eq-height">
+		  <div class="advpanel">
+		  Put contents here
+		  </div>
+		  
         <div class="col-md-4 push chromebar padright"> <span class="gocollapse" id="expanded"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
@@ -997,7 +1046,8 @@ span.gocollapse {
 			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#expanded").click(function(){
     $(".push").toggleClass("pushed");
-	$(".datacol").toggleClass("datashrunk"); 
+	$(".datacol").toggleClass("datashrunk");
+		$(".advpanel").toggleClass("shown"); 
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
 			// Throw a class on the simple and detailed chart area to trigger the animations and movement
