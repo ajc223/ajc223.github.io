@@ -64,7 +64,7 @@
 	
 /* collapse */
 		
-.collapsecol {
+.push {
 	-webkit-transition: all linear 600ms;
 	-moz-transition: all linear 600ms;
 	transition: all linear 600ms;
@@ -79,17 +79,18 @@
 		perspective-origin: left;
 		*/
 }
-.collapsecol.collapsecolwidth {
-	transform: translateX(-100%);
+.push.pushed {
+	transform: translateX(100%);
 	overflow: hidden;
 	position: absolute;
-	left: 0px;
+	right: 0px;
 	opacity: 0;
 	visbility: hidden;
 	z-index: -5;
+	width: 80%;
 }
-.colgrow.expanded {
-	width: 99%;
+.datacol.datashrunk {
+	width: 15%;
 	-webkit-transition: all ease-in-out 650ms;
 	-moz-transition: all ease-in-out 650ms;
 	transition: all ease-in-out 650ms;
@@ -205,7 +206,7 @@ span.gocollapse {
       <!-- DC Output pulled from lifetime cash flow as of september 12 -->
       
       <div class="row row-eq-height">
-        <div class="col-md-4 collapsecol chromebar padright"> <span class="gocollapse" id="nochrome"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
+        <div class="col-md-4 collapsecol chromebar padright"> <span class="gocollapse" id="expanded"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
@@ -291,7 +292,7 @@ span.gocollapse {
           </div>
           <div id="panel-left" style="display: none;"></div>
         </div>
-        <div class="col-md-8 col-with-separator padleft">
+        <div class="col-md-8 col-with-separato datacol padleft">
           <div id="panel-right-wrapper" class="">
             <div id="panel-right">
               <div id="CashFlow">
@@ -1256,9 +1257,9 @@ span.gocollapse {
 });
 				});
 			// Push off the sidebar and hide other chrome elements when in presentation mode
-	$("#nochrome").click(function(){
-    $(".collapsecol").toggleClass("collapsecolwidth");
-	$(".colgrow").toggleClass("expanded"); 
+	$("#expanded").click(function(){
+    $(".pushed").toggleClass("pushed");
+	$(".datacol").toggleClass("datashrunk"); 
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
 			// Throw a class on the simple and detailed chart area to trigger the animations and movement
