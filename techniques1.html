@@ -111,7 +111,8 @@ span.gocollapse {
 }
 /* Start Panel */
 	
-.fadeout {
+.fadeout.hidden {
+	opacity: 0;
 	-webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadeout 2s; /* Firefox < 16 */
 	-ms-animation: fadeout 2s; /* Internet Explorer */
@@ -120,10 +121,6 @@ span.gocollapse {
 	-moz-animation-delay: 3s;
 	-webkit-animation-delay: 3s;
 	animation-delay: 3s;
-	opacity: 1;
-}
-.fadeout.hidden {
-	opacity: 0;
 }
 /* hidden panel */
 	
