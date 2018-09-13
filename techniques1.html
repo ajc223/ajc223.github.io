@@ -111,15 +111,12 @@ span.gocollapse {
 }
 /* Start Panel */
 	
-.startpanel.hidden {
+.startpanel.hiddenclass {
 	-webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadeout 2s; /* Firefox < 16 */
 	-ms-animation: fadeout 2s; /* Internet Explorer */
 	-o-animation: fadeout 2s; /* Opera < 12.1 */
 	animation: fadeout 2s;
-	-moz-animation-delay: 3s;
-	-webkit-animation-delay: 3s;
-	animation-delay: 3s;
 }
 /* hidden panel */
 	
@@ -1120,7 +1117,7 @@ transform: translate3d(0, -20%, 0);
 				});
 			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#expanded").click(function(){
-	$(".startpanel").toggleClass("hidden");
+	$(".startpanel").toggleClass("hiddenclass");
 	$(".advpanel").toggleClass("shown"); 
     // $(".push").toggleClass("pushed");
 	// $(".datacol").toggleClass("datashrunk");
