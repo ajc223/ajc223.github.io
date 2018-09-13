@@ -50,18 +50,16 @@
 	z-index: 5;
 	font-size: 1.1em;
 }
-	
-	/*
+/*
  * Row with equal height columns
  * --------------------------------------------------
  */
 .row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
-	
 /* collapse */
 		
 .push {
@@ -103,101 +101,133 @@ span.gocollapse {
 .chromebar {
 	border-right: 1px solid #e2e2e2;
 }
+/* Padding */
 	
-	/* Padding */
+.padright {
+	padding-right: 30px;
+}
+.padleft {
+	padding-left: 30px;
+}
+/* Start Panel */
 	
-	.padright {
-		padding-right: 30px;
-	}
+.fadeout {
+	-webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadeout 2s; /* Firefox < 16 */
+	-ms-animation: fadeout 2s; /* Internet Explorer */
+	-o-animation: fadeout 2s; /* Opera < 12.1 */
+	animation: fadeout 2s;
+	-moz-animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
+}
+.fadeout.hidden {
+	opacity: 0;
+}
+/* hidden panel */
 	
-	.padleft {
-		padding-left: 30px;
-	}
-	
-	/* Start Panel */
-	
-	.fadeout {
-		 -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeout 2s; /* Firefox < 16 */
-        -ms-animation: fadeout 2s; /* Internet Explorer */
-         -o-animation: fadeout 2s; /* Opera < 12.1 */
-            animation: fadeout 2s;
-		-moz-animation-delay: 3s;
-		-webkit-animation-delay: 3s;
-		animation-delay: 3s;
-	}
-	
-	.fadeout.hidden {
-		opacity: 0;
-	}
-	
-	/* hidden panel */
-	
-	.advpanel {
-	  display: none;
-	  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-		width: 100%;
-		height: 500px;
-		background-color: #fff;
-		z-index: 25;
-	}
-	
-	.advpanel.shown {
-		display: block;
-	}
+.advpanel {
+	display: none;
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 2s; /* Firefox < 16 */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera < 12.1 */
+	animation: fadein 2s;
+	width: 100%;
+	height: 500px;
+	background-color: #fff;
+	z-index: 25;
+}
+.advpanel.shown {
+	display: block;
+}
 	
 	/* fader */
 	
 	@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+ from {
+opacity: 0;
 }
-	
-	@keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+ to {
+opacity: 1;
+}
+}
+ @keyframes fadeout {
+ from {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+ to {
+opacity: 0;
+transform: translate3d(0, -20%, 0);
+}
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+ from {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+ to {
+opacity: 0;
+transform: translate3d(0, -20%, 0);
+}
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+ from {
+opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+ to {
+opacity: 0;
+transform: translate3d(0, -20%, 0);
+}
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+ from {
+opacity: 1;
+transform: translate3d(0, 0, 0);
 }
-
+ to {
+opacity: 0;
+transform: translate3d(0, -20%, 0);
+}
+}
 </style>
 </head>
 <body class="DefaultBody">
@@ -270,7 +300,7 @@ span.gocollapse {
   <div class="container">
     <div id="frozen-bar" class="hide"></div>
   </div>
-  <div class="js-main">
+  <div class="js-main"> 
     <!-- Content Container --> 
     
     <!-- Page Header -->
@@ -281,17 +311,17 @@ span.gocollapse {
         </div>
       </div>
       
-      <!-- DC Output pulled from lifetime cash flow as of september 12 -->
-		
-		<!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
-		
-		  <div class="row row-eq-height advpanel">
-		  <div class="col-md-9">Put advanced form and tabs here</div>
-		  <div class="col-md-3">Put mini chart &amp; data here</div>
-		  </div>
+      <!-- DC Output pulled from lifetime cash flow as of september 12 --> 
       
-		<!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
-      <div class="row row-eq-height fadeout">		  
+      <!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
+      
+      <div class="row row-eq-height advpanel">
+        <div class="col-md-9">Put advanced form and tabs here</div>
+        <div class="col-md-3">Put mini chart &amp; data here</div>
+      </div>
+      
+      <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
+      <div class="row row-eq-height fadeout">
         <div class="col-md-4 push chromebar padright"> <span class="gocollapse" id="expanded"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
@@ -405,8 +435,7 @@ span.gocollapse {
                 </div>
                 
                 <!-- Add Chart Here -->
-				  <div id="chartdiv" style="height: 400px"></div>
-                
+                <div id="chartdiv" style="height: 400px"></div>
                 <div id="chart-details" class="chart-details hidden-print">
                   <div class="pull-right">
                     <div id="chart-details-ages" class="chart-details-ages">
@@ -1071,8 +1100,7 @@ span.gocollapse {
 </div>
 
 <!-- Scripts --> 
-	<script src="https://code.highcharts.com/highcharts.js"></script>
-
+<script src="https://code.highcharts.com/highcharts.js"></script> 
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			
@@ -1101,16 +1129,16 @@ span.gocollapse {
  $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
 });
 	});
-	</script>
-	<script>
+	</script> 
+<script>
 	function(e) {
   hashState.SetKey('technique', null);
   $document.trigger('hashchange-technique');
 }
-	</script>
-	
-	<!-- Highcharts Sample -->
-	<script type="text/javascript">
+	</script> 
+
+<!-- Highcharts Sample --> 
+<script type="text/javascript">
 	Highcharts.chart('chartdiv', {
     title: {
         text: 'Chart reflow is set to true'
