@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 no-js"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9 no-js"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 no-js"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<title>Decision Center Techniques</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=1389e589d7" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-ClientDecisionCenter.css?v=016d8cb7e9" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Controls.css?v=81b4083505" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/Content-less-TransientNotifications.css?v=e9487b63ce" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/content-css-layout.css?v=1c7a43b183" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayoutBase.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayout.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Freeze.css?v=a0ca0f2546" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Firefly.css?v=33321bd7ac" type="text/css" rel="stylesheet"/>
+<!-- font awesome 5 -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<!-- We need a js library that can watch page states and animate between them -->
+<script src="https://cdn.jsdelivr.net/npm/swup@1.1.1/lib/index.min.js"></script>
+<script type="text/javascript">
+	var swup = new Swup()
+	</script>
+	
+<!-- Layout Specific CSS -->
+<style type="text/css">
+#js-techniquelistsection > div {
+	position: relative;
+}
+.technique-list-item {
+	position: relative;
+}
+.technique-list-item.list-group-item:hover:after {
+	font-family: "Font Awesome\ 5 Free";
+	content: '\f303';
+	font-weight: 900;
+	position: absolute;
+	top: 25%;
+	right: 15px;
+	color: #999;
+	z-index: 5;
+	font-size: 1.1em;
+}
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+/* collapse */
+		
+.push {
+	-webkit-transition: all linear 600ms;
+	-moz-transition: all linear 600ms;
+	transition: all linear 600ms;
+	opacity: 1;
+	visibility: visible;
+	right: 0px;
+}
+.row.pers {
+	overflow: hidden;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;/* -webkit-perspective-origin: left;
+		perspective-origin: left;
+		*/
+}
+.push.pushed {
+	width: 80%;
+}
+.datacol.datashrunk {
+	width: 15%;
+	-webkit-transition: all ease-in-out 650ms;
+	-moz-transition: all ease-in-out 650ms;
+	transition: all ease-in-out 650ms;
+	background-color: #fff;
+	float: right;
+}
+a.gocollapse {
+	position: absolute;
+	top: 50%;
+	right: -10px;
+	z-index: 5;
+	font-size: 1.4em;
+	color: #999;
+	background-color: #fff;
+	cursor: pointer;
+}
+.chromebar {
+	border-right: 1px solid #e2e2e2;
+}
+/* Padding */
+	
+.padright {
+	padding-right: 30px;
+}
+.padleft {
+	padding-left: 30px;
+}
+/* Start Panel */
+	
+	.startpanel {
+	position: relative;
+	z-index: 1;
+	}
+	
+.startpanel.hiddenclass {
+	--webkit-transition: all ease-in-out 950ms;
+	-moz-transition: all ease-in-out 950ms;
+	transition: all ease-in-out 650ms;
+	/*
+	-moz-animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s; */
+	opacity: 0;
+	height: 0px;
+}
+/* hidden panel */
+	
+.advpanel {
+	opacity: 0;
+	display: none;
+	width: 100%;
+	height: 500px;
+	background-color: #fff;
+	z-index: 25;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	z-index: 5;
+	position: relative;
+}
+.advpanel.shown {
+	opacity: 1;
+	display: block;
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 2s; /* Firefox < 16 */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera < 12.1 */
+	animation: fadein 2s;
+}
+	
+	/* fader */
+	
+	@keyframes fadein {
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+ from {
+opacity: 0;
+}
+ to {
+opacity: 1;
+}
+}
+ @keyframes fadeout {
+ from {
+opacity: 1;
+}
+ to {
+opacity: 0;
+}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+ from {
+opacity: 1;
+}
+ to {
+opacity: 0;
+}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+ from {
+opacity: 1;
+}
+ to {
+opacity: 0;
+}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+ from {
+opacity: 1;
+}
+ to {
+opacity: 0;
+}
+}
+	
+/* Swup Styles */
+	
+	.a-fade {
+    transition: .4s;
+    opacity: 1;
+}
+html.is-animating .a-fade{
+    opacity: 0;
+}
+	
+	.loading {
+    display: none;
+}
+html.is-changing .loading{
+    display: block;
+}
+</style>
+</head>
+<body class="DefaultBody">
+<div class="with-stickyfooter js-page">
+  <div class="navbar navbar-static-top navbar-default hidden-present menubar" role="navigation">
+    <div class="container js-usernav">
+      <button type="button" class="navbar-toggle js-popover js-popover-menu visible-xs visible-sm">MENU</button>
+      <a class="navbar-brand" href="/ema/Redirect/Home"> <img src="https://wealth.emaplan.com/ema/partner/default/Files/Images/Header/AdvisorNavBarLogo.png?v=103291510" /> </a>
+      <ul class="nav navbar-nav hidden-xs hidden-sm">
+        <li> <a href="/ema/Redirect/Home" data-id="Home"> Home </a> </li>
+        <li> <a href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> </li>
+        <li> <a href="/ema/Connections" data-id="Connections"> Connections </a> </li>
+        <li> <a href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="Applications">Applications <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="https://wealth.emaplan.com/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> </li>
+            <li class="divider"></li>
+            <li> <a href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="More">More <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> </li>
+            <li> <a href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> </li>
+            <li> <a href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> </li>
+            <li> <a href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-alerts"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Alerts" data-placement="bottom"> <span class="badge badge-alerts js-alerts-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-lg fa-bell"></i> </span> </a> </li>
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-tasks"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Tasks" data-placement="bottom"> <span class="badge badge-tasks js-tasks-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-warning badge-tasks-warning js-tasks-warning" style="display: none"></i> <i class="fa fa-lg fa-check-square"></i> </span> </a> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+        <li> <a href="/ema/Settings" data-id="Settings"> Settings </a> </li>
+        <li> <a href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> </li>
+        <li> <a href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="js-menu-title" class="popover-content-title text-center hide">
+    <button data-back class="btn btn-primary btn-sm pull-left hide" style="margin-right: -100%;"> <i class="fa fa-caret-left"></i> Back </button>
+    <strong data-title></strong> </div>
+  <div id="js-menu" class="hide">
+    <div class="popover-content-md">
+      <div class="js-menu-main list-group"> <a class="list-group-item" href="/ema/Redirect/Home" data-id="Home"> Home </a> <a class="list-group-item" href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> <a class="list-group-item" href="/ema/Connections" data-id="Connections"> Connections </a> <a class="list-group-item" href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> <a data-menu="js-menu-Applications" class="list-group-item" href="javascript:void(0);" data-id="Applications">Applications <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a data-menu="js-menu-More" class="list-group-item" href="javascript:void(0);" data-id="More">More <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a class="list-group-item" href="/ema/Settings" data-id="Settings"> Settings </a> <a class="list-group-item" href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> <a class="list-group-item" href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </div>
+      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
+      <div class="js-menu-More list-group hide"> <a class="list-group-item" href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> <a class="list-group-item" href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> <a class="list-group-item" href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> <a class="list-group-item" href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </div>
+    </div>
+  </div>
+  <div class="navbar navbar-client js-clientnav" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand js-popover-contact"> <span class="h1"> <a href="javascript:void(0);" data-pega-id="client-name">Frank and Joanna Miller</a> <i class="fa fa-caret-down navbar-brand-dropdown"></i> </span> </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="OverviewNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Overview">Overview</a></li>
+        <li><a id="FactsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Facts">Facts</a></li>
+        <li><a id="PlansNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans">Plans</a></li>
+        <li><a id="ReportsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Reports">Reports</a></li>
+        <li><a id="VaultNavBarItem" href="/ema/Vault/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b">Vault</a></li>
+        <li class="navbar-client-crm"><a class="js-popover-crm js-popover" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Notes,&nbsp;Tasks,&nbsp;History"><i class="fa fa-user navbar-client-clienticon"></i></span><span class="hidden">Relationship</span></a></li>
+        <li class="navbar-client-website"><a class="js-popover-clientwebsite" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Client&nbsp;Website"><i class="fa fa-globe"></i></span><span class="hidden">Website</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div id="problem-bar" data-clientid="b5077a53-e6be-458a-97c9-c5045d48af0b" class="hide"></div>
+  </div>
+  <div class="container">
+    <div id="frozen-bar" class="hide"></div>
+  </div>
+  <div class="js-main" id="swup"> 
+    <!-- Content Container --> 
+    
+    <!-- Page Header -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> <a href="javascript:void(0);" data-base-url="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/DecisionCenter" data-scenario-id="4fa57c86-5a3f-4466-b8e8-9f8eeff88d96" class="btn btn-default pull-right js-gotopresentation" data-eventname="Planning" data-feature="Decision Center" data-action="Go to Presentation" style="position: relative; z-index: 1;">Go to Presentation</a>
+          <h1 class="page-header page-header-plantool"> <span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span> <span class="decisionctr"><i class="ei ei-decisioncenter page-header-plantool-icon"></i> <span class="page-header-plantool-text"><strong>DECISION</strong>CENTER</span></span> </h1>
+        </div>
+      </div>
+      
+      <!-- DC Output pulled from lifetime cash flow as of september 12 --> 
+      
+      <!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
+      
+      <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
+      <div class="a-fade row row-eq-height">
+        <div class="col-md-9">Put advanced form and tabs here</div>
+        <div class="col-md-3">Put mini chart &amp; data here</div>
+      </div>
+    </div>
+    <!-- end base col container --> 
+  </div>
+  <!-- end js main --> 
+</div>
+<!-- with sticky footer -->
+
+<div class="page-footer hidden-present hidden-print">
+  <div class="container">
+    <div id="PrintedFactFinderModal" class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"> Printed Fact Forms </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li><a href="/ema/partner/default/Files/Content/QuickFactFinder.pdf?v=103291510" target="_blank">Printed Preliminary Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.pdf?v=103291510" target="_blank">Printed Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.doc?v=103291510" target="_blank">Printed Fact Form</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <address>
+        <a href="http://www.emoneyadvisor.com" target="_blank"><strong>eMoney Advisor, LLC</strong></a><br />
+        Four Radnor Corporate Center,<br />
+        Suite 300<br />
+        100 Matsonford Road<br />
+        Radnor, PA 19087<br />
+        <ul class="list-inline">
+          <li><a href="https://www.facebook.com/eMoneyAdvisor" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="http://twitter.com/eMoneyAdvisor" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="http://www.linkedin.com/company/emoney-advisor" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="http://www.youtube.com/user/emoneyadvisor" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+        </ul>
+        </address>
+      </div>
+      <div class="col-sm-3">
+        <h4>Resources</h4>
+        <ul class="list-unstyled">
+          <li><a href="javascript:void(0);" class="js-printedfactfinders">Printed Fact Forms</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Services</h4>
+        <ul class="list-unstyled">
+          <li><a href="http://www.emoneyadvisor.com/Products/Advisor-Branded-Media" target="eMarketing">Advisor Branded Marketing</a></li>
+          <li><a href="http://blog.emoneyadvisor.com/" target="emoneyblog">eMoney Blog</a></li>
+          <li><a href="http://www.emoneyadvisor.com/files/data-entry.pdf" target="eDataEntry">Data Entry Services</a></li>
+          <li><a href="/ema/Advisor/Mimeo">Print on Demand</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Support</h4>
+        <ul class="list-unstyled">
+          <li><a href="tel:(888) 362-8482"><strong>(888) 362-8482</strong></a></li>
+          <li><a href="javascript:void(0);" class="js-contactus">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-muted"> <small>&copy; 2018 eMoney Advisor, LLC.</small>&nbsp;&nbsp;|&nbsp;&nbsp;<small class="footer-version text-muted">Software Version: 10.3.291.510</small> </div>
+    <div class="text-center">
+      <ul class="list-inline">
+        <li> <a href="/ema/Legal/Terms"><small>Terms of Service</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Security"><small>Security</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Privacy"><small>Privacy Policy</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Disclaimer"><small>Disclaimer</small></a> </li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <p style="margin:0">www.emoneyadvisor.com</p>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts --> 
+<script src="https://code.highcharts.com/highcharts.js"></script> 
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
+		$(".editlink").click(function(){
+		$.get("/formsample.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+			$(".editlinka").click(function(){
+		$.get("/formsampleadv.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+			// Push off the sidebar and hide other chrome elements when in presentation mode
+	$("#expanded").click(function(){
+	$(".startpanel").toggleClass("hiddenclass");
+	$(".advpanel").toggleClass("shown"); 
+    // $(".push").toggleClass("pushed");
+	// $(".datacol").toggleClass("datashrunk");
+	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
+});
+			// Throw a class on the simple and detailed chart area to trigger the animations and movement
+	$("#expandedinfo").click(function() {
+  $('.reshuffle').toggleClass('reshuffle-active');
+ $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
+});
+	});
+	</script> 
+<script>
+	function(e) {
+  hashState.SetKey('technique', null);
+  $document.trigger('hashchange-technique');
+}
+	</script> 
+
+<!-- Highcharts Sample --> 
+<script type="text/javascript">
+	Highcharts.chart('chartdiv', {
+    title: {
+        text: 'Chart reflow is set to true'
+    },
+
+    subtitle: {
+        text: 'When resizing the window or the frame, the chart should resize'
+    },
+
+
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }]
+});
+	</script>
+</body>
+</html>
