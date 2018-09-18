@@ -513,13 +513,6 @@ html.is-changing .loading{
 });
 	});
 	</script> 
-<script>
-	function(e) {
-  hashState.SetKey('technique', null);
-  $document.trigger('hashchange-technique');
-}
-	</script> 
-
 <!-- Highcharts Sample --> 
 <script type="text/javascript">
 	Highcharts.chart('chartdiv', {
@@ -541,5 +534,7 @@ html.is-changing .loading{
     }]
 });
 	</script>
+	<script src="swup.min.js"></script>
+	<script src="swupsettings.js"></script>
 </body>
 </html>
