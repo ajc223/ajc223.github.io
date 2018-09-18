@@ -279,7 +279,7 @@
 <script type="text/javascript">	
 	jQuery(document).on('swup:contentReplaced', function () {
     // create the chart
-    var mychart = $('#chartdiv').highcharts({
+    var mychart = $('chartdiv').highcharts({
         chart: {
             events: {
                 click: function(event) {
@@ -296,27 +296,6 @@
         }]
     });
 		
-});
-	</script>
-	
-<script type="text/javascript">
-	Highcharts.chart('chartdiv', {
-    title: {
-        text: 'Test'
-    },
-
-    subtitle: {
-        text: 'Test'
-    },
-
-
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
-
-    series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    }]
 });
 	</script>
 	<script src="swup.min.js"></script>
