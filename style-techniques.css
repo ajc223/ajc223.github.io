@@ -232,9 +232,10 @@ html.is-changing .loading{
 }
 
 .loading .textcenter {
-	top: 45%;
+	top: 48%;
 	left: 50%;
 	text-align: center;
+	position: absolute;
 }
 
 html.is-animating .loading {
