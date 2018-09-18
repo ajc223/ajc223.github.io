@@ -223,10 +223,10 @@ html.is-changing .loading{
     top: 0;
     left: 0;
     z-index: 15;
-    background-color: #fff;
-	background-color: rgba(255, 255, 255, .6);
+    background-color: #2c485f;
+	/* background-color: rgba(255, 255, 255, .6); */
     transform: translateX(-100%);
-    transition: all 0.5s ease;
+    transition: all 0.9s ease;
 	font-size: 2rem;
 }
 
