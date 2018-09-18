@@ -230,6 +230,6 @@ html.is-changing .loading{
 	font-size: 2rem;
 }
 
-html.is-animating .c-load-screen {
+html.is-animating .loading {
     transform: translateX(0);
 }
