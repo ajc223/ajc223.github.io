@@ -226,10 +226,11 @@ html.is-changing .loading{
     background-color: #2c485f;
 	/* background-color: rgba(255, 255, 255, .6); */
     transform: translateX(-100%);
-    transition: all 0.9s ease;
+    transition: all 1.5s ease-in-out;
 	font-size: 2rem;
 }
 
 html.is-animating .loading {
     transform: translateX(0);
+	overflow: hidden;
 }
