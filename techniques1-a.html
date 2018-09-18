@@ -277,9 +277,11 @@
 	</script> 
 <!-- Highcharts Sample --> 
 <script type="text/javascript">	
-	jQuery(document).on('swup:contentReplaced', function () {
-    // create the chart
-    var mychart = $('chartdiv').highcharts({
+jQuery(document).on('swup:contentReplaced', function () {
+    drawHighChart(args)
+});
+function drawHighChart(args){
+	 var mychart = $('chartdiv').highcharts({
         chart: {
             events: {
                 click: function(event) {
@@ -298,8 +300,7 @@
         enabled: false
     },
     });
-		
-});
+}
 	</script>
 	<script src="swup.min.js"></script>
 	<script src="swupsettings.js"></script>
