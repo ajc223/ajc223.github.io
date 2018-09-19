@@ -53,7 +53,7 @@
 	background-color: #fff;
 	float: right;
 }
-a.gocollapse {
+a.gocollapse, span.gocollapse {
 	position: absolute;
 	top: 50%;
 	right: -10px;
