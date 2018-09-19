@@ -277,31 +277,14 @@
 	});
 	</script> 
 <!-- Highcharts Sample --> 
-<script type="text/javascript">	
-document.addEventListener('swup:contentReplaced', function () {
-    drawHighChart()
-});
-function drawHighChart(){
-	 var mychart = $('chartdiv').highcharts({
-        chart: {
-            events: {
-                click: function(event) {
-                    alert ('x: '+ event.xAxis[0].value +', y: '+
-                          event.yAxis[0].value);
-                }
-            }        
-        },
-        xAxis: {
-        },
-
-        series: [{
-            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]        
-        }],
-		exporting: {
-        enabled: false
-    },
-    });
+	<script type="text/javascript">
+function init () {
+    new Particles(element);
+    // any other scripts 
 }
+
+init();
+document.addEventListener('swup:contentReplaced', init);
 	</script>
 	<script src="swup.min.js"></script>
 	<script src="swupsettings.js"></script>
