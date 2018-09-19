@@ -145,7 +145,7 @@
 		</div>
 		
       <div class="startpanel row row-eq-height">
-        <div class="col-md-4"> <span class="gocollapse" id="expanded"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
+        <div class="col-md-4">
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
@@ -958,7 +958,7 @@
 });
 				});
 			$(".editlinka").click(function(){
-		$.get("/formsampleadv.html", function(data) {
+		$.get("/formsample.html", function(data) {
      $("#js-techniquelistsection").replaceWith(data);
 });
 				});
