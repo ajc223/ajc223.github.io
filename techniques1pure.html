@@ -139,7 +139,7 @@
 		  </div>
         <div class="col-md-4">
 			
-			<div id="chartdiv" style="height: 250px"></div>
+			<div id="chartdivb" style="height: 250px"></div>
 			
 			  </div>
 		</div>
@@ -979,26 +979,63 @@
 	</script> 
 <!-- Highcharts Sample --> 
 <script type="text/javascript">
-	Highcharts.chart('chartdiv', {
+Highcharts.chart('chartdiv', {
+    chart: {
+        type: 'column'
+    },
     title: {
-        text: 'Chart reflow is set to true'
+        text: 'Stacked column chart'
     },
-
-    subtitle: {
-        text: 'When resizing the window or the frame, the chart should resize'
-    },
-
-
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
     },
-
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total fruit consumption'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+        }
+    },
     series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    }],
-		exporting: {
-        enabled: false
-    }
+        name: 'John',
+        data: [5, 3, 4, 7, 2]
+    }, {
+        name: 'Jane',
+        data: [2, 2, 3, 2, 1]
+    }, {
+        name: 'Joe',
+        data: [3, 4, 4, 2, 5]
+    }]
 });
 	</script>
 </body>
