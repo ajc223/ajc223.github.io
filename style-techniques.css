@@ -108,6 +108,7 @@ a.gocollapse, span.gocollapse {
 	animation-delay: 1s;
 	z-index: 5;
 	position: relative;
+	transformY: (-100%);
 }
 .advpanel.shown {
 	opacity: 1;
@@ -117,6 +118,9 @@ a.gocollapse, span.gocollapse {
 	-ms-animation: fadein 500ms; /* Internet Explorer */
 	-o-animation: fadein 500ms; /* Opera < 12.1 */
 	animation: fadein 500ms;
+	transformY: 90%;
+	background-color: #fff;
+	z-index: 5;
 }
 	
 	/* fader */
