@@ -82,15 +82,17 @@ a.gocollapse, span.gocollapse {
 	}
 	
 .startpanel.hiddenclass {
+	/*
 	--webkit-transition: all ease-in-out 950ms;
 	-moz-transition: all ease-in-out 950ms;
 	transition: all ease-in-out 650ms;
-	/*
 	-moz-animation-delay: 2s;
 	-webkit-animation-delay: 2s;
-	animation-delay: 2s; */
+	animation-delay: 2s;
 	opacity: 0;
 	height: 0px;
+	*/
+	display: none;
 }
 /* hidden panel */
 	
