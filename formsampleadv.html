@@ -643,3 +643,32 @@
   </form>
 	<span id="expanded" class="btn btn-default" style="position: relative; z-index: 1;">Advanced</span>
 </div>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
+		$(".editlink").click(function(){
+		$.get("/formsample.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+			$(".editlinka").click(function(){
+		$.get("/formsample.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+			// Push off the sidebar and hide other chrome elements when in presentation mode
+	$("#expanded").click(function(){
+	$(".startpanel").toggleClass("hiddenclass");
+	$(".advpanel").toggleClass("shown"); 
+    // $(".push").toggleClass("pushed");
+	// $(".datacol").toggleClass("datashrunk");
+	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
+});
+			// Throw a class on the simple and detailed chart area to trigger the animations and movement
+	$("#expandedinfo").click(function() {
+  $('.reshuffle').toggleClass('reshuffle-active');
+ $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
+});
+	});
+	</script> 
