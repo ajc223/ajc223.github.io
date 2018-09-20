@@ -97,12 +97,8 @@ a.gocollapse, span.gocollapse {
 /* hidden panel */
 	
 .advpanel {
-	display: none;
-}
-.advpanel.shown {
 	display: block;
 }
-
 
 /* Fade Panel
 
@@ -399,6 +395,7 @@ animation-delay: 7.5s;
 }
 100% {
 	opacity: 0;
+	height: 0px;
 }
 }
 @keyframes fadeOutDown {
@@ -407,6 +404,7 @@ animation-delay: 7.5s;
 }
 100% {
 	opacity: 0;
+	height: 0px;
 }
 } 
 
