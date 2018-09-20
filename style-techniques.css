@@ -111,12 +111,15 @@ a.gocollapse, span.gocollapse {
 }
 .advpanel.shown {
 	opacity: 1;
-	-webkit-animation: all 1s ease-in-out;
-	-moz-animation: all 1s ease-in-out;
-	-ms-animation: all 1s ease-in-out;
-	-o-animation: all 1s ease-in-out;
-	animation: all 1s ease-in-out;
+	-webkit-animation: all 2s ease-in-out;
+	-moz-animation: all 2s ease-in-out;
+	-ms-animation: all 2s ease-in-out;
+	-o-animation: all 2s ease-in-out;
+	animation: all 2s ease-in-out;
 	transformY: 90%;
+	-moz-animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
 	background-color: #fff;
 	z-index: 5;
 	transform: translateY(0);
