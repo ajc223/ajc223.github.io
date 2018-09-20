@@ -117,7 +117,7 @@
       <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
 		
 		<!-- Hidden Slide Up ADV Panel -->
-		<div class="row advpanel">
+		<div class="advpanel row">
 		 <div class="col-md-8">
 		  		  <!-- Sub Nav -->
 				  
@@ -148,7 +148,7 @@
 		
 		
 		
-      <div class="row row-eq-height hideafter">
+      <div class="hideafter row row-eq-height">
         <div class="col-md-4">
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
@@ -970,11 +970,6 @@
 	$("#expanded").click(function(){
 	$(".advpanel").toggleClass("shown animate fadeInUp six"); 
     $(".hideafter").toggleClass("animate fadeOutDown");
-});
-			// Throw a class on the simple and detailed chart area to trigger the animations and movement
-	$("#expandedinfo").click(function() {
-  $('.reshuffle').toggleClass('reshuffle-active');
- $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
 });
 	});
 	</script> 
