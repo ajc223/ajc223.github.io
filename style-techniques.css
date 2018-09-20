@@ -98,7 +98,6 @@ a.gocollapse, span.gocollapse {
 	
 .advpanel {
 	opacity: 0;
-	display: none;
 	height: 90vh;
 	position: fixed;
 	bottom: 0px;
@@ -112,7 +111,6 @@ a.gocollapse, span.gocollapse {
 }
 .advpanel.shown {
 	opacity: 1;
-	display: block;
 	-webkit-animation: all 1s ease-in-out;
 	-moz-animation: all 1s ease-in-out;
 	-ms-animation: all 1s ease-in-out;
