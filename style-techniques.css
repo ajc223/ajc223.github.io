@@ -386,6 +386,36 @@ animation-delay: 7.5s;
 	-webkit-transform: none;
 	transform: none;
 }
+}
+
+/*=== FADE OUT DOWN ===*/
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+ }
+@-webkit-keyframes fadeOutDown {
+0% {
+	opacity: 1;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+100% {
+	opacity: 0;
+	-webkit-transform: none;
+	transform: none;
+}
+}
+@keyframes fadeOutDown {
+0% {
+	opacity: 1;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+100% {
+	opacity: 0;
+	-webkit-transform: none;
+	transform: none;
+}
 } 
 
 /*=== FADE IN LEFT ===*/

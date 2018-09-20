@@ -117,7 +117,7 @@
       <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
 		
 		<!-- Hidden Slide Up ADV Panel -->
-		<div class="row advpanel animate fadeInDown two">
+		<div class="row advpanel">
 		 <div class="col-md-8">
 		  		  <!-- Sub Nav -->
 				  
@@ -148,7 +148,7 @@
 		
 		
 		
-      <div class="row row-eq-height animate fadeInDown two">
+      <div class="row row-eq-height hideafter">
         <div class="col-md-4">
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
@@ -968,8 +968,8 @@
 				});
 			// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#expanded").click(function(){
-	$(".advpanel").toggleClass("shown"); 
-    // $(".push").toggleClass("pushed");
+	$(".advpanel").toggleClass("shown animate fadeInUp six"); 
+    $(".highafter").toggleClass("animate fadeOutDown");
 	// $(".datacol").toggleClass("datashrunk");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
 });
