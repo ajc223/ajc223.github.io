@@ -641,7 +641,7 @@
     </div>
     <input class="is-invisible" onclick="document.activeElement.blur(); return false;" type="submit">
   </form>
-  <a class="btn btn-default pull-right" style="position: relative; z-index: 1;" href="#" data-toggle="modalopen" data-target="#lab-slide-bottom-popup">Advanced</a> </div>
+  <a class="btn btn-default pull-right" style="position: relative; z-index: 1;" href="#" data-toggle="modal" data-target="#lab-slide-bottom-popup">Advanced</a> </div>
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			
@@ -669,7 +669,7 @@
   $('.reshuffle').toggleClass('reshuffle-active');
  $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
 });	
-    $('.lab-slide-up').find('a').attr('data-toggle', 'modalopen');
+    $('.lab-slide-up').find('a').attr('data-toggle', 'modal');
     $('.lab-slide-up').find('a').attr('data-target', '#lab-slide-bottom-popup');		
 	});
 	</script> 
