@@ -86,6 +86,11 @@ ul.nomargins {
 	margin-bottom: 20px;
 }
 
+.row.firstrow h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 .row.firstrow h3 a {
 	color: #888;
 }
