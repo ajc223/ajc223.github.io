@@ -98,7 +98,6 @@ a.gocollapse, span.gocollapse {
 	
 .advpanel {
 	display: block;
-	height: 0px;
 }
 
 .advpanel:after {
