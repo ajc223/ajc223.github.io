@@ -133,6 +133,14 @@ ul.nomargins {
 	padding-bottom: 10px;
 }
 
+.sideitems .summary-section {
+	margin-bottom: 20px;
+}
+
+.sideitems .summary-section:last-of-type {
+	margin: 0px;
+}
+
 /* Fade Panel
 
 
