@@ -78,6 +78,12 @@ a.gocollapse, span.gocollapse {
 ul.nomargins {
 	margin: 0px;
 }
+
+/* Rename Bar */
+
+.row.firstrow {
+	border-bottom: 1px solid #e2e2e2;
+}
 /* Start Panel */
 	
 	.startpanel {
