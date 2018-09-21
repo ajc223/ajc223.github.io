@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 no-js"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9 no-js"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 no-js"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<title>Decision Center Techniques - Pure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=1389e589d7" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-ClientDecisionCenter.css?v=016d8cb7e9" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Controls.css?v=81b4083505" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/Content-less-TransientNotifications.css?v=e9487b63ce" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/content-css-layout.css?v=1c7a43b183" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayoutBase.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-PageLayout.css?v=fff4c651ba" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Freeze.css?v=a0ca0f2546" type="text/css" rel="stylesheet"/>
+<link href="https://wealth.emaplan.com/ema/wwwroot/css/emx-Firefly.css?v=33321bd7ac" type="text/css" rel="stylesheet"/>
+<!-- font awesome 5 -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<!-- High Charts -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<!-- Layout Specific CSS -->
+<link rel="stylesheet" href="style-techniques.css">
+</head>
+<body class="DefaultBody">
+<div class="with-stickyfooter js-page">
+  <div class="navbar navbar-static-top navbar-default hidden-present menubar" role="navigation">
+    <div class="container js-usernav">
+      <button type="button" class="navbar-toggle js-popover js-popover-menu visible-xs visible-sm">MENU</button>
+      <a class="navbar-brand" href="/ema/Redirect/Home"> <img src="https://wealth.emaplan.com/ema/partner/default/Files/Images/Header/AdvisorNavBarLogo.png?v=103291510" /> </a>
+      <ul class="nav navbar-nav hidden-xs hidden-sm">
+        <li> <a href="/ema/Redirect/Home" data-id="Home"> Home </a> </li>
+        <li> <a href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> </li>
+        <li> <a href="/ema/Connections" data-id="Connections"> Connections </a> </li>
+        <li> <a href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="Applications">Applications <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="https://wealth.emaplan.com/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> </li>
+            <li class="divider"></li>
+            <li> <a href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-id="More">More <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu" role="menu">
+            <li> <a href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> </li>
+            <li> <a href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> </li>
+            <li> <a href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> </li>
+            <li> <a href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-alerts"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Alerts" data-placement="bottom"> <span class="badge badge-alerts js-alerts-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-lg fa-bell"></i> </span> </a> </li>
+        <li> <a href="javascript:void(0);" class="js-popover js-popover-tasks"> <span class="extendedtouchtarget" data-toggle="tooltip" title="Tasks" data-placement="bottom"> <span class="badge badge-tasks js-tasks-badgecount" style="display: none" data-badge-count="0">0</span> <i class="fa fa-warning badge-tasks-warning js-tasks-warning" style="display: none"></i> <i class="fa fa-lg fa-check-square"></i> </span> </a> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+        <li> <a href="/ema/Settings" data-id="Settings"> Settings </a> </li>
+        <li> <a href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> </li>
+        <li> <a href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="js-menu-title" class="popover-content-title text-center hide">
+    <button data-back class="btn btn-primary btn-sm pull-left hide" style="margin-right: -100%;"> <i class="fa fa-caret-left"></i> Back </button>
+    <strong data-title></strong> </div>
+  <div id="js-menu" class="hide">
+    <div class="popover-content-md">
+      <div class="js-menu-main list-group"> <a class="list-group-item" href="/ema/Redirect/Home" data-id="Home"> Home </a> <a class="list-group-item" href="/ema/Advisor/Clients" data-id="Clients"> Clients </a> <a class="list-group-item" href="/ema/Connections" data-id="Connections"> Connections </a> <a class="list-group-item" href="/ema/Advisor/Analytics/Pro?role=advisor" data-id="Analytics"> Analytics </a> <a data-menu="js-menu-Applications" class="list-group-item" href="javascript:void(0);" data-id="Applications">Applications <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a data-menu="js-menu-More" class="list-group-item" href="javascript:void(0);" data-id="More">More <i class="fa fa-lg fa-caret-right pull-right"></i></a> <a class="list-group-item" href="/ema/Settings" data-id="Settings"> Settings </a> <a class="list-group-item" href="javascript:WalkMePlayerAPI.toggleMenu();" target="" data-id="Help"> Help </a> <a class="list-group-item" href="/ema/SignOut" data-id="SignOut"> Sign Out </a> </div>
+      <div class="js-menu-Applications list-group hide"> <a class="list-group-item" href="/ema/Integration/QuickTake" data-id="QuickTake"> <img src="/ema/emx/IntegrationQuickTake/icon.png" alt="Research &amp; News" /> Research &amp; News </a> <a class="list-group-item" href="/ema/Integrations/Select" data-id="ViewAllApplications"> View All Applications </a> </div>
+      <div class="js-menu-More list-group hide"> <a class="list-group-item" href="/ema/Advisor/Reports" data-id="AdvisorReports"> Advisor Reports </a> <a class="list-group-item" href="/ema/Vault/Advisor" data-id="AdvisorVault"> Advisor Vault </a> <a class="list-group-item" href="/ema/Advisor/InvestmentAssumptions" data-id="InvestmentAssumptions"> Investment Assumptions </a> <a class="list-group-item" href="/ema/Advisor/VaultUsage" data-id="VaultUsage"> Vault Usage </a> </div>
+    </div>
+  </div>
+  <div class="navbar navbar-client js-clientnav" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand js-popover-contact"> <span class="h1"> <a href="javascript:void(0);" data-pega-id="client-name">Frank and Joanna Miller</a> <i class="fa fa-caret-down navbar-brand-dropdown"></i> </span> </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="OverviewNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Overview">Overview</a></li>
+        <li><a id="FactsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Facts">Facts</a></li>
+        <li><a id="PlansNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans">Plans</a></li>
+        <li><a id="ReportsNavBarItem" href="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Reports">Reports</a></li>
+        <li><a id="VaultNavBarItem" href="/ema/Vault/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b">Vault</a></li>
+        <li class="navbar-client-crm"><a class="js-popover-crm js-popover" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Notes,&nbsp;Tasks,&nbsp;History"><i class="fa fa-user navbar-client-clienticon"></i></span><span class="hidden">Relationship</span></a></li>
+        <li class="navbar-client-website"><a class="js-popover-clientwebsite" data-id="b5077a53-e6be-458a-97c9-c5045d48af0b" href="javascript:void(0);"><span class="extendedtouchtarget" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Client&nbsp;Website"><i class="fa fa-globe"></i></span><span class="hidden">Website</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div id="problem-bar" data-clientid="b5077a53-e6be-458a-97c9-c5045d48af0b" class="hide"></div>
+  </div>
+  <div class="container">
+    <div id="frozen-bar" class="hide"></div>
+  </div>
+  <div class="js-main" id="swup"> 
+    <!-- Content Container --> 
+    
+    <!-- Page Header -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> <a href="javascript:void(0);" data-base-url="/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans/Presentation/DecisionCenter" data-scenario-id="4fa57c86-5a3f-4466-b8e8-9f8eeff88d96" class="btn btn-default pull-right js-gotopresentation" data-eventname="Planning" data-feature="Decision Center" data-action="Go to Presentation" style="position: relative; z-index: 1;">Go to Presentation</a>
+          <h1 class="page-header page-header-plantool"> <span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span> <span class="decisionctr"><i class="ei ei-decisioncenter page-header-plantool-icon"></i> <span class="page-header-plantool-text"><strong>DECISION</strong>CENTER</span></span> </h1>
+        </div>
+      </div>
+      
+      <!-- DC Output pulled from lifetime cash flow as of september 12 --> 
+      
+      <!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
+      
+      <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
+		
+		
+      <div class="row row-eq-height animateslow fadeInDown">
+        <div class="col-md-4">
+          <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
+          <div id="panel-planDropdown">
+            <div class="comparison-header-column plan-dropdown">
+              <div class="h3"> <small>Selected Plan</small><br>
+                <div>
+                  <div class="dropdown"> <a href="javascript:void(0);" data-toggle="dropdown" id="scenario-link" class="" role="menu" title="" data-selected="4fa57c86-5a3f-4466-b8e8-9f8eeff88d96"> Advanced Plan - Aug 2018 <i class="fa fa-caret-down hidden-print"></i> </a>
+                    <ul class="link-menu dropdown-menu" id="scenario-menu" data-for="scenario-link" data-hashkey="scenario">
+                      <li data-value="e6f37577-673e-4daf-882e-66d9f226381f" class=""> <a href="javascript:void(0);" tabindex="-1">Base Facts</a> </li>
+                      <li data-value="4fa57c86-5a3f-4466-b8e8-9f8eeff88d96" class=""> <a href="javascript:void(0);" tabindex="-1">Advanced Plan - Aug 2018</a> </li>
+                      <li data-value="b3eb8718-2b22-47a2-bda8-dcbe18e459ff" class=""> <a href="javascript:void(0);" tabindex="-1">Advanced Plan - Aug 2018</a> </li>
+                      <li data-value="a898b94b-e6fd-43f8-b165-c9ce14c9bdb5" class=""> <a href="javascript:void(0);" tabindex="-1">Advanced Plan - Jun 2018</a> </li>
+                      <li data-value="ab36048e-e18b-4c14-8221-e89e99b7027b" class=""> <a href="javascript:void(0);" tabindex="-1">Advanced Plan - May 2018</a> </li>
+                      <li data-value="3c3a93e2-9b92-49de-87ad-9e9931c5e0e9" class=""> <a href="javascript:void(0);" tabindex="-1">Delay retirement and Soc Security</a> </li>
+                      <li data-value="5bdc3895-9241-44e2-ac3b-85505688845f" class=""> <a href="javascript:void(0);" tabindex="-1">New AP Flow</a> </li>
+                      <li data-value="fd10d501-20f8-4d02-89cb-8b07b7c7c19c" class=""> <a href="javascript:void(0);" tabindex="-1">Retire at 65 with Part-Time Consulting</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="js-techniquelistsection">
+            <div data-reactid=".0">
+              <div class="form-header border-top-zero" data-reactid=".0.0"><a href="javascript:void(0);" class="pull-right edit track-event" data-reactid=".0.0.0"><i class="fas fa-plus-circle"></i> Add</a><strong class="text-caps" data-reactid=".0.0.1">Techniques</strong></div>
+              <ul class="list-group technique-list ui-sortable" data-reactid=".0.1">
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f">
+                  <div data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0">
+                      <input id="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" checked="" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.1"><a class="editlink" data-reactid=".0.1.$4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f.0.1.0">Fin Support for Moms $60,000 x 8 Years</a></div>
+                  </div>
+                </li>
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$EditLifeEvents">
+                  <div data-reactid=".0.1.$EditLifeEvents.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$EditLifeEvents.0.0">
+                      <input id="ema-switch-fe89545d-4409-4179-afe4-623b7112f0c7" checked="" data-reactid=".0.1.$EditLifeEvents.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-fe89545d-4409-4179-afe4-623b7112f0c7" data-reactid=".0.1.$EditLifeEvents.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$EditLifeEvents.0.1"><a class="editlinka" data-reactid=".0.1.$EditLifeEvents.0.1.0">Retire 3 Years Later - Age 68/67</a></div>
+                  </div>
+                </li>
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a">
+                  <div data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0.0">
+                      <input id="ema-switch-d971f918-840a-4eed-877a-7895951dd34a" checked="" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-d971f918-840a-4eed-877a-7895951dd34a" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0.1"><a class="editlink" data-reactid=".0.1.$d971f918-840a-4eed-877a-7895951dd34a.0.1.0">Sell Vacation House 2021 for $350,000</a></div>
+                  </div>
+                </li>
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049">
+                  <div data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0.0">
+                      <input id="ema-switch-f21336a9-dce0-48a9-8d74-3e58a51ea049" checked="" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-f21336a9-dce0-48a9-8d74-3e58a51ea049" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0.1"><a class="editlink" data-reactid=".0.1.$f21336a9-dce0-48a9-8d74-3e58a51ea049.0.1.0">Modify Home</a></div>
+                  </div>
+                </li>
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6">
+                  <div data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0.0">
+                      <input id="ema-switch-2c75b88c-7cf5-4b3c-94c6-e701497085b6" checked="" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-2c75b88c-7cf5-4b3c-94c6-e701497085b6" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0.1"><a class="editlink" data-reactid=".0.1.$2c75b88c-7cf5-4b3c-94c6-e701497085b6.0.1.0">Rebalance Portfolios</a></div>
+                  </div>
+                </li>
+                <li class="list-group-item technique-list-item" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5">
+                  <div data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0">
+                    <div class="ctrl-switch" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0.0">
+                      <input id="ema-switch-8d81876f-2793-4039-9976-9940882233d5" checked="" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0.0.0" type="checkbox">
+                      <label class="ctrl-switch-slider" for="ema-switch-8d81876f-2793-4039-9976-9940882233d5" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0.0.1"></label>
+                    </div>
+                    <div class="menu-text" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0.1"><a class="editlink" data-reactid=".0.1.$8d81876f-2793-4039-9976-9940882233d5.0.1.0">Gift to Charity</a></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="text-right list-footer" data-reactid=".0.2"><a href="javascript:void(0);" class="text-muted" data-reactid=".0.2.0"><small data-reactid=".0.2.0.0">All On</small></a><span data-reactid=".0.2.1">&nbsp;·&nbsp;</span><a href="javascript:void(0);" class="text-muted" data-reactid=".0.2.2"><small data-reactid=".0.2.2.0">All Off</small></a></div>
+            </div>
+          </div>
+          <div id="panel-left" style="display: none;"></div>
+        </div>
+        <div class="col-md-8 col-with-separato datacol">
+          <div id="panel-right-wrapper" class="">
+            <div id="panel-right">
+              <div id="CashFlow">
+                <div class="comparison-header table-header">
+                  <div class="comparison-header-column">
+                    <div class="h3"> <small>Selected Report</small><br>
+                      <div class="dropdown"> <a href="javascript:void(0);" data-toggle="dropdown" id="report-link" class="" role="menu" title="" data-selected="LifetimeCashFlow"> Lifetime Cash Flow <i class="fa fa-caret-down hidden-print"></i> </a>
+                        <ul class="link-menu dropdown-menu" id="report-menu" data-for="report-link" data-hashkey="report">
+                          <li data-value="LifetimeCashFlow" class="active"> <a href="javascript:void(0);" tabindex="-1">Lifetime Cash Flow</a> </li>
+                          <li data-value="CashFlowDetails" class=""> <a href="javascript:void(0);" tabindex="-1">Cash Flow Details</a> </li>
+                          <li data-value="MonteCarlo" class=""> <a href="javascript:void(0);" tabindex="-1">Stress Test</a> </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				  
+				  		  <!-- Sub Nav -->
+				  
+				  <ul class="link-menu link-menu-estate nav nav-pills nav-justified" data-for="step-link" data-hashkey="step">
+	<li class="active" data-value="NetWorth">
+		<a href="javascript:void(0);">Net Worth</a>
+	</li>
+	<li class="" data-value="FirstDeath">
+		<a href="javascript:void(0);">Frank's Death</a>
+	</li>
+	<li class="" data-value="SurvivorIncome">
+		<a href="javascript:void(0);">Survivor Income</a>
+	</li>
+	<li class="" data-value="LastDeath">
+		<a href="javascript:void(0);">Joanna's Death</a>
+	</li>
+	<li class="" data-value="Overview">
+		<a href="javascript:void(0);">Overview</a>
+	</li>
+</ul>
+				  
+                <div class="present-value-toggle-section">
+                  <div id="switch-to-future-value-section" class="alert alert-info hidden"> <span>You are currently viewing in Present Value</span> <span class="present-value-info-tooltip" data-toggle="tooltip" data-placement="top" title="The discount rate used for present value calculations is equal to the annual inflation rate defined in the plan."> <i class="fa fa-question-circle present-value-color"></i> </span>
+                    <div class="pull-right"> <a id="switch-to-future-value" href="javascript:void(0);">Switch back to Future Value</a> </div>
+                  </div>
+                  <div id="switch-to-present-value-section" class="">
+                    <div class="text-right"> <a id="switch-to-present-value" href="javascript:void(0);">View in Present Value</a> <span class="present-value-info-tooltip" data-toggle="tooltip" data-placement="top" title="The discount rate used for present value calculations is equal to the annual inflation rate defined in the plan."> <i class="fa fa-question-circle present-value-color"></i> </span> </div>
+                  </div>
+                </div>
+                
+                <!-- Add Chart Here -->
+                <div id="chartdiv" style="height: 400px"></div>
+                <div id="chart-details" class="chart-details hidden-print">
+                  <div class="pull-right">
+                    <div id="chart-details-ages" class="chart-details-ages">
+                      <div class="details-age-container male "> <span class="details-age">97</span> <span class="details-name"><span class="font-size-tiny">FRANK</span></span> </div>
+                      <div class="details-age-container female "> <span class="details-age">96</span> <span class="details-name"><span class="font-size-tiny">JOANNA</span></span> </div>
+                    </div>
+                  </div>
+                  <h2 id="chart-details-header" class="chart-details-header"> Details by Year: <a href="javascript:void(0);" class="year">2064</a> </h2>
+                  <div id="chart-details-content" class="chart-details-content">
+                    <table id="chart-details-table" class="table chart-details-table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th style="width: 164px;"><span class="font-size-small">Portfolio Assets</span></th>
+                          <th style="width: 124px;"><span class="font-size-small">Net Worth</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="font-size-tiny">BEFORE</span></td>
+                          <td><span class="font-size-small">$79,344</span></td>
+                          <td><span class="font-size-small">$4,111,180</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="font-size-tiny">AFTER</span></td>
+                          <td><span class="font-size-small">$2,620,741</span></td>
+                          <td><span class="font-size-small">$2,715,741</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="font-size-tiny">NET</span></td>
+                          <td><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar">$</span>2,541,397</span></span></td>
+                          <td><span class="arrow red"><i class="fa fa-arrow-circle-down"></i> <span class="text"><span class="small-dollar">$</span>1,395,439</span></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div id="chart-detailsprint" class="visible-print">
+                  <table class="chart-details-print">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th class="divider-right"></th>
+                        <th colspan="3" class="font-size-larger divider-right" style="text-align: center;">Portfolio Assets</th>
+                        <th colspan="3" class="font-size-larger" style="text-align: center;">Net Worth</th>
+                      </tr>
+                      <tr>
+                        <th>Year</th>
+                        <th class="divider-right">Age</th>
+                        <th>Before</th>
+                        <th>After</th>
+                        <th class="divider-right">Net Change</th>
+                        <th>Before</th>
+                        <th>After</th>
+                        <th>Net Change</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2018</td>
+                        <td class="divider-right"> 51/50 </td>
+                        <td>$1,124,369</td>
+                        <td>$734,691</td>
+                        <td class="divider-right">($389,678)</td>
+                        <td>$2,047,315</td>
+                        <td>$1,185,193</td>
+                        <td>($862,122)</td>
+                      </tr>
+                      <tr>
+                        <td>2019</td>
+                        <td class="divider-right"> 52/51 </td>
+                        <td>$1,253,714</td>
+                        <td>$832,480</td>
+                        <td class="divider-right">($421,234)</td>
+                        <td>$2,236,549</td>
+                        <td>$1,292,382</td>
+                        <td>($944,167)</td>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td class="divider-right"> 53/52 </td>
+                        <td>$1,395,366</td>
+                        <td>$939,721</td>
+                        <td class="divider-right">($455,645)</td>
+                        <td>$2,440,074</td>
+                        <td>$1,409,288</td>
+                        <td>($1,030,786)</td>
+                      </tr>
+                      <tr>
+                        <td>2021</td>
+                        <td class="divider-right"> 54/53 </td>
+                        <td>$1,549,886</td>
+                        <td>$1,440,519</td>
+                        <td class="divider-right">($109,367)</td>
+                        <td>$2,658,521</td>
+                        <td>$1,532,785</td>
+                        <td>($1,125,736)</td>
+                      </tr>
+                      <tr>
+                        <td>2022</td>
+                        <td class="divider-right"> 55/54 </td>
+                        <td>$1,718,386</td>
+                        <td>$1,605,151</td>
+                        <td class="divider-right">($113,235)</td>
+                        <td>$2,893,078</td>
+                        <td>$1,697,728</td>
+                        <td>($1,195,350)</td>
+                      </tr>
+                      <tr>
+                        <td>2023</td>
+                        <td class="divider-right"> 56/55 </td>
+                        <td>$1,846,573</td>
+                        <td>$1,776,407</td>
+                        <td class="divider-right">($70,166)</td>
+                        <td>$3,089,529</td>
+                        <td>$1,869,338</td>
+                        <td>($1,220,191)</td>
+                      </tr>
+                      <tr>
+                        <td>2024</td>
+                        <td class="divider-right"> 57/56 </td>
+                        <td>$2,006,697</td>
+                        <td>$1,902,721</td>
+                        <td class="divider-right">($103,976)</td>
+                        <td>$3,320,204</td>
+                        <td>$1,996,054</td>
+                        <td>($1,324,150)</td>
+                      </tr>
+                      <tr>
+                        <td>2025</td>
+                        <td class="divider-right"> 58/57 </td>
+                        <td>$2,180,654</td>
+                        <td>$2,037,552</td>
+                        <td class="divider-right">($143,102)</td>
+                        <td>$3,567,084</td>
+                        <td>$2,131,343</td>
+                        <td>($1,435,741)</td>
+                      </tr>
+                      <tr>
+                        <td>2026</td>
+                        <td class="divider-right"> 59/58 </td>
+                        <td>$2,408,155</td>
+                        <td>$2,234,659</td>
+                        <td class="divider-right">($173,496)</td>
+                        <td>$3,869,969</td>
+                        <td>$2,328,971</td>
+                        <td>($1,540,998)</td>
+                      </tr>
+                      <tr>
+                        <td>2027</td>
+                        <td class="divider-right"> 60/59 </td>
+                        <td>$2,656,335</td>
+                        <td>$2,448,773</td>
+                        <td class="divider-right">($207,562)</td>
+                        <td>$4,196,086</td>
+                        <td>$2,543,678</td>
+                        <td>($1,652,408)</td>
+                      </tr>
+                      <tr>
+                        <td>2028</td>
+                        <td class="divider-right"> 61/60 </td>
+                        <td>$2,926,970</td>
+                        <td>$2,681,988</td>
+                        <td class="divider-right">($244,982)</td>
+                        <td>$4,546,727</td>
+                        <td>$2,776,988</td>
+                        <td>($1,769,739)</td>
+                      </tr>
+                      <tr>
+                        <td>2029</td>
+                        <td class="divider-right"> 62/61 </td>
+                        <td>$3,220,399</td>
+                        <td>$2,935,275</td>
+                        <td class="divider-right">($285,124)</td>
+                        <td>$4,940,637</td>
+                        <td>$3,030,275</td>
+                        <td>($1,910,362)</td>
+                      </tr>
+                      <tr>
+                        <td>2030</td>
+                        <td class="divider-right"> 63/62 </td>
+                        <td>$3,540,754</td>
+                        <td>$3,211,337</td>
+                        <td class="divider-right">($329,417)</td>
+                        <td>$5,302,598</td>
+                        <td>$3,306,337</td>
+                        <td>($1,996,261)</td>
+                      </tr>
+                      <tr>
+                        <td>2031</td>
+                        <td class="divider-right"> 64/63 </td>
+                        <td>$3,890,274</td>
+                        <td>$3,511,432</td>
+                        <td class="divider-right">($378,842)</td>
+                        <td>$5,694,789</td>
+                        <td>$3,606,432</td>
+                        <td>($2,088,357)</td>
+                      </tr>
+                      <tr>
+                        <td>2032</td>
+                        <td class="divider-right"> 65/64 </td>
+                        <td>$3,944,270</td>
+                        <td>$3,862,170</td>
+                        <td class="divider-right">($82,100)</td>
+                        <td>$5,792,548</td>
+                        <td>$3,957,170</td>
+                        <td>($1,835,378)</td>
+                      </tr>
+                      <tr>
+                        <td>2033</td>
+                        <td class="divider-right"> 66/65 </td>
+                        <td>$3,978,888</td>
+                        <td>$4,244,253</td>
+                        <td class="divider-right">$265,365</td>
+                        <td>$5,872,050</td>
+                        <td>$4,339,253</td>
+                        <td>($1,532,797)</td>
+                      </tr>
+                      <tr>
+                        <td>2034</td>
+                        <td class="divider-right"> 67/66 </td>
+                        <td>$4,018,265</td>
+                        <td>$4,660,368</td>
+                        <td class="divider-right">$642,103</td>
+                        <td>$5,957,460</td>
+                        <td>$4,755,368</td>
+                        <td>($1,202,092)</td>
+                      </tr>
+                      <tr>
+                        <td>2035</td>
+                        <td class="divider-right"> 68/67 </td>
+                        <td>$4,057,043</td>
+                        <td>$4,726,746</td>
+                        <td class="divider-right">$669,703</td>
+                        <td>$6,043,449</td>
+                        <td>$4,821,746</td>
+                        <td>($1,221,703)</td>
+                      </tr>
+                      <tr>
+                        <td>2036</td>
+                        <td class="divider-right"> 69/68 </td>
+                        <td>$4,095,019</td>
+                        <td>$4,794,173</td>
+                        <td class="divider-right">$699,154</td>
+                        <td>$6,129,845</td>
+                        <td>$4,889,173</td>
+                        <td>($1,240,672)</td>
+                      </tr>
+                      <tr>
+                        <td>2037</td>
+                        <td class="divider-right"> 70/69 </td>
+                        <td>$4,112,368</td>
+                        <td>$4,836,032</td>
+                        <td class="divider-right">$723,664</td>
+                        <td>$6,196,854</td>
+                        <td>$4,931,032</td>
+                        <td>($1,265,822)</td>
+                      </tr>
+                      <tr>
+                        <td>2038</td>
+                        <td class="divider-right"> 71/70 </td>
+                        <td>$4,104,537</td>
+                        <td>$4,865,792</td>
+                        <td class="divider-right">$761,255</td>
+                        <td>$6,239,954</td>
+                        <td>$4,960,792</td>
+                        <td>($1,279,162)</td>
+                      </tr>
+                      <tr>
+                        <td>2039</td>
+                        <td class="divider-right"> 72/71 </td>
+                        <td>$4,082,544</td>
+                        <td>$4,891,372</td>
+                        <td class="divider-right">$808,828</td>
+                        <td>$6,270,196</td>
+                        <td>$4,986,372</td>
+                        <td>($1,283,824)</td>
+                      </tr>
+                      <tr>
+                        <td>2040</td>
+                        <td class="divider-right"> 73/72 </td>
+                        <td>$4,054,289</td>
+                        <td>$4,912,272</td>
+                        <td class="divider-right">$857,983</td>
+                        <td>$6,295,513</td>
+                        <td>$5,007,272</td>
+                        <td>($1,288,241)</td>
+                      </tr>
+                      <tr>
+                        <td>2041</td>
+                        <td class="divider-right"> 74/73 </td>
+                        <td>$4,019,307</td>
+                        <td>$4,928,357</td>
+                        <td class="divider-right">$909,050</td>
+                        <td>$6,315,474</td>
+                        <td>$5,023,357</td>
+                        <td>($1,292,117)</td>
+                      </tr>
+                      <tr>
+                        <td>2042</td>
+                        <td class="divider-right"> 75/74 </td>
+                        <td>$3,977,161</td>
+                        <td>$4,939,136</td>
+                        <td class="divider-right">$961,975</td>
+                        <td>$6,329,678</td>
+                        <td>$5,034,136</td>
+                        <td>($1,295,542)</td>
+                      </tr>
+                      <tr>
+                        <td>2043</td>
+                        <td class="divider-right"> 76/75 </td>
+                        <td>$3,927,377</td>
+                        <td>$4,944,096</td>
+                        <td class="divider-right">$1,016,719</td>
+                        <td>$6,337,686</td>
+                        <td>$5,039,096</td>
+                        <td>($1,298,590)</td>
+                      </tr>
+                      <tr>
+                        <td>2044</td>
+                        <td class="divider-right"> 77/76 </td>
+                        <td>$3,869,453</td>
+                        <td>$4,942,945</td>
+                        <td class="divider-right">$1,073,492</td>
+                        <td>$6,339,034</td>
+                        <td>$5,037,945</td>
+                        <td>($1,301,089)</td>
+                      </tr>
+                      <tr>
+                        <td>2045</td>
+                        <td class="divider-right"> 78/77 </td>
+                        <td>$3,802,833</td>
+                        <td>$4,934,937</td>
+                        <td class="divider-right">$1,132,104</td>
+                        <td>$6,333,203</td>
+                        <td>$5,029,937</td>
+                        <td>($1,303,266)</td>
+                      </tr>
+                      <tr>
+                        <td>2046</td>
+                        <td class="divider-right"> 79/78 </td>
+                        <td>$3,726,939</td>
+                        <td>$4,919,695</td>
+                        <td class="divider-right">$1,192,756</td>
+                        <td>$6,319,654</td>
+                        <td>$5,014,695</td>
+                        <td>($1,304,959)</td>
+                      </tr>
+                      <tr>
+                        <td>2047</td>
+                        <td class="divider-right"> 80/79 </td>
+                        <td>$3,641,184</td>
+                        <td>$4,896,728</td>
+                        <td class="divider-right">$1,255,544</td>
+                        <td>$6,297,841</td>
+                        <td>$4,991,728</td>
+                        <td>($1,306,113)</td>
+                      </tr>
+                      <tr>
+                        <td>2048</td>
+                        <td class="divider-right"> 81/80 </td>
+                        <td>$3,544,905</td>
+                        <td>$4,865,413</td>
+                        <td class="divider-right">$1,320,508</td>
+                        <td>$6,267,140</td>
+                        <td>$4,960,413</td>
+                        <td>($1,306,727)</td>
+                      </tr>
+                      <tr>
+                        <td>2049</td>
+                        <td class="divider-right"> 82/81 </td>
+                        <td>$3,437,431</td>
+                        <td>$4,825,123</td>
+                        <td class="divider-right">$1,387,692</td>
+                        <td>$6,226,924</td>
+                        <td>$4,920,123</td>
+                        <td>($1,306,801)</td>
+                      </tr>
+                      <tr>
+                        <td>2050</td>
+                        <td class="divider-right"> 83/82 </td>
+                        <td>$3,318,120</td>
+                        <td>$4,775,240</td>
+                        <td class="divider-right">$1,457,120</td>
+                        <td>$6,176,592</td>
+                        <td>$4,870,240</td>
+                        <td>($1,306,352)</td>
+                      </tr>
+                      <tr>
+                        <td>2051</td>
+                        <td class="divider-right"> 84/83 </td>
+                        <td>$3,186,095</td>
+                        <td>$4,714,976</td>
+                        <td class="divider-right">$1,528,881</td>
+                        <td>$6,115,312</td>
+                        <td>$4,809,976</td>
+                        <td>($1,305,336)</td>
+                      </tr>
+                      <tr>
+                        <td>2052</td>
+                        <td class="divider-right"> 85/84 </td>
+                        <td>$3,040,676</td>
+                        <td>$4,644,174</td>
+                        <td class="divider-right">$1,603,498</td>
+                        <td>$6,042,449</td>
+                        <td>$4,739,174</td>
+                        <td>($1,303,275)</td>
+                      </tr>
+                      <tr>
+                        <td>2053</td>
+                        <td class="divider-right"> 86/85 </td>
+                        <td>$2,881,015</td>
+                        <td>$4,562,283</td>
+                        <td class="divider-right">$1,681,268</td>
+                        <td>$5,957,202</td>
+                        <td>$4,657,283</td>
+                        <td>($1,299,919)</td>
+                      </tr>
+                      <tr>
+                        <td>2054</td>
+                        <td class="divider-right"> 87/86 </td>
+                        <td>$2,706,187</td>
+                        <td>$4,468,603</td>
+                        <td class="divider-right">$1,762,416</td>
+                        <td>$5,858,692</td>
+                        <td>$4,563,603</td>
+                        <td>($1,295,089)</td>
+                      </tr>
+                      <tr>
+                        <td>2055</td>
+                        <td class="divider-right"> 88/87 </td>
+                        <td>$2,515,325</td>
+                        <td>$4,362,482</td>
+                        <td class="divider-right">$1,847,157</td>
+                        <td>$5,746,102</td>
+                        <td>$4,457,482</td>
+                        <td>($1,288,620)</td>
+                      </tr>
+                      <tr>
+                        <td>2056</td>
+                        <td class="divider-right"> 89/88 </td>
+                        <td>$2,307,362</td>
+                        <td>$4,243,152</td>
+                        <td class="divider-right">$1,935,790</td>
+                        <td>$5,618,415</td>
+                        <td>$4,338,152</td>
+                        <td>($1,280,263)</td>
+                      </tr>
+                      <tr>
+                        <td>2057</td>
+                        <td class="divider-right"> 90/89 </td>
+                        <td>$2,060,978</td>
+                        <td>$4,096,763</td>
+                        <td class="divider-right">$2,035,785</td>
+                        <td>$5,454,362</td>
+                        <td>$4,191,763</td>
+                        <td>($1,262,599)</td>
+                      </tr>
+                      <tr>
+                        <td>2058</td>
+                        <td class="divider-right"> 91/90 </td>
+                        <td>$1,793,927</td>
+                        <td>$3,935,945</td>
+                        <td class="divider-right">$2,142,018</td>
+                        <td>$5,271,750</td>
+                        <td>$4,030,945</td>
+                        <td>($1,240,805)</td>
+                      </tr>
+                      <tr>
+                        <td>2059</td>
+                        <td class="divider-right"> 92/91 </td>
+                        <td>$1,504,999</td>
+                        <td>$3,760,080</td>
+                        <td class="divider-right">$2,255,081</td>
+                        <td>$5,069,422</td>
+                        <td>$3,855,080</td>
+                        <td>($1,214,342)</td>
+                      </tr>
+                      <tr>
+                        <td>2060</td>
+                        <td class="divider-right"> 93/92 </td>
+                        <td>$1,192,937</td>
+                        <td>$3,568,577</td>
+                        <td class="divider-right">$2,375,640</td>
+                        <td>$4,846,177</td>
+                        <td>$3,663,577</td>
+                        <td>($1,182,600)</td>
+                      </tr>
+                      <tr>
+                        <td>2061</td>
+                        <td class="divider-right"> 94/93 </td>
+                        <td>$899,569</td>
+                        <td>$3,361,735</td>
+                        <td class="divider-right">$2,462,166</td>
+                        <td>$4,643,900</td>
+                        <td>$3,456,735</td>
+                        <td>($1,187,165)</td>
+                      </tr>
+                      <tr>
+                        <td>2062</td>
+                        <td class="divider-right"> 95/94 </td>
+                        <td>$646,147</td>
+                        <td>$3,139,359</td>
+                        <td class="divider-right">$2,493,212</td>
+                        <td>$4,483,901</td>
+                        <td>$3,234,359</td>
+                        <td>($1,249,542)</td>
+                      </tr>
+                      <tr>
+                        <td>2063</td>
+                        <td class="divider-right"> 96/95 </td>
+                        <td>$373,135</td>
+                        <td>$2,900,954</td>
+                        <td class="divider-right">$2,527,819</td>
+                        <td>$4,306,704</td>
+                        <td>$2,995,954</td>
+                        <td>($1,310,750)</td>
+                      </tr>
+                      <tr>
+                        <td>2064</td>
+                        <td class="divider-right"> 97/96 </td>
+                        <td>$79,344</td>
+                        <td>$2,620,741</td>
+                        <td class="divider-right">$2,541,397</td>
+                        <td>$4,111,180</td>
+                        <td>$2,715,741</td>
+                        <td>($1,395,439)</td>
+                      </tr>
+                      <tr>
+                        <td>2065</td>
+                        <td class="divider-right"> 98/97 </td>
+                        <td>($234,640)</td>
+                        <td>$2,313,378</td>
+                        <td class="divider-right">$2,548,018</td>
+                        <td>$3,897,979</td>
+                        <td>$2,408,378</td>
+                        <td>($1,489,601)</td>
+                      </tr>
+                      <tr>
+                        <td>2066</td>
+                        <td class="divider-right"> 99/98 </td>
+                        <td>($556,417)</td>
+                        <td>$1,980,452</td>
+                        <td class="divider-right">$2,536,869</td>
+                        <td>$3,679,565</td>
+                        <td>$2,075,452</td>
+                        <td>($1,604,113)</td>
+                      </tr>
+                      <tr>
+                        <td>2067</td>
+                        <td class="divider-right"> 100/99 </td>
+                        <td>($561,834)</td>
+                        <td>$1,944,778</td>
+                        <td class="divider-right">$2,506,612</td>
+                        <td>$3,780,157</td>
+                        <td>$2,039,778</td>
+                        <td>($1,740,379)</td>
+                      </tr>
+                      <tr>
+                        <td>2068</td>
+                        <td class="divider-right"> ––/100 </td>
+                        <td>($931,998)</td>
+                        <td>$1,591,427</td>
+                        <td class="divider-right">$2,523,425</td>
+                        <td>$3,518,716</td>
+                        <td>$1,686,427</td>
+                        <td>($1,832,289)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div id="js-addpanel">
+              <div data-reactid=".1"></div>
+            </div>
+          </div>
+        </div>
+        <div id="popup-placeholder"></div>
+      </div>
+    </div>
+    <!-- end base col container --> 
+  </div>
+  <!-- end js main --> 
+	
+	<div class="loading"><div class="textcenter"><img src="spinner.gif" alt="Loading" /></div></div>
+	<!-- Preloader -->
+	
+</div>
+<!-- with sticky footer -->
+
+<div class="page-footer hidden-present hidden-print">
+  <div class="container">
+    <div id="PrintedFactFinderModal" class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"> Printed Fact Forms </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li><a href="/ema/partner/default/Files/Content/QuickFactFinder.pdf?v=103291510" target="_blank">Printed Preliminary Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.pdf?v=103291510" target="_blank">Printed Fact Form PDF</a></li>
+              <li><a href="/ema/partner/ema/Files/Content/FactFinder.doc?v=103291510" target="_blank">Printed Fact Form</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <address>
+        <a href="http://www.emoneyadvisor.com" target="_blank"><strong>eMoney Advisor, LLC</strong></a><br />
+        Four Radnor Corporate Center,<br />
+        Suite 300<br />
+        100 Matsonford Road<br />
+        Radnor, PA 19087<br />
+        <ul class="list-inline">
+          <li><a href="https://www.facebook.com/eMoneyAdvisor" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="http://twitter.com/eMoneyAdvisor" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="http://www.linkedin.com/company/emoney-advisor" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="http://www.youtube.com/user/emoneyadvisor" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+        </ul>
+        </address>
+      </div>
+      <div class="col-sm-3">
+        <h4>Resources</h4>
+        <ul class="list-unstyled">
+          <li><a href="javascript:void(0);" class="js-printedfactfinders">Printed Fact Forms</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Services</h4>
+        <ul class="list-unstyled">
+          <li><a href="http://www.emoneyadvisor.com/Products/Advisor-Branded-Media" target="eMarketing">Advisor Branded Marketing</a></li>
+          <li><a href="http://blog.emoneyadvisor.com/" target="emoneyblog">eMoney Blog</a></li>
+          <li><a href="http://www.emoneyadvisor.com/files/data-entry.pdf" target="eDataEntry">Data Entry Services</a></li>
+          <li><a href="/ema/Advisor/Mimeo">Print on Demand</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4>Support</h4>
+        <ul class="list-unstyled">
+          <li><a href="tel:(888) 362-8482"><strong>(888) 362-8482</strong></a></li>
+          <li><a href="javascript:void(0);" class="js-contactus">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-muted"> <small>&copy; 2018 eMoney Advisor, LLC.</small>&nbsp;&nbsp;|&nbsp;&nbsp;<small class="footer-version text-muted">Software Version: 10.3.291.510</small> </div>
+    <div class="text-center">
+      <ul class="list-inline">
+        <li> <a href="/ema/Legal/Terms"><small>Terms of Service</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Security"><small>Security</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Privacy"><small>Privacy Policy</small></a> </li>
+        <li> · </li>
+        <li> <a href="/ema/Legal/Disclaimer"><small>Disclaimer</small></a> </li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <p style="margin:0">www.emoneyadvisor.com</p>
+    </div>
+  </div>
+</div>
+	
+	<!-- Advanced Panel would need to dynamically inject context here -->
+	
+	<!-- MODAL CONTENT SAMPLE STARTS HERE -->
+<div class="modal fade" id="lab-slide-bottom-popup" data-keyboard="false" data-backdrop="false">
+  <div class="lab-modal-body">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h1>
+			Terms and Conditions		</h1>
+
+    <p>LICENSING</p>
+    <p>Licenses are valid for one year from the date of purchase. When asking for support with any purchased plugin, you may be asked to provide a valid license key as proof of purchase.</p>
+    <p>SOFTWARE UPDATES</p>
+    <p>Updates are included for free for one year. If you have a valid and active license key, and your purchased plugin(s) supports it, updates will be delivered automatically from the WordPress dashboard. If your plugin(s) does not support automatic upgrades,
+      then updates can be downloaded from your <a href="https://1wd.tv/my-account/" target="_blank">account</a> page.</p>
+    <p>SUPPORT SERVICES</p>
+    <p>Support for purchased plugins is given up to one year after the purchase date. If you wish to get support after one year, you must purchase a new license key for the plugin you are seeking support for.</p>
+    <p>REFUNDS</p>
+    <p>I&nbsp;firmly believe in and stand behind my&nbsp;products 100%, but I&nbsp;are understand that no all plugins&nbsp;can&nbsp;work perfectly for everyone all of the time. If you are unhappy with your purchase, or you have an issue that we are unable
+      to resolve that makes the system unusable, I&nbsp;am more than happy to provide a complete refund within 30 days of your original purchase.</p>
+    <p>A few conditions:</p>
+    <ol>
+      <li>I&nbsp;cannot provide refunds due to technical issues unless you allow us to adequately try and assist you. If we are unable to resolve the issue for you, I&nbsp;will provide a refund. Please open a support ticket before requesting a refund for
+        a technical issue.</li>
+      <li>Refunds may only be issued within 30 days of the purchase date. After 30 days no refunds can be processed.</li>
+    </ol>
+    <div class="text-center">
+      <a href="https://1wd.tv/" target="_blank" class="btn-primary btn-plain btn btn-lg popup-button">Visit 1WD.tv!</a>
+    </div>
+  </div>
+  <!-- /.modal-body -->
+</div>
+<!-- /.modal -->
+<!-- END MODAL CONTENT SAMPLE -->
+
+<!-- Scripts -->
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
+		$(".editlink").click(function(){
+		$.get("/formsamplemodal.html", function(data) {
+     $("#js-techniquelistsection").replaceWith(data);
+});
+				});
+				});
+			// Push off the sidebar and hide other chrome elements when in presentation mode
+	$("#expanded").click(function(){
+	$(".advpanel").toggleClass("shown animate fadeInUp six"); 
+    $(".hideafter").toggleClass("animate fadeOutDown");
+});
+			
+			 $(document).ready(function() {
+    $('.lab-slide-up').find('a').attr('data-toggle', 'modal');
+    $('.lab-slide-up').find('a').attr('data-target', '#lab-slide-bottom-popup');
+  });
+			
+	});
+	</script> 
+<!-- Highcharts Sample --> 
+<script type="text/javascript">
+Highcharts.chart('chartdiv', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Stacked column chart'
+    },
+    xAxis: {
+        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total fruit consumption'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+        }
+    },
+    series: [{
+        name: 'John',
+        data: [5, 3, 4, 7, 2]
+    }, {
+        name: 'Jane',
+        data: [2, 2, 3, 2, 1]
+    }, {
+        name: 'Joe',
+        data: [3, 4, 4, 2, 5]
+    }]
+});
+	</script>
+</body>
+</html>
