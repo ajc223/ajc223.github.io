@@ -126,6 +126,13 @@ ul.nomargins {
 	display: block;
 }
 
+/* Style the table for now */
+
+.ContentTab td {
+	pading-top: 10px;
+	padding-bottom: 10px;
+}
+
 /* Fade Panel
 
 
