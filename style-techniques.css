@@ -74,6 +74,10 @@ a.gocollapse, span.gocollapse {
 .padleft {
 	padding-left: 30px;
 }
+
+ul.nomargings {
+	margin: 0px;
+}
 /* Start Panel */
 	
 	.startpanel {
