@@ -99,7 +99,7 @@
   <div class="container">
     <div id="frozen-bar" class="hide"></div>
   </div>
-  <div class="js-main" id="swup"> 
+  <div class="js-main"> 
     <!-- Content Container --> 
     
     <!-- Page Header -->
@@ -109,20 +109,12 @@
           <h1 class="page-header page-header-plantool"> <span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span> <span class="decisionctr"><i class="ei ei-decisioncenter page-header-plantool-icon"></i> <span class="page-header-plantool-text"><strong>DECISION</strong>CENTER</span></span> </h1>
         </div>
       </div>
-      
-      <!-- DC Output pulled from lifetime cash flow as of september 12 --> 
-      
-      <!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay -->
-      
-      <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
-		
-		<!-- Hidden Slide Up ADV Panel -->
 		
 		<div class="row subnav">
 			<div class="col-md-12"><a href="#"><i class="fas fa-arrow-circle-left"></i> Back to Decision Center</a></div>
 		</div>
 		
-		<div class="row advpanel animateslow fadeInDown">
+		<div class="row animateslow fadeInDown">
 		 <div class="col-md-8">
 		  		  <!-- Sub Nav -->
 				  
@@ -145,9 +137,7 @@
 </ul>
 		  </div>
         <div class="col-md-4">
-			
 			<div id="chartdivb" style="height: 250px"></div>
-			
 			  </div>
 		</div>
 		
@@ -155,9 +145,6 @@
     <!-- end base col container --> 
   </div>
   <!-- end js main --> 
-	
-	<div class="loading"><div class="textcenter"><img src="spinner.gif" alt="Loading" /></div></div>
-	<!-- Preloader -->
 	
 </div>
 <!-- with sticky footer -->
@@ -262,12 +249,12 @@
 	</script> 
 <!-- Highcharts Sample --> 
 <script type="text/javascript">
-Highcharts.chart('chartdiv', {
+Highcharts.chart('chartdivb', {
     chart: {
         type: 'column'
     },
     title: {
-        text: 'Stacked column chart'
+        text: ''
     },
     xAxis: {
         categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
@@ -275,7 +262,7 @@ Highcharts.chart('chartdiv', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Total fruit consumption'
+            text: ''
         },
         stackLabels: {
             enabled: true,
