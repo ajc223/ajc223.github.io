@@ -669,7 +669,7 @@ animation-delay: 7.5s;
 
 /* Modal and Slide Up */
 
-.modalopen.fade.in .lab-modal-body {
+.modalopen.startitem.in .lab-modal-body {
   bottom: 0;
   opacity: 1;
 }
