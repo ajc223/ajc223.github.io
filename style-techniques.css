@@ -670,7 +670,7 @@ animation-delay: 7.5s;
 /* Modal and Slide Up */
 
 .modal-backdrop {
-	background-color: rgba(255, 255, 255, .8);
+	background-color: rgba(0, 0, 0, .4);
 }
 
 .bottomsheet {
@@ -690,7 +690,6 @@ border-radius: 0px; */
 }
 
 .modal.easeshow.show .bottomsheet {
-overflow-y: auto;
 -webkit-transform: translateY(0);
 -moz-transform: translateY(0);
  transform: translateY(0);
