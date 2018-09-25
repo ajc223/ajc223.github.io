@@ -688,6 +688,7 @@ border-radius: 0px; */
 -moz-transform: translateY(200%);
  transform: translateY(200%);
 background-color: #fff;
+padding-left: calc(100vw - 100%);
 }
 
 .modal.easeshow.show .bottomsheet {
