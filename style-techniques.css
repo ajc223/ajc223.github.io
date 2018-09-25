@@ -703,7 +703,8 @@ border-radius: 3px;
 -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
 -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
 box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
-padding: 5%;
+padding: 2%;
 overflow-y:  auto;
-	max-height: 75vh;
+max-height: 75vh;
+background-color: #fff;
 }
