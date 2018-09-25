@@ -674,12 +674,19 @@ animation-delay: 7.5s;
 }
 
 .modal.easeshow {
-	-webkit-transform: translateY(0);
-		-moz-transform: translateY(0);
-  transform: translateY(0);
-	-webkit-transition: transform 0.5s ease-in-out;
-	-moz-transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
+-webkit-transition: transform 0.5s ease-in-out;
+-moz-transition: transform 0.5s ease-in-out;
+ transition: transform 0.5s ease-in-out;
+	-webkit-transform: translateY(-100%);
+-moz-transform: translateY(-100%);
+ transform: translateY(-100%);
+}
+
+.modal.easeshow.show {
+min-height: 70vh;
+-webkit-transform: translateY(0);
+-moz-transform: translateY(0);
+ transform: translateY(0);
 }
 
 .bottomsheet {
