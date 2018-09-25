@@ -687,6 +687,7 @@ border-radius: 0px; */
 -webkit-transform: translateY(-70vh);
 -moz-transform: translateY(-70vh);
  transform: translateY(-70vh);
+background-color: #fff;
 }
 
 .modal.easeshow.show .bottomsheet {
@@ -695,6 +696,7 @@ border-radius: 0px; */
  transform: translateY(0);
 }
 
+/*
 .advform {
 -webkit-border-top-left-radius: 3px;
 -webkit-border-top-right-radius: 3px;
@@ -710,3 +712,4 @@ overflow-y:  auto;
 max-height: 85vh;
 background-color: #fff;
 }
+*/
