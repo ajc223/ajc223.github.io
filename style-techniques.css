@@ -690,7 +690,8 @@ border-radius: 0px;
 }
 
 .modal.easeshow.show .bottomsheet {
-min-height: 70vh;
+max-height: 80vh;
+overflow-y: auto;
 -webkit-transform: translateY(0);
 -moz-transform: translateY(0);
  transform: translateY(0);
