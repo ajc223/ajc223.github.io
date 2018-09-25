@@ -684,9 +684,9 @@ border-radius: 0px; */
 -webkit-transition: transform 0.5s ease-in-out;
 -moz-transition: transform 0.5s ease-in-out;
  transition: transform 0.5s ease-in-out;
--webkit-transform: translateY(-70vh);
--moz-transform: translateY(-70vh);
- transform: translateY(-70vh);
+-webkit-transform: translateY(200%);
+-moz-transform: translateY(200%);
+ transform: translateY(200%);
 background-color: #fff;
 }
 
@@ -696,6 +696,9 @@ background-color: #fff;
  transform: translateY(0);
 	max-height: 80vh;
 	overflow-y: auto;
+	-webkit-box-shadow: 2px 5px 5px 0px rgba(176,176,176,1);
+-moz-box-shadow: 2px 5px 5px 0px rgba(176,176,176,1);
+box-shadow: 2px 5px 5px 0px rgba(176,176,176,1);
 }
 
 /*
