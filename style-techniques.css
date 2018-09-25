@@ -696,7 +696,7 @@ padding-left: calc(100vw - 100%);
 -moz-transform: translateY(0);
  transform: translateY(0);
 	max-height: 80vh;
-	overflow: hidden;
+	overflow-y: auto;
 -webkit-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 -moz-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
