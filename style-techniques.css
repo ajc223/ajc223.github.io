@@ -670,7 +670,7 @@ animation-delay: 7.5s;
 /* Modal and Slide Up */
 
 .modal-backdrop {
-	background: none !important;
+	background-color: rgba(255, 255, .8);
 }
 
 .bottomsheet {
@@ -690,9 +690,20 @@ border-radius: 0px; */
 }
 
 .modal.easeshow.show .bottomsheet {
-max-height: 80vh;
 overflow-y: auto;
 -webkit-transform: translateY(0);
 -moz-transform: translateY(0);
  transform: translateY(0);
+}
+
+.advform {
+ -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
+-moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
+box-shadow: 0 0 10px 0 rgba(0,0,0,.35);
+padding: 5%;
+overflow-y:  auto;
+	max-height: 75vh;
 }
