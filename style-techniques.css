@@ -694,6 +694,8 @@ background-color: #fff;
 -webkit-transform: translateY(0);
 -moz-transform: translateY(0);
  transform: translateY(0);
+	max-height: 80vh;
+	overflow-y: auto;
 }
 
 /*
