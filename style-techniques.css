@@ -669,11 +669,25 @@ animation-delay: 7.5s;
 
 /* Modal and Slide Up */
 
-.modal-backdrop {background: none; !important; }
+.modal-backdrop {
+	background: none !important;
+}
+
+.modal.easeshow {
+	-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+  transform: translateY(0);
+	-webkit-transition: transform 0.5s ease-in-out;
+	-moz-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
 
 .bottomsheet {
 position:absolute;
 bottom:0;
 margin:0;
 width:100%;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
 }
