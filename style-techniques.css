@@ -775,11 +775,14 @@ background-color: #fff;
 	list-style-type: none;
 	margin-right: 15px;
 	text-align: center;
+	border-right: 1px solid #e2e2e2;
+	padding-right: 15px;
 }
 
 .modal.easeshow ul.actionlist li:last-child {
 	margin: 0px;
 	padding: 0px;
+	border: 0px;
 }
 
 .modal.easeshow ul.actionlist li i {
