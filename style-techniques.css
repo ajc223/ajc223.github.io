@@ -726,8 +726,14 @@ padding-bottom: 15px;
 	line-height: 1;
 }
 
-.modal.easeshow.show button.close, .modal.easeshow.show button.close:focus, .modal.easeshow.show button.close:hover {
+.modal.easeshow.show button.close {
 	color: #fff;
+	opacity: .8;
+}
+
+.modal.easeshow.show button.close:focus, .modal.easeshow.show button.close:hover {
+	color: #fff;
+	opacity: 1;
 }
 
 /*
