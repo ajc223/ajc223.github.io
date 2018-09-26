@@ -681,7 +681,7 @@ animation-delay: 7.5s;
 position:absolute;
 bottom:0;
 margin:0;
-width:100%;
+width: calc(100vw - 100%);
 /* -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px; */
