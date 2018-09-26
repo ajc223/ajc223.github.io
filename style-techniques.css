@@ -700,19 +700,22 @@ padding-left: calc(100vw - 100%);
 -webkit-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 -moz-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
+}
+
+.modal.easeshow.show .bottomsheet .advform {
 padding-top: 15px;
 padding-bottom: 15px;
 }
 
-.modal.easeshow.show .bottomsheet .advform {
-	padding-top: 15px;
-padding-bottom: 15px;
-}
-
 .modal.easeshow.show .bottomsheet .sheetheader {
-	background-color: #007dc5;
+	background-color: #2c485f;
 	color: #fff;
 	padding: 10px;
+}
+
+.modal.easeshow.show .bottomsheet .sheetheader h3 {
+	margin: 0px;
+	padding: 0px;
 }
 
 /*
