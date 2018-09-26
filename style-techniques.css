@@ -799,11 +799,12 @@ background-color: #fff;
 	font-size: 1.6em;
 }
 
-.modal.easeshow ul.actionlist li a {
+.modal.easeshow ul.actionlist li a, 
+.modal.easeshow.show .bottomsheet .sheetheader h3 a {
 	color: #999;
 }
 
-.modal.easeshow ul.actionlist li a:hover {
+.modal.easeshow ul.actionlist li a:hover, .modal.easeshow.show .bottomsheet .sheetheader h3 a:hover {
 	text-decoration: none;
 	color: #333;
 }
