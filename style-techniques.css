@@ -673,10 +673,6 @@ animation-delay: 7.5s;
 	background-color: rgba(0, 0, 0, .4);
 }
 
-.modal.easeshow {
-	padding-left: calc(100vw - 100%);
-}
-
 .bottomsheet {
 position:absolute;
 bottom:0;
@@ -692,7 +688,7 @@ border-radius: 0px; */
 -moz-transform: translateY(200%);
  transform: translateY(200%);
 background-color: #fff;
-padding-left: calc(100vw - 100%);
+/* padding-left: calc(100vw - 100%); */
 }
 
 .modal.easeshow.show .bottomsheet {
@@ -716,7 +712,7 @@ padding-bottom: 15px;
 	color: #fff;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	padding-left: calc(100vw - 100%);
+	/* padding-left: calc(100vw - 100%); */
 }
 
 .modal.easeshow.show .bottomsheet .sheetheader h3 {
