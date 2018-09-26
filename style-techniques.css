@@ -738,6 +738,7 @@ padding-bottom: 15px;
 
 .modal.easeshow.show .innercontainer {
 	border: 1px solid #e2e2e2;
+	border-top: 0px;
 }
 
 /*
