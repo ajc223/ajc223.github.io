@@ -1252,6 +1252,9 @@ Highcharts.chart('chartdiv', {
             }
         }
     },
+	 exporting: {
+        enabled: false
+    },
     legend: {
         align: 'right',
         x: -30,
@@ -1294,6 +1297,12 @@ Highcharts.chart('chartdivb', {
             renderTo: 'container',
             type: 'column'
         },
+	title: {
+        text: ''
+    },
+	 exporting: {
+        enabled: false
+    },
         yAxis: {
             title: {
                 text: 'axis title',
