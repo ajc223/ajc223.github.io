@@ -716,6 +716,10 @@ padding-bottom: 15px;
 	/* padding-left: calc(100vw - 100%); */
 }
 
+.modal.easeshow.show .bottomsheet .sheetheader i {
+	color: #fff;
+}
+
 .modal.easeshow.show .bottomsheet .sheetheader h3 {
 	margin: 0px;
 	padding: 0px;
