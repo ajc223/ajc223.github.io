@@ -711,6 +711,7 @@ padding-bottom: 15px;
 	background-color: #2c485f;
 	color: #fff;
 	padding: 10px;
+	padding-left: calc(100vw - 100%);
 }
 
 .modal.easeshow.show .bottomsheet .sheetheader h3 {
