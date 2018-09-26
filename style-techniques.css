@@ -814,5 +814,5 @@ background-color: #fff;
 
 .modal .scrollon {
 	overflow-y: auto;
-	overflow: visible;
+	height: 60vh;
 }
