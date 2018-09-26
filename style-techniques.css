@@ -797,6 +797,8 @@ background-color: #fff;
 .modal.easeshow ul.actionlist li i {
 	display: block;
 	font-size: 1.6em;
+	margin-bottom: 8px;
+	line-height: 1;
 }
 
 .modal.easeshow ul.actionlist li a, 
