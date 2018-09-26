@@ -690,7 +690,7 @@ border-radius: 0px; */
 -moz-transform: translateY(200%);
  transform: translateY(200%);
 background-color: #fff;
-overflow: auto;
+overflow: hidden;
 /* padding-left: calc(100vw - 100%); */
 }
 
@@ -812,9 +812,7 @@ background-color: #fff;
 	color: #333;
 }
 
-/*
 .modal .scrollon {
 	overflow-y: auto;
 	height: 75vh;
 }
-*/
