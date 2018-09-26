@@ -736,6 +736,10 @@ padding-bottom: 15px;
 	opacity: 1;
 }
 
+.modal.easeshow.show .innercontainer {
+	border: 1px solid #e2e2e2;
+}
+
 /*
 .advform {
 -webkit-border-top-left-radius: 3px;
