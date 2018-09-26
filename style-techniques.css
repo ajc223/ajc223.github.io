@@ -726,6 +726,10 @@ padding-bottom: 15px;
 	line-height: 1;
 }
 
+.modal.easeshow.show button.close, .modal.easeshow.show button.close:focus, .modal.easeshow.show button.close:hover {
+	color: #fff;
+}
+
 /*
 .advform {
 -webkit-border-top-left-radius: 3px;
