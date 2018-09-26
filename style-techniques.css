@@ -810,3 +810,8 @@ background-color: #fff;
 	text-decoration: none;
 	color: #333;
 }
+
+.modal .scrollon {
+	overflow-y: auto;
+	overflow: visible;
+}
