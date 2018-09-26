@@ -679,7 +679,7 @@ position: fixed;
 bottom:0;
 margin:0;
 width: 100vw;
-height: 80vh;
+height: 90vh;
 /* -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px; */
@@ -814,5 +814,5 @@ background-color: #fff;
 
 .modal .scrollon {
 	overflow-y: auto;
-	height: 60vh;
+	height: 75vh;
 }
