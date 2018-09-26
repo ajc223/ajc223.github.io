@@ -738,6 +738,12 @@ background-color: #fff;
 }
 */
 
+.modal.easeshow .tablewrap {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+}
+
 .modal.easeshow .tabletop {
 	display: table;
 	width: 100%;
