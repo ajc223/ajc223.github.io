@@ -737,3 +737,27 @@ max-height: 85vh;
 background-color: #fff;
 }
 */
+
+.modal.easeshow ul.actionlist {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.modal.easeshow ul.actionlist li {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	margin-right: 15px;
+}
+
+.modal.easeshow ul.actionlist li:last-child {
+	margin: 0px;
+	padding: 0px;
+}
+
+.modal.easeshow ul.actionlist li i {
+	display: block;
+	font-size: 2em;
+}
