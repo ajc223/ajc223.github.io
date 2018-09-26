@@ -679,6 +679,7 @@ position: fixed;
 bottom:0;
 margin:0;
 width: 100vw;
+height: 80vh;
 /* -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px; */
@@ -697,7 +698,6 @@ overflow: hidden;
 -webkit-transform: translateY(0);
 -moz-transform: translateY(0);
  transform: translateY(0);
-max-height: 80vh;
 -webkit-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 -moz-box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
 box-shadow: 2px -5px 5px 0px rgba(153,153,153,1);
