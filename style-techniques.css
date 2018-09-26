@@ -738,6 +738,30 @@ background-color: #fff;
 }
 */
 
+.modal.easeshow .tabletop {
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	border-collapse: collapse;
+	border: 0px;
+	table-layout: fixed;
+}
+
+.modal.easeshow .tabletop .cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.modal.easeshow .tabletop .cell.one {
+	width: 60%;
+}
+
+.modal.easeshow .tabletop .cell.two {
+	text-align: right;
+	width: 40%;
+	padding-left: 5%;
+}
+
 .modal.easeshow ul.actionlist {
 	list-style-type: none;
 	margin: 0px;
@@ -761,4 +785,12 @@ background-color: #fff;
 .modal.easeshow ul.actionlist li i {
 	display: block;
 	font-size: 1.6em;
+}
+
+.modal.easeshow ul.actionlist li a {
+	color: #999;
+}
+
+.modal.easeshow ul.actionlist li a:hover {
+	text-decoration: none;
 }
