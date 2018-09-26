@@ -745,11 +745,12 @@ background-color: #fff;
 }
 
 .modal.easeshow ul.actionlist li {
-	display: inline;
+	display: inline-block;
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 	margin-right: 15px;
+	text-align: center;
 }
 
 .modal.easeshow ul.actionlist li:last-child {
@@ -759,5 +760,5 @@ background-color: #fff;
 
 .modal.easeshow ul.actionlist li i {
 	display: block;
-	font-size: 2em;
+	font-size: 1.6em;
 }
