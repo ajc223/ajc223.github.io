@@ -718,6 +718,7 @@ padding-bottom: 15px;
 .modal.easeshow.show .bottomsheet .sheetheader h3 {
 	margin: 0px;
 	padding: 0px;
+	line-height: 1;
 }
 
 /*
@@ -756,6 +757,7 @@ background-color: #fff;
 .modal.easeshow .tabletop .cell {
 	display: table-cell;
 	vertical-align: middle;
+	line-height: 1;
 }
 
 .modal.easeshow .tabletop .cell.one {
@@ -772,6 +774,7 @@ background-color: #fff;
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
+	font-size: .9em;
 }
 
 .modal.easeshow ul.actionlist li {
@@ -802,4 +805,5 @@ background-color: #fff;
 
 .modal.easeshow ul.actionlist li a:hover {
 	text-decoration: none;
+	color: #333;
 }
