@@ -20,10 +20,23 @@
 			padding: 15px;
 			background-color: #fff;
 			margin: 0 auto;
-			margin-top: 15%;
+			margin-top: 5%;
+			max-width: 600px;
+			font-size: .950rem;
+			margin-bottom: 25px;
+		}
+		
+			.notebox {
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			padding: 15px;
+			background-color: #fff;
+			margin: 0 auto;
 			max-width: 600px;
 			font-size: .950rem;
 		}
+		
 		
 		.centercol a {
 			color: #1225A6;
@@ -100,6 +113,20 @@
 		<li><a href="scroll-funding-condensedswitched.html" target="_blank">Available Funding - Condensed Header (Split) - Swapped Sides</a></li>
 	</ul>
 -->
+	</div>
+	
+	<div class="notebox">
+	
+<p><strong>Method 1 - PJAX</strong></p>
+<p>Plugins like Swup (https://github.com/gmrchk/swup) use pjax to replace content & speed up page loads. It also adds classes dynamically for state changes (is animating, is leaving, etc) which give greater flexibility for css transitions.</p>
+<p>The issue is that these types of plugins do not reload the entire page, so any other javascript is not processed. There are ways around it (https://github.com/gmrchk/swup/issues/41) which requires including all JS in a single file and conditionally determining what runs when. Seems difficult to accomplish without knowing the whole ins and outs of our system, and how highcharts are inserted.</p>
+
+
+<p><strong>Method 2 - (Almost) Pure CSS</strong><p>
+<p>Pure CSS is the more preferred approach but is not without limitations. Width changes are often not smooth, and any element that is resized through an animation won’t trigger a high charts redraw, so sizing (or resizing) the chart elements becomes difficult (at least doing so in a smooth manner)</p>
+<p>Fades and slide in/outs likely give the best result since items live in a section off-screen and won’t be subject to size changes and potential redraws in the case of charts. In any event, javascript is needed to toggle the animation class on elements.</p>
+<p>In the slide in example used here, I’m using a bootstrap modal but anchoring to the bottom of the viewport so it’s more of a tray. The styles have been tweaked to accommodate this.</p>
+		
 	</div>
 	
 </body>
