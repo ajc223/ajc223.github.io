@@ -204,7 +204,7 @@
           <div id="panel-left" style="display: none;"></div>
         </div>
         <div class="col-md-8 switchb">
-          <div id="panel-right-wrapper" class="showstartchart">
+          <div id="panel-right-wrapper">
             <div id="panel-right">
               <div id="CashFlow">
                 <div class="comparison-header table-header">
@@ -222,6 +222,8 @@
                 </div>
                 
                 <!-- Sub Nav -->
+				  
+				  <div class="showstartchart">
                 
                 <ul class="link-menu link-menu-estate nav nav-pills nav-justified" data-for="step-link" data-hashkey="step">
                   <li class="active" data-value="NetWorth"> <a href="javascript:void(0);">Net Worth</a> </li>
@@ -817,16 +819,15 @@
             <div id="js-addpanel">
               <div data-reactid=".1"></div>
             </div>
-          </div>
-			
-			
-			<!-- Drop the alternate chart here -->
-			<div id="panel-right-wrapper" class="hidestart">
-			 <div id="chartdivb" class="highchartalt" style="height: 250px"></div>
+          </div><!-- end cashflow -->
+		
+		<!-- Drop the alternate chart here -->
+		<div class="hidestart">
+		 <div id="chartdivb" class="highchartalt" style="height: 250px"></div>
           <div class="summary-section"> <small class="initialism">Assets last until</small> <span class="summary-highlight">Age 100</span> </div>
           <div class="summary-section"> <small class="initialism">Funding gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar"></span>4 Years</span></span></span> </div>
           <div class="summary-section"> <small class="initialism">Value gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar">$</span>2,521,576</span></span></span> </div>
-			</div>
+
 			
 			<!-- end alt chart -->
         </div>
