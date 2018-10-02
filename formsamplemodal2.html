@@ -663,7 +663,10 @@ drop the advanced form in here
     $(".switchb").removeClass("col-md-8").addClass("col-md-4");
 	$(".showstart").toggleClass("hidestart");
 	$(".showstartchart").toggleClass("hidethis");
-	$(".hidestart").toggleClass("shown animate fadeInUp two");	
+	$(".hidestart").toggleClass("shown animate fadeInUp two");
+	$( ".highcharts" ).each(function( index ) { 
+      $(this).highcharts().reflow(); 
+   }); 
     // $(".push").toggleClass("pushed shown animate fadeInUp six");
 	// $(".datacol").toggleClass("datashrunk");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
