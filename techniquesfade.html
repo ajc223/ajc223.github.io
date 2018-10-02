@@ -6,7 +6,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<title>Decision Center Techniques - Pure</title>
+<title>Decision Center Techniques - Fade</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://wealth.emaplan.com/ema/wwwroot/css/bootstrap-ema.css?v=99634ce806" type="text/css" rel="stylesheet"/>
@@ -117,7 +117,7 @@
       <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
       
       <div class="row row-eq-height animateslow fadeInDown">
-        <div class="col-md-4">
+        <div class="col-md-4 switcha">
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
@@ -203,7 +203,7 @@
           </div>
           <div id="panel-left" style="display: none;"></div>
         </div>
-        <div class="col-md-8 col-with-separato datacol">
+        <div class="col-md-8 col-with-separato datacol switchb">
           <div id="panel-right-wrapper" class="">
             <div id="panel-right">
               <div id="CashFlow">
@@ -930,281 +930,281 @@
     <!-- Modal content-->
     
     <div class="model-content container advform">
-		<div class="tablewrap">
-      <div class="tabletop">
-        <div class="cell one">
-          <h3>My New Business Name <a href="#"><i class="fas fa-pencil-alt"></i></a></h3>
+      <div class="tablewrap">
+        <div class="tabletop">
+          <div class="cell one">
+            <h3>My New Business Name <a href="#"><i class="fas fa-pencil-alt"></i></a></h3>
+          </div>
+          <div class="cell two">
+            <ul class="actionlist">
+              <li><a href="#"><i class="far fa-star"></i> Favorite</a></li>
+              <li><a href="#"><i class="fas fa-layer-group"></i> Save to Group</a></li>
+              <li><a href="#"><i class="far fa-save"></i> Save to Facts</a></li>
+            </ul>
+          </div>
         </div>
-		  <div class="cell two">
-		  <ul class="actionlist">
-			  <li><a href="#"><i class="far fa-star"></i> Favorite</a></li>
-			  <li><a href="#"><i class="fas fa-layer-group"></i> Save to Group</a></li>
-			  <li><a href="#"><i class="far fa-save"></i> Save to Facts</a></li>
-			  </ul>
-			  </div>
-			</div>
       </div>
       <div class="row animateslow fadeInDown">
         <div class="col-md-8">
-			<div class="innercontainer scrollon">
-          <!-- Sub Nav -->
-          
-          <ul class="link-menu link-menu-estate nav nav-pills nav-justified nomargins" data-for="step-link" data-hashkey="step">
-            <li class="active" data-value="NetWorth"> <a href="javascript:void(0);">Basic</a> </li>
-            <li class="" data-value="FirstDeath"> <a href="javascript:void(0);">Schedule</a> </li>
-            <li class="" data-value="SurvivorIncome"> <a href="javascript:void(0);">Additional Info</a> </li>
-            <li class="" data-value="LastDeath"> <a href="javascript:void(0);">Ownership</a> </li>
-          </ul>
-          
-          <!-- Stick extended form here for now -->
-          
-          <table class="ContentTab" width="100%" cellspacing="0" cellpadding="0" border="0">
-            <tbody>
-              <tr valign="top">
-                <td><table style="margin-left:10px;" border="0">
-                    <tbody>
-                      <tr>
-                        <td height="12"></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Business Name:</td>
-                        <td><input class="form-control form-control-webforms inp_f_Left" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Name" value="Business 2" maxlength="50" size="35" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <script type="text/javascript">AddLoadEvent(function() { SetFocus(document.getElementById('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name')); });</script><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" data-val-errormessage="Name is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" data-val-errormessage="Name contains a potentially unsafe character sequence (0)." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name_Validator2" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="CrossSiteScriptingValidator" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Available in Year:</td>
-                        <td><nobr>
-                          <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartTypeDropDown$YearIndexDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearIndexDropDown" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u003cstrong\u003eLeave field blank if the asset currently exists.\u003c/strong\u003e For assets that won\u0027t exist until a future year (inheritance or lump sum pension distributions for example), enter the year that asset will appear on the client\u0027s balance sheet. Do not enter the year in which the asset is available to take withdrawals. The intent of this field is strictly when the asset exists even if there is no intention to take withdrawals for many years.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown');">
-                            <option value="" selected="selected"></option>
-                            <option value="CalendarYear">Calendar Year</option>
-                            <option value="ClientAge">When Frank is</option>
-                            <option value="ClientRetire">Frank's Retirement (age 65 in 2032)</option>
-                            <option value="ClientSenior">Frank's Advanced Age (age 90 in 2057)</option>
-                            <option value="ClientDeath">Frank's Death (age 100 in 2067)</option>
-                            <option value="SpouseAge">When Joanna is</option>
-                            <option value="SpouseRetire">Joanna's Retirement (age 65 in 2033)</option>
-                            <option value="SpouseSenior">Joanna's Advanced Age (age 90 in 2058)</option>
-                            <option value="SpouseDeath">Joanna's Death (age 100 in 2068)</option>
-                            <option value="FirstDeath">At First Death (2067)</option>
-                          </select>
-                          &nbsp;
-                          <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartTypeDropDown$YearValueEdit" maxlength="5" size="4" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u003cstrong\u003eLeave field blank if the asset currently exists.\u003c/strong\u003e For assets that won\u0027t exist until a future year (inheritance or lump sum pension distributions for example), enter the year that asset will appear on the client\u0027s balance sheet. Do not enter the year in which the asset is available to take withdrawals. The intent of this field is strictly when the asset exists even if there is no intention to take withdrawals for many years.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onchange="UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown');" onblur="Reformat(this, 'Integer', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="visibility:hidden;" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-errormessage="Year/Age is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-errormessage="Year/Age must be between 0 and 999999999999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit_Validator2" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span>&nbsp;<span class="FormLabel" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearTextSpan" style="visibility: hidden;"></span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearSelectorValidator" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateYearSelector" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearIndexDropDown" data-val-errormessage="Compare Failed" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearSelectorCompareValidator" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateCompareYearSelector" style="color:Red;display:none;">*</span></nobr><script type="text/javascript">
+          <div class="innercontainer scrollon"> 
+            <!-- Sub Nav -->
+            
+            <ul class="link-menu link-menu-estate nav nav-pills nav-justified nomargins" data-for="step-link" data-hashkey="step">
+              <li class="active" data-value="NetWorth"> <a href="javascript:void(0);">Basic</a> </li>
+              <li class="" data-value="FirstDeath"> <a href="javascript:void(0);">Schedule</a> </li>
+              <li class="" data-value="SurvivorIncome"> <a href="javascript:void(0);">Additional Info</a> </li>
+              <li class="" data-value="LastDeath"> <a href="javascript:void(0);">Ownership</a> </li>
+            </ul>
+            
+            <!-- Stick extended form here for now -->
+            
+            <table class="ContentTab" width="100%" cellspacing="0" cellpadding="0" border="0">
+              <tbody>
+                <tr valign="top">
+                  <td><table style="margin-left:10px;" border="0">
+                      <tbody>
+                        <tr>
+                          <td height="12"></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Business Name:</td>
+                          <td><input class="form-control form-control-webforms inp_f_Left" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Name" value="Business 2" maxlength="50" size="35" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <script type="text/javascript">AddLoadEvent(function() { SetFocus(document.getElementById('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name')); });</script><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" data-val-errormessage="Name is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name" data-val-errormessage="Name contains a potentially unsafe character sequence (0)." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Name_Validator2" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="CrossSiteScriptingValidator" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Available in Year:</td>
+                          <td><nobr>
+                            <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartTypeDropDown$YearIndexDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearIndexDropDown" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u003cstrong\u003eLeave field blank if the asset currently exists.\u003c/strong\u003e For assets that won\u0027t exist until a future year (inheritance or lump sum pension distributions for example), enter the year that asset will appear on the client\u0027s balance sheet. Do not enter the year in which the asset is available to take withdrawals. The intent of this field is strictly when the asset exists even if there is no intention to take withdrawals for many years.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown');">
+                              <option value="" selected="selected"></option>
+                              <option value="CalendarYear">Calendar Year</option>
+                              <option value="ClientAge">When Frank is</option>
+                              <option value="ClientRetire">Frank's Retirement (age 65 in 2032)</option>
+                              <option value="ClientSenior">Frank's Advanced Age (age 90 in 2057)</option>
+                              <option value="ClientDeath">Frank's Death (age 100 in 2067)</option>
+                              <option value="SpouseAge">When Joanna is</option>
+                              <option value="SpouseRetire">Joanna's Retirement (age 65 in 2033)</option>
+                              <option value="SpouseSenior">Joanna's Advanced Age (age 90 in 2058)</option>
+                              <option value="SpouseDeath">Joanna's Death (age 100 in 2068)</option>
+                              <option value="FirstDeath">At First Death (2067)</option>
+                            </select>
+                            &nbsp;
+                            <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartTypeDropDown$YearValueEdit" maxlength="5" size="4" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u003cstrong\u003eLeave field blank if the asset currently exists.\u003c/strong\u003e For assets that won\u0027t exist until a future year (inheritance or lump sum pension distributions for example), enter the year that asset will appear on the client\u0027s balance sheet. Do not enter the year in which the asset is available to take withdrawals. The intent of this field is strictly when the asset exists even if there is no intention to take withdrawals for many years.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onchange="UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown');" onblur="Reformat(this, 'Integer', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="visibility:hidden;" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-errormessage="Year/Age is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-errormessage="Year/Age must be between 0 and 999999999999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit_Validator2" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span>&nbsp;<span class="FormLabel" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearTextSpan" style="visibility: hidden;"></span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearValueEdit" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearSelectorValidator" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateYearSelector" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearIndexDropDown" data-val-errormessage="Compare Failed" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown_YearSelectorCompareValidator" data-val="true" data-val-evaluationfunction="CustomValidatorEvaluateIsValid" data-val-clientvalidationfunction="ValidateCompareYearSelector" style="color:Red;display:none;">*</span></nobr><script type="text/javascript">
 												AddLoadEvent(function() { 
 													$(document).on('resetForm', function() { UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown'); });
 													UpdateYearSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartTypeDropDown'); 
 												});
 											</script></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Start Indexing:</td>
-                        <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartIndexing" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartIndexing" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u0027Immediately\u0027 = \u003ci\u003eValue\u003c/i\u003e is increased by the growth rate specified starting in the current year. \u003cbr /\u003e\u003cbr /\u003e \u0027At Start Year\u0027 = \u003ci\u003eValue\u003c/i\u003e is increased by the growth rate specified once the asset is available. \u003cbr /\u003e\u003cbr /\u003e \u003cstrong\u003eNote:\u003c/strong\u003e For \u003cstrong\u003eBusiness Interests\u003c/strong\u003e, \u003ci\u003eAdditional Expenses\u003c/i\u003e are also indexed according to the value entered in the \u003ci\u003eStart Indexing\u003c/i\u003e drop-down.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();">
-                            <option value="Immediately" selected="selected">Immediately</option>
-                            <option value="WhenFlowBegins">At Start Year</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" id="ValueLabel" nowrap="">Base Value:</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Value" value="$0" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" onchange="UpdateTotalValue();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" data-val-errormessage="Base Value is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" data-val-errormessage="Base Value must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value_Validator2" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" id="OtherAssetValueLabel" nowrap="">Other Assets Value:</td>
-                        <td><div id="OtherAssetValue">$0</div></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" id="TotalValueLabel" nowrap="">Total Business Value:</td>
-                        <td><div id="TotalValue">$0</div></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Pre-Retire Gross Growth:</td>
-                        <td><nobr>
-                          <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PreGrowthRate$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate');">
-                            <option value="None">No Growth (0.00%)</option>
-                            <option value="Inflation" selected="selected">Inflation (2.56%)</option>
-                            <option value="assetpres">Asset Pres (3.60%)</option>
-                            <option value="income">Income (4.85%)</option>
-                            <option value="enhincome">Enh Income (6.33%)</option>
-                            <option value="growincome">Growth Inc (7.15%)</option>
-                            <option value="growth">Growth (8.96%)</option>
-                            <option value="aggrgrowth">Agg Growth (9.85%)</option>
-                            <option value="Custom">Custom</option>
-                          </select>
-                          &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_DigitalModelLabel"></span>
-                          <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PreGrowthRate$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
-                          <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate'); });</script></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Post-Retire Gross Growth:</td>
-                        <td><nobr>
-                          <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PostGrowthRate$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate');">
-                            <option value="Nothing"></option>
-                            <option value="None">No Growth (0.00%)</option>
-                            <option value="Inflation" selected="selected">Inflation (2.56%)</option>
-                            <option value="assetpres">Asset Pres (3.60%)</option>
-                            <option value="income">Income (4.85%)</option>
-                            <option value="enhincome">Enh Income (6.33%)</option>
-                            <option value="growincome">Growth Inc (7.15%)</option>
-                            <option value="growth">Growth (8.96%)</option>
-                            <option value="aggrgrowth">Agg Growth (9.85%)</option>
-                            <option value="Custom">Custom</option>
-                          </select>
-                          &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_DigitalModelLabel"></span>
-                          <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PostGrowthRate$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox" data-val-errormessage="Post-Retire Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
-                          <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate'); });</script></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Business Tax Basis:</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Basis" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis" data-val-errormessage="Tax Basis must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Owner:</td>
-                        <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$OwnerDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__OwnerDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();">
-                            <option value=""></option>
-                            <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Person">Frank Miller</option>
-                            <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Spouse">Joanna Miller</option>
-                            <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Joint" selected="selected">Frank and Joanna (Joint/ROS)</option>
-                            <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|JointCommon">Frank and Joanna (Common)</option>
-                            <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Community">Frank and Joanna (Community)</option>
-                            <optgroup label="Children">
-                            <option value="3416937b-ffa9-47ef-be73-604744078d24|Joint" optgroup="Children">Lucas Miller</option>
-                            <option value="afc84f5f-a948-4f8a-81c6-c17d31afd5c1|Joint" optgroup="Children">Mary Beth Miller</option>
-                            <option value="198c331b-4c8f-4bc1-aed6-199bbb11a569|Joint" optgroup="Children">Peter Miller</option>
-                            <option value="7bf5b065-e7bb-4017-8249-7a615bf73b7b|Joint" optgroup="Children">Test Name</option>
-                            </optgroup>
-                            <optgroup label="Grandchildren">
-                            <option value="387e52c2-bdc2-4c00-a636-43ac14f4cc0b|Joint" optgroup="Grandchildren">Grandchild Miller</option>
-                            <option value="4b6b3851-ac5a-4cb4-bc0c-fa8d5edef0d0|Joint" optgroup="Grandchildren">Grandchild 1 Miller</option>
-                            <option value="883ac2fe-de00-4d14-b4bb-490318eb622a|Joint" optgroup="Grandchildren">Grandchild 3 Miller</option>
-                            </optgroup>
-                            <optgroup label="Great Grandchildren">
-                            <option value="439b8940-e688-40e9-8291-bf291f877a12|Joint" optgroup="Great Grandchildren">Great Grandchild 1 Miller</option>
-                            </optgroup>
-                            <optgroup label="Individuals">
-                            <option value="27e28394-ea9c-4855-a473-6812fe734b11|Joint" optgroup="Individuals">Elaine Grafton</option>
-                            <option value="5ab1b6ba-2b79-43b4-9403-046fac3d266e|Joint" optgroup="Individuals">Other Individual</option>
-                            <option value="c1eedc87-f9ef-4efc-a98d-44d81ef48a19|Joint" optgroup="Individuals">Stephanie Miller</option>
-                            <option value="0600fe8f-5c6b-4a12-be99-de5afdb8ffcd|Joint" optgroup="Individuals">Other Heirs</option>
-                            </optgroup>
-                            <optgroup label="Businesses">
-                            <option value="6bbf2622-1775-4c13-9003-ad8cd06eaf6f|Joint" optgroup="Businesses">Business 1</option>
-                            </optgroup>
-                            <optgroup label="Trusts &amp; Partnerships">
-                            <option value="f4553e77-c672-460a-ba98-2fb464a96a12|Joint" optgroup="Trusts &amp; Partnerships">Default Trust</option>
-                            </optgroup>
-                          </select>
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__OwnerDropDown" data-val-errormessage="Owner is required" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__ctl02" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Business Type:</td>
-                        <td nowrap=""><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$EntityTypeDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown" onchange="BusinessTypeChanged();" onfocus="if (typeof(HideTips)=='function') HideTips();">
-                            <option value="" selected="selected"></option>
-                            <option value="Sole">Sole Proprietorship</option>
-                            <option value="Partnership">Partnership</option>
-                            <option value="SCorp">S-Corp</option>
-                            <option value="CCorp">C-Corp</option>
-                            <option value="LLC">Limited Liability Company</option>
-                            <option value="ProfCorp">Professional Corp</option>
-                          </select>
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown" data-val-errormessage="Business Type is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Discount Percent:</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Discount" maxlength="4" size="4" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Discount Percent', 'The discount rate used for gift and estate tax calculations.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Percent', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount" data-val-errormessage="Discount must be between 0% and 50%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="50" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabelDisabled" id="PassThruEnabledLabel">Pass Thru Enabled?&nbsp;</td>
-                        <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PassThruEnabled" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PassThruEnabled" onchange="PassThruChanged()" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Pass Thru Enabled', '\u0027Yes\u0027 = Earnings/Loss from Business is passed thru to client for Income Tax calculation. \u003cbr /\u003e\u003cbr /\u003e \u0027No\u0027 = Earnings/Loss from Business is \u003cstrong\u003enot\u003c/strong\u003e passed thru to client for Income Tax calculation.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="">
-                            <option value="False">No</option>
-                            <option value="True" selected="selected">Yes</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabelDisabled" id="SpecifiedServiceTradeLabel">Specified Service Trade?&nbsp;</td>
-                        <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$SpecifiedServiceTrade" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__SpecifiedServiceTrade" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Specified Service Trade', 'The pass-thru income deduction may be calculated differently depending upon whether this is a regular business or a professional services business known as a \&quot;specified service trade\&quot;. \u003cbr /\u003eNote that the Tax Cuts \u0026 Jobs Act provides this deduction until the provision sunsets at the end of 2025, unless sunset is suspended by the advisor.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="">
-                            <option value="False" selected="selected">No</option>
-                            <option value="True">Yes</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Subject to Unearned Income Medicare Tax?</td>
-                        <td nowrap=""><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$HasMedicareTax" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__HasMedicareTax" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Subject to Unearned Income Medicare Tax?', 'Certain business income is potentially subject to the 3.8% unearned income Medicare tax by being included in Net Investment Income as defined in IRC Section 1411(c). Answer \&quot;yes\&quot; if income from this business should be part of Net Investment Income.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();">
-                            <option value="False" selected="selected">No</option>
-                            <option value="True">Yes</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">&nbsp;</td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel"><b>Cash Flow</b></td>
-                        <td>&nbsp;</td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" id="AdditionalIncomeLabel">Income:&nbsp;</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalAnnualIncome" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Income', 'Specifies the amount of additional annual income to be received by the business.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome" data-val-errormessage="Additional Income must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Income Indexed At:</td>
-                        <td><nobr>
-                          <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalIncomeGrowthRateSelector$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector');">
-                            <option value="None" selected="selected">No Growth (0.00%)</option>
-                            <option value="Inflation">Inflation (2.56%)</option>
-                            <option value="Custom">Custom</option>
-                          </select>
-                          &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_DigitalModelLabel"></span>
-                          <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalIncomeGrowthRateSelector$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
-                          <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector'); });</script></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" id="AdditionalExpenseLabel">Expenses:&nbsp;</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalAnnualExpenses" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Expenses', 'Specifies the amount of additional annual expenses to be applied to the business, not including payments for any liabilities defined as specifically owned by the business.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses" data-val-errormessage="Additional Expenses must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel" nowrap="">Expenses Indexed At:</td>
-                        <td><nobr>
-                          <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalExpenseGrowthRateSelector$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector');">
-                            <option value="None" selected="selected">No Growth (0.00%)</option>
-                            <option value="Inflation">Inflation (2.56%)</option>
-                            <option value="Custom">Custom</option>
-                          </select>
-                          &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_DigitalModelLabel"></span>
-                          <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalExpenseGrowthRateSelector$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
-                          <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector'); });</script></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabel">Distribution Type:</td>
-                        <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PayoutTypeDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutTypeDropDown" onchange="UpdateControlState();" onfocus="if (typeof(HideTips)=='function') HideTips();">
-                            <option value="None" selected="selected">None</option>
-                            <option value="Annuity">Fixed Amount</option>
-                            <option value="Interest">Income</option>
-                          </select></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabelDisabled" id="AnnuityAmountLabel">Distribution Amount:</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AnnuityAmount" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" data-val-errormessage="Distribution Amount is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" data-val-errormessage="Distribution Amount must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount_Validator2" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                      <tr>
-                        <td class="FormLabelDisabled" id="PayoutRateLabel">Distribution (% of Income):</td>
-                        <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PayoutRate" maxlength="6" size="6" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Distribution (% of Income)', 'Percentage of business income to be distributed to the owner(s) annually. This also includes investment income from investments (according to the investment\u0027s Realization Model) owned by the business. Up to 100% of this income can be distributed annually. The amount distributed to each owner is based upon their ownership percentage.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Percent', 1);  " onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="" type="text">
-                          <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" data-val-errormessage="Distribution (% of Income) is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" data-val-errormessage="Distribution (% of Income) must be between 0.0% and 100.0%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate_Validator2" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="100" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <br></td>
-              </tr>
-            </tbody>
-          </table>
-		  </div>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Start Indexing:</td>
+                          <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$StartIndexing" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__StartIndexing" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Available in Year', '\u0027Immediately\u0027 = \u003ci\u003eValue\u003c/i\u003e is increased by the growth rate specified starting in the current year. \u003cbr /\u003e\u003cbr /\u003e \u0027At Start Year\u0027 = \u003ci\u003eValue\u003c/i\u003e is increased by the growth rate specified once the asset is available. \u003cbr /\u003e\u003cbr /\u003e \u003cstrong\u003eNote:\u003c/strong\u003e For \u003cstrong\u003eBusiness Interests\u003c/strong\u003e, \u003ci\u003eAdditional Expenses\u003c/i\u003e are also indexed according to the value entered in the \u003ci\u003eStart Indexing\u003c/i\u003e drop-down.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();">
+                              <option value="Immediately" selected="selected">Immediately</option>
+                              <option value="WhenFlowBegins">At Start Year</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" id="ValueLabel" nowrap="">Base Value:</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Value" value="$0" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" onchange="UpdateTotalValue();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" data-val-errormessage="Base Value is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value" data-val-errormessage="Base Value must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Value_Validator2" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" id="OtherAssetValueLabel" nowrap="">Other Assets Value:</td>
+                          <td><div id="OtherAssetValue">$0</div></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" id="TotalValueLabel" nowrap="">Total Business Value:</td>
+                          <td><div id="TotalValue">$0</div></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Pre-Retire Gross Growth:</td>
+                          <td><nobr>
+                            <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PreGrowthRate$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate');">
+                              <option value="None">No Growth (0.00%)</option>
+                              <option value="Inflation" selected="selected">Inflation (2.56%)</option>
+                              <option value="assetpres">Asset Pres (3.60%)</option>
+                              <option value="income">Income (4.85%)</option>
+                              <option value="enhincome">Enh Income (6.33%)</option>
+                              <option value="growincome">Growth Inc (7.15%)</option>
+                              <option value="growth">Growth (8.96%)</option>
+                              <option value="aggrgrowth">Agg Growth (9.85%)</option>
+                              <option value="Custom">Custom</option>
+                            </select>
+                            &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_DigitalModelLabel"></span>
+                            <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PreGrowthRate$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
+                            <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PreGrowthRate'); });</script></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Post-Retire Gross Growth:</td>
+                          <td><nobr>
+                            <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PostGrowthRate$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate');">
+                              <option value="Nothing"></option>
+                              <option value="None">No Growth (0.00%)</option>
+                              <option value="Inflation" selected="selected">Inflation (2.56%)</option>
+                              <option value="assetpres">Asset Pres (3.60%)</option>
+                              <option value="income">Income (4.85%)</option>
+                              <option value="enhincome">Enh Income (6.33%)</option>
+                              <option value="growincome">Growth Inc (7.15%)</option>
+                              <option value="growth">Growth (8.96%)</option>
+                              <option value="aggrgrowth">Agg Growth (9.85%)</option>
+                              <option value="Custom">Custom</option>
+                            </select>
+                            &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_DigitalModelLabel"></span>
+                            <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PostGrowthRate$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox" data-val-errormessage="Post-Retire Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
+                            <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PostGrowthRate'); });</script></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Business Tax Basis:</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Basis" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis" data-val-errormessage="Tax Basis must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Basis_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Owner:</td>
+                          <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$OwnerDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__OwnerDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();">
+                              <option value=""></option>
+                              <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Person">Frank Miller</option>
+                              <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Spouse">Joanna Miller</option>
+                              <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Joint" selected="selected">Frank and Joanna (Joint/ROS)</option>
+                              <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|JointCommon">Frank and Joanna (Common)</option>
+                              <option value="7032507e-4665-458f-9f52-ba5a567ee7c4|Community">Frank and Joanna (Community)</option>
+                              <optgroup label="Children">
+                              <option value="3416937b-ffa9-47ef-be73-604744078d24|Joint" optgroup="Children">Lucas Miller</option>
+                              <option value="afc84f5f-a948-4f8a-81c6-c17d31afd5c1|Joint" optgroup="Children">Mary Beth Miller</option>
+                              <option value="198c331b-4c8f-4bc1-aed6-199bbb11a569|Joint" optgroup="Children">Peter Miller</option>
+                              <option value="7bf5b065-e7bb-4017-8249-7a615bf73b7b|Joint" optgroup="Children">Test Name</option>
+                              </optgroup>
+                              <optgroup label="Grandchildren">
+                              <option value="387e52c2-bdc2-4c00-a636-43ac14f4cc0b|Joint" optgroup="Grandchildren">Grandchild Miller</option>
+                              <option value="4b6b3851-ac5a-4cb4-bc0c-fa8d5edef0d0|Joint" optgroup="Grandchildren">Grandchild 1 Miller</option>
+                              <option value="883ac2fe-de00-4d14-b4bb-490318eb622a|Joint" optgroup="Grandchildren">Grandchild 3 Miller</option>
+                              </optgroup>
+                              <optgroup label="Great Grandchildren">
+                              <option value="439b8940-e688-40e9-8291-bf291f877a12|Joint" optgroup="Great Grandchildren">Great Grandchild 1 Miller</option>
+                              </optgroup>
+                              <optgroup label="Individuals">
+                              <option value="27e28394-ea9c-4855-a473-6812fe734b11|Joint" optgroup="Individuals">Elaine Grafton</option>
+                              <option value="5ab1b6ba-2b79-43b4-9403-046fac3d266e|Joint" optgroup="Individuals">Other Individual</option>
+                              <option value="c1eedc87-f9ef-4efc-a98d-44d81ef48a19|Joint" optgroup="Individuals">Stephanie Miller</option>
+                              <option value="0600fe8f-5c6b-4a12-be99-de5afdb8ffcd|Joint" optgroup="Individuals">Other Heirs</option>
+                              </optgroup>
+                              <optgroup label="Businesses">
+                              <option value="6bbf2622-1775-4c13-9003-ad8cd06eaf6f|Joint" optgroup="Businesses">Business 1</option>
+                              </optgroup>
+                              <optgroup label="Trusts &amp; Partnerships">
+                              <option value="f4553e77-c672-460a-ba98-2fb464a96a12|Joint" optgroup="Trusts &amp; Partnerships">Default Trust</option>
+                              </optgroup>
+                            </select>
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__OwnerDropDown" data-val-errormessage="Owner is required" data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__ctl02" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Business Type:</td>
+                          <td nowrap=""><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$EntityTypeDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown" onchange="BusinessTypeChanged();" onfocus="if (typeof(HideTips)=='function') HideTips();">
+                              <option value="" selected="selected"></option>
+                              <option value="Sole">Sole Proprietorship</option>
+                              <option value="Partnership">Partnership</option>
+                              <option value="SCorp">S-Corp</option>
+                              <option value="CCorp">C-Corp</option>
+                              <option value="LLC">Limited Liability Company</option>
+                              <option value="ProfCorp">Professional Corp</option>
+                            </select>
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown" data-val-errormessage="Business Type is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__EntityTypeDropDown_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Discount Percent:</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$Discount" maxlength="4" size="4" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Discount Percent', 'The discount rate used for gift and estate tax calculations.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Percent', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount" data-val-errormessage="Discount must be between 0% and 50%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__Discount_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="50" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabelDisabled" id="PassThruEnabledLabel">Pass Thru Enabled?&nbsp;</td>
+                          <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PassThruEnabled" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PassThruEnabled" onchange="PassThruChanged()" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Pass Thru Enabled', '\u0027Yes\u0027 = Earnings/Loss from Business is passed thru to client for Income Tax calculation. \u003cbr /\u003e\u003cbr /\u003e \u0027No\u0027 = Earnings/Loss from Business is \u003cstrong\u003enot\u003c/strong\u003e passed thru to client for Income Tax calculation.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="">
+                              <option value="False">No</option>
+                              <option value="True" selected="selected">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabelDisabled" id="SpecifiedServiceTradeLabel">Specified Service Trade?&nbsp;</td>
+                          <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$SpecifiedServiceTrade" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__SpecifiedServiceTrade" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Specified Service Trade', 'The pass-thru income deduction may be calculated differently depending upon whether this is a regular business or a professional services business known as a \&quot;specified service trade\&quot;. \u003cbr /\u003eNote that the Tax Cuts \u0026 Jobs Act provides this deduction until the provision sunsets at the end of 2025, unless sunset is suspended by the advisor.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="">
+                              <option value="False" selected="selected">No</option>
+                              <option value="True">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Subject to Unearned Income Medicare Tax?</td>
+                          <td nowrap=""><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$HasMedicareTax" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__HasMedicareTax" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Subject to Unearned Income Medicare Tax?', 'Certain business income is potentially subject to the 3.8% unearned income Medicare tax by being included in Net Investment Income as defined in IRC Section 1411(c). Answer \&quot;yes\&quot; if income from this business should be part of Net Investment Income.', 6); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onfocus="if (typeof(HideTips)=='function') HideTips();">
+                              <option value="False" selected="selected">No</option>
+                              <option value="True">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel"><b>Cash Flow</b></td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" id="AdditionalIncomeLabel">Income:&nbsp;</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalAnnualIncome" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Income', 'Specifies the amount of additional annual income to be received by the business.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome" data-val-errormessage="Additional Income must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualIncome_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Income Indexed At:</td>
+                          <td><nobr>
+                            <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalIncomeGrowthRateSelector$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector');">
+                              <option value="None" selected="selected">No Growth (0.00%)</option>
+                              <option value="Inflation">Inflation (2.56%)</option>
+                              <option value="Custom">Custom</option>
+                            </select>
+                            &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_DigitalModelLabel"></span>
+                            <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalIncomeGrowthRateSelector$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
+                            <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalIncomeGrowthRateSelector'); });</script></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" id="AdditionalExpenseLabel">Expenses:&nbsp;</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalAnnualExpenses" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Expenses', 'Specifies the amount of additional annual expenses to be applied to the business, not including payments for any liabilities defined as specifically owned by the business.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses" data-val-errormessage="Additional Expenses must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalAnnualExpenses_Validator1" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel" nowrap="">Expenses Indexed At:</td>
+                          <td><nobr>
+                            <select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalExpenseGrowthRateSelector$GrowthRateDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateDropDown" onfocus="if (typeof(HideTips)=='function') HideTips();" onchange="UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector');">
+                              <option value="None" selected="selected">No Growth (0.00%)</option>
+                              <option value="Inflation">Inflation (2.56%)</option>
+                              <option value="Custom">Custom</option>
+                            </select>
+                            &nbsp;<span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_DefaultGrowthRateLabel" style="display: none;"></span><span class=" control-label" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_DigitalModelLabel"></span>
+                            <input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AdditionalExpenseGrowthRateSelector$GrowthRateTextBox" maxlength="7" size="7" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox" onblur="Reformat(this, 'Percent', 2);  " onfocus="if (typeof(HideTips)=='function') HideTips();" style="display:none;" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox" data-val-errormessage="Custom Rate must be between 0.00% and 25.00%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector_GrowthRateTextBox_Validator1" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="25.00" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></nobr> 
+                            <script type="text/javascript">AddLoadEvent(function() { UpdateGrowthRateSelector('ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AdditionalExpenseGrowthRateSelector'); });</script></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabel">Distribution Type:</td>
+                          <td><select class="form-control form-control-webforms " name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PayoutTypeDropDown" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutTypeDropDown" onchange="UpdateControlState();" onfocus="if (typeof(HideTips)=='function') HideTips();">
+                              <option value="None" selected="selected">None</option>
+                              <option value="Annuity">Fixed Amount</option>
+                              <option value="Interest">Income</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabelDisabled" id="AnnuityAmountLabel">Distribution Amount:</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$AnnuityAmount" maxlength="16" size="11" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" onblur="Reformat(this, 'Currency', 0);  " onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" data-val-errormessage="Distribution Amount is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount" data-val-errormessage="Distribution Amount must be between $0 and $999,999,999,999." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__AnnuityAmount_Validator2" data-val="true" data-val-type="Currency" data-val-decimalchar="." data-val-groupchar="," data-val-digits="2" data-val-groupsize="3" data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="999999999999" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                        <tr>
+                          <td class="FormLabelDisabled" id="PayoutRateLabel">Distribution (% of Income):</td>
+                          <td><input class="form-control form-control-webforms inp_f_Right" name="ctl00$Content$PageContent_$Placeholder_$PlanningCenterPlaceHolder_$FactChangePlaceHolder_$ScenarioChangePlaceHolder_$PayoutRate" maxlength="6" size="6" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" onmouseover="if (typeof ShowTip === 'function') { ShowTip(this, 'Distribution (% of Income)', 'Percentage of business income to be distributed to the owner(s) annually. This also includes investment income from investments (according to the investment\u0027s Realization Model) owned by the business. Up to 100% of this income can be distributed annually. The amount distributed to each owner is based upon their ownership percentage.', 8); }" onmouseout="if (typeof(HideTip)=='function') HideTip();" onblur="Reformat(this, 'Percent', 1);  " onfocus="if (typeof(HideTips)=='function') HideTips();" disabled="" type="text">
+                            <span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" data-val-errormessage="Distribution (% of Income) is required." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate_Validator1" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="color:Red;display:none;">*</span><span data-val-controltovalidate="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate" data-val-errormessage="Distribution (% of Income) must be between 0.0% and 100.0%." data-val-display="Dynamic" id="ctl00_Content_PageContent__Placeholder__PlanningCenterPlaceHolder__FactChangePlaceHolder__ScenarioChangePlaceHolder__PayoutRate_Validator2" data-val="true" data-val-type="Double" data-val-decimalchar="." data-val-evaluationfunction="RangeValidatorEvaluateIsValid" data-val-maximumvalue="100" data-val-minimumvalue="0" style="color:Red;display:none;">*</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="col-md-4 sideitems">
           <div id="chartdivb" style="height: 250px"></div>
@@ -1223,7 +1223,7 @@
 			
 		// Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
 		$(".editlink").click(function(){
-		$.get("/formsamplemodal.html", function(data) {
+		$.get("/formsamplemodal2.html", function(data) {
      $("#js-techniquelistsection").replaceWith(data);
 });
 				});
