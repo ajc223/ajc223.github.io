@@ -675,6 +675,17 @@ drop the advanced form in here
 	$("#expandedinfo").click(function() {
   $('.reshuffle').toggleClass('reshuffle-active');
  $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
-});		
+});
+			
+			$("#expanded").click(function(e) {
+  e.preventDefault();
+  setInterval(function() {
+    $(window).resize(function() {
+      $('body').load( function(){
+        $(window).trigger('resize');
+      });
+    })
+  }, 1);
+});
 	});
 	</script> 
