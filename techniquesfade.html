@@ -139,7 +139,7 @@
               </div>
             </div>
           </div>
-          <div id="js-techniquelistsection">
+          <div id="js-techniquelistsection" class="showstart">
             <div data-reactid=".0">
               <div class="form-header border-top-zero" data-reactid=".0.0"><a href="javascript:void(0);" class="pull-right edit track-event" data-reactid=".0.0.0"><i class="fas fa-plus-circle"></i> Add</a><strong class="text-caps" data-reactid=".0.0.1">Techniques</strong></div>
               <ul class="list-group technique-list ui-sortable" data-reactid=".0.1">
@@ -204,7 +204,7 @@
           <div id="panel-left" style="display: none;"></div>
         </div>
         <div class="col-md-8 switchb">
-          <div id="panel-right-wrapper" class="">
+          <div id="panel-right-wrapper" class="showstart">
             <div id="panel-right">
               <div id="CashFlow">
                 <div class="comparison-header table-header">
@@ -818,6 +818,17 @@
               <div data-reactid=".1"></div>
             </div>
           </div>
+			
+			
+			<!-- Drop the alternate chart here -->
+			<div id="panel-right-wrapper" class="hidestart">
+			 <div id="chartdivb" style="height: 250px"></div>
+          <div class="summary-section"> <small class="initialism">Assets last until</small> <span class="summary-highlight">Age 100</span> </div>
+          <div class="summary-section"> <small class="initialism">Funding gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar"></span>4 Years</span></span></span> </div>
+          <div class="summary-section"> <small class="initialism">Value gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar">$</span>2,521,576</span></span></span> </div>
+			</div>
+			
+			<!-- end alt chart -->
         </div>
         <div id="popup-placeholder"></div>
       </div>

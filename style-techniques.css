@@ -835,3 +835,9 @@ background-color: #fff;
 	overflow-y: auto;
 	height: 75vh;
 }
+
+/* Show hide in place */
+
+.hidestart {
+	display: none;
+}

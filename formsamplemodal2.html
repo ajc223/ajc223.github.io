@@ -1,4 +1,4 @@
-<div id="panel-left" style="">
+<div id="panel-left" style="" class="showstart">
   <form class="technique js-handlebadrequest" novalidate="novalidate">
     <div class="form-header">
       <button type="button" class="btn btn-primary pull-right back">Back</button>
@@ -641,13 +641,28 @@
     </div>
     <input class="is-invisible" onclick="document.activeElement.blur(); return false;" type="submit">
   </form>
-  <button class="btn btn-default pull-right" style="position: relative; z-index: 1;" id="expanded">Advanced test</button></div>
+  <button class="btn btn-default pull-right" style="position: relative; z-index: 1;" id="expanded">Advanced test</button>
+</div>
+
+<!-- Replace with expanded form -->
+
+
+<div id="panel-left-adv" class="hidestart">
+drop the advanced form in here
+</div>
+
+
+<!-- expanded form here -->
+
+
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 	// Push off the sidebar and hide other chrome elements when in presentation mode
 	$("#expanded").click(function(){
 	$(".switcha").removeClass("col-md-4").addClass("col-md-8"); 
     $(".switchb").removeClass("col-md-8").addClass("col-md-4");
+	$(".showstart").toggleClass("hideonclick");
+	$(".hidestart").toggleClass("shown animate fadeInUp two");	
     // $(".push").toggleClass("pushed shown animate fadeInUp six");
 	// $(".datacol").toggleClass("datashrunk");
 	$(".gocollapse .fas").toggleClass("fa-chevron-circle-right");
