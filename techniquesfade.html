@@ -998,29 +998,20 @@ Highcharts.chart('chartdiv', {
 	</script> 
 <script type="text/javascript">
 Highcharts.chart('chartdivb', {
-    chart: {
-            renderTo: 'container',
-            type: 'column'
-        },
-	title: {
+     title: {
         text: ''
     },
-	 exporting: {
-        enabled: false
+    subtitle: {
+        text: ''
     },
-        yAxis: {
-            title: {
-                text: 'axis title',
-                useHTML: true,
-                style: {
-                    "-webkit-transform": "rotate(90deg)",
-                    "-moz-transform": "rotate(90deg)", 
-                    "-o-transform": "rotate(90deg)"
-                }
-            }
-        },
-        series: [{
-            data: [1200,1700,2200,2700,3200,3700,4200,4700,5200,5700,6200,6700,7200,7700,8200,8700,9200,9700,10200,10700,11200,11700,12200,12700,13200]}]
+
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }]
 });
 	</script>
 </body>
