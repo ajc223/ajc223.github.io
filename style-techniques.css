@@ -545,6 +545,9 @@ animation-delay: 7.5s;
 .fadeIn {
     -webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
+	-webkit-transition: all liner 500ms;
+	-moz-transition: all linear 500ms;
+	transiton: all linear 500ms;
 }
 
 /*=== FADE IN UP Big ===*/
