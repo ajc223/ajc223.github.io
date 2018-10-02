@@ -841,3 +841,7 @@ background-color: #fff;
 .hidestart {
 	display: none;
 }
+
+.showstart {
+	display: block;
+}
