@@ -842,6 +842,6 @@ background-color: #fff;
 	display: none;
 }
 
-.showstart {
+.showstart, .shown {
 	display: block;
 }
