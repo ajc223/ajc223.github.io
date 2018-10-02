@@ -838,7 +838,7 @@ background-color: #fff;
 
 /* Show hide in place */
 
-.hidestart {
+.hidestart, .hidethis {
 	display: none;
 }
 
