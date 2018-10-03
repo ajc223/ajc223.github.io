@@ -938,30 +938,4 @@ $("#expandedinfo").click(function() {
   }, 1);
 });
 	});
-</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	// Push off the sidebar and hide other chrome elements when in presentation mode
-	$("span.expandedpush").click(function(){
-	$(".switcha").removeClass("col-md-4").addClass("col-md-8"); 
-    $(".switchb").removeClass("col-md-8").addClass("col-md-4");
-	$(".showstart").toggleClass("hidestart");
-	$(".showstartchart").toggleClass("hidethis");
-	$(".hidestart").toggleClass("shown animate fadeIn");
-	$( "#chartdivb" ).each(function( index ) { 
-      $(this).highcharts().reflow(); 
-   }); 
-});		
- $(".expandedpush").click(function(e) {
-  e.preventDefault();
-  setInterval(function() {
-    $(window).resize(function() {
-      $('body').load( function(){
-        $(window).trigger('resize');
-      });
-    })
-  }, 1);
-});
-	});
 </script> 
