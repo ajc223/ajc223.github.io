@@ -980,7 +980,7 @@ jQuery(document).ready(function($) {
 	$(".showstart").toggleClass("hidestart");
 	$(".expandedpush").toggleClass("pushedopen");
 	$(".showstartchart").toggleClass("hidethis");
-	$(".gocollapse .fa-chevron-circle-right").toggleClass("fa-chevron-circle-left");
+	$(".gocollapse .fa-chevron-circle-right").removeClass("fa-chevron-circle-right").addClass("fa-chevron-circle-left"); 
 	$(".hidestart").toggleClass("shown animate fadeIn");
 	$( "#chartdivb" ).each(function( index ) { 
       $(this).highcharts().reflow(); 
@@ -992,7 +992,7 @@ jQuery(document).ready(function($) {
 	$(".showstart").toggleClass("hidestart");
 	$(".expandedpush").toggleClass("pushedopen");
 	$(".showstartchart").toggleClass("hidethis");
-	$(".gocollapse .fa-chevron-circle-right").toggleClass("fa-chevron-circle-left");
+	$(".gocollapse .fa-chevron-circle-left").removeClass("fa-chevron-circle-left").addClass("fa-chevron-circle-right"); 
 	$(".hidestart").toggleClass("shown animate fadeIn");
 	$( "#chartdivb" ).each(function( index ) { 
       $(this).highcharts().reflow(); 
