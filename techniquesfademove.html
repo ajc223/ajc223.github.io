@@ -987,8 +987,8 @@ jQuery(document).ready(function($) {
    }); 
 });
 	$("expandedpush.pushedopen").click(function(){
-	$(".switcha").removeClass("col-md-8").addClass("col-md-4"); 
-    $(".switchb").removeClass("col-md-4").addClass("col-md-8");
+	$(".switcha").toggleClass("col-md-4"); 
+    $(".switchb").toggleClass("col-md-8");
 	$(".showstart").toggleClass("hidestart");
 	$(".expandedpush").toggleClass("pushedopen");
 	$(".showstartchart").toggleClass("hidethis");
