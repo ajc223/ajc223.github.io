@@ -978,14 +978,14 @@ jQuery(document).ready(function($) {
 	$(".switcha").removeClass("col-md-4").addClass("col-md-8"); 
     $(".switchb").removeClass("col-md-8").addClass("col-md-4");
 	$(".showstart").toggleClass("hidestart");
-	$("span.expandedpush").toggleClass("pushedopen");
+	$(".expandedpush").toggleClass("pushedopen");
 	$(".showstartchart").toggleClass("hidethis");
 	$(".hidestart").toggleClass("shown animate fadeIn");
 	$( "#chartdivb" ).each(function( index ) { 
       $(this).highcharts().reflow(); 
    }); 
 });
-	$("span.expandedpush.pushedopen").click(function(){
+	$("..pushedopen").click(function(){
 	$(".switcha").removeClass("col-md-8").addClass("col-md-4"); 
     $(".switchb").removeClass("col-md-4").addClass("col-md-8");
 	$(".showstart").toggleClass("hidestart");
