@@ -642,7 +642,7 @@
     </div>
     <input class="is-invisible" onclick="document.activeElement.blur(); return false;" type="submit">
   </form>
-  <button class="btn btn-default pull-right" style="position: relative; z-index: 1;" id="expanded">Advanced test</button>
+  <button class="btn btn-default pull-right" style="position: relative; z-index: 1;" class="expandeditem">Advanced</button>
 	</div><!-- end show start -->
 	
 	<!-- Show on click adv -->
@@ -911,7 +911,7 @@
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
 	// Push off the sidebar and hide other chrome elements when in presentation mode
-	$("#expanded").click(function(){
+	$(".expandeditem").click(function(){
 	$(".switcha").removeClass("col-md-4").addClass("col-md-8"); 
     $(".switchb").removeClass("col-md-8").addClass("col-md-4");
 	$(".showstart").toggleClass("hidestart");
@@ -930,7 +930,7 @@
  $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
 });
 			
- $("#expanded").click(function(e) {
+ $(".expandeditem").click(function(e) {
   e.preventDefault();
   setInterval(function() {
     $(window).resize(function() {

@@ -117,7 +117,7 @@
       <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
       
       <div class="row row-eq-height">
-        <div class="col-md-4 switcha push chromebar padright"><span class="gocollapse"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
+        <div class="col-md-4 switcha push chromebar padright"><span class="expandeditem gocollapse"><i class="fas fa-chevron-circle-right"></i></span><!-- expands to advanced edit mode -->
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
           <div id="panel-planDropdown">
             <div class="comparison-header-column plan-dropdown">
@@ -946,7 +946,7 @@
 jQuery(document).ready(function($) {
 // Load in place. this isn't how it's done in reality, but for now let's try mimicking it for demo purposes
 $(".editlink").click(function(){
-$.get("/formsamplemodal2.html", function(data) {
+$.get("/formsamplemodal3.html", function(data) {
 $("#js-techniquelistsection").replaceWith(data);
 });
 });
