@@ -4,6 +4,10 @@
 .technique-list-item {
 	position: relative;
 }
+.technique-list-item a {
+	cursor: pointer;
+}
+/*
 .technique-list-item.list-group-item:hover:after {
 	font-family: "Font Awesome\ 5 Free";
 	content: '\f303';
@@ -15,6 +19,7 @@
 	z-index: 5;
 	font-size: 1.1em;
 }
+*/
 /*
  * Row with equal height columns
  * --------------------------------------------------
