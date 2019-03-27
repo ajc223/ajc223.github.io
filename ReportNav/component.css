@@ -1,15 +1,7 @@
 /* Icons (made with Icomoon.io) */
 
-@font-face {
-	font-family: 'feather';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/feather/feather.eot?1gafuo');
-	src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'), url('../fonts/feather/feather.woff2?1gafuo') format('woff2'), url('../fonts/feather/feather.ttf?1gafuo') format('truetype'), url('../fonts/feather/feather.woff?1gafuo') format('woff'), url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
-}
-
 .icon {
-	font-family: 'feather';
+	font-family: 'Font Awesome 5 Free';
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
@@ -22,28 +14,28 @@
 }
 
 .icon--arrow-left:before {
-	content: '\e901';
+	content: '\f053';
 }
 
 .icon--menu:before {
-	content: '\e903';
+	content: '\f578';
 }
 
 .icon--cross:before {
-	content: '\e117';
+	content: '\f00d';
 }
 
 
 /* Menu styles */
 
-/*
 .menu {
-	position: fixed;
-	top: 120px;
+	position: relative;
+	/* top: 120px;
 	left: 0;
 	width: 300px;
+	*/
 	height: calc(100vh - 120px);
-	background: #1c1d22;
+	background: #fff;
 }
 
 .menu__wrap {
@@ -53,7 +45,6 @@
 	overflow: hidden;
 	width: 100%;
 }
-*/
 
 .menu__level {
 	position: absolute;
@@ -93,8 +84,8 @@
 }
 
 .menu__link[data-submenu]::after {
-	content: '\e904';
-	font-family: 'feather';
+	content: '\f141';
+	font-family: 'Font Awesome 5 Free';
 	position: absolute;
 	right: 0;
 	padding: 0.25em 1.25em;
@@ -109,8 +100,9 @@
 }
 
 .menu__link--current::before {
-	content: '\00B7';
+	content: '\f192';
 	font-size: 1.5em;
+	font-family: 'Font Awesome 5 Free';
 	line-height: 0;
 	position: absolute;
 	top: 50%;
@@ -232,7 +224,9 @@
 	font-size: 0.65em;
 	line-height: 1;
 	position: relative;
-	padding: 2.5em 3.75em 1.5em 2.5em;
+	padding: 15px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #e2e2e2;
 }
 
 .menu__breadcrumbs a {
@@ -255,8 +249,8 @@
 }
 
 .menu__breadcrumbs a:not(:last-child)::after {
-	content: '\e902';
-	font-family: 'feather';
+	content: '\f105';
+	font-family: 'Font Awesome 5 Free';
 	display: inline-block;
 	padding: 0 0.5em;
 	color: #33353e;
