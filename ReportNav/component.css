@@ -36,6 +36,7 @@
 
 /* Menu styles */
 
+/*
 .menu {
 	position: fixed;
 	top: 120px;
@@ -52,6 +53,7 @@
 	overflow: hidden;
 	width: 100%;
 }
+*/
 
 .menu__level {
 	position: absolute;
