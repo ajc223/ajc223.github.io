@@ -406,13 +406,7 @@
           <h1 class="page-header page-header-plantool"> <span class="backlink"><a class="js-back-link" href="https://wealth.emaplan.com/ema/Advisor/Clients/b5077a53-e6be-458a-97c9-c5045d48af0b/Plans"><i class="fa fa-arrow-circle-left"></i>Go back to <span class="js-back-text">Plans</span></a></span> <span class="decisionctr"><i class="ei ei-decisioncenter page-header-plantool-icon"></i> <span class="page-header-plantool-text"><strong>DECISION</strong>CENTER</span></span> </h1>
         </div>
       </div>
-      
-      <!-- DC Output pulled from lifetime cash flow as of september 12 --> 
-      
-      <!-- Here we need the advanced contents, added dynamically based on selected elements. Fade this up and in on delay --> 
-      
-      <!-- DC Placeholder. Fade this down and out on expanded or advanced click -->
-      
+ 
       <div class="row row-eq-height">
         <div class="col-md-4 switcha">
           <div id="ClientName" class="h2 page-header"> Frank and Joanna Miller </div>
@@ -441,26 +435,28 @@
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Vegetables</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Grains</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Cash Flow</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Report Family A</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Report Family B</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Report Family C</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-4" href="#">Report Family D</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-4" href="#">Report Family E</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-7" aria-owns="submenu-4" href="#">Report Family F</a></li>
 				</ul>
 				<!-- Submenu 1 -->
 				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Vegetables">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Cabbages</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Salad Greens</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Overview</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Income</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" href="#">Expenses</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Withdrawals</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Mushrooms</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
 				</ul>
 				<!-- Submenu 1-1 -->
 				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Income Taxes</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Healthcare</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Living Expenses</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Insurance Premiums</a></li>
 				</ul>
 				<!-- Submenu 2 -->
 				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
@@ -1148,18 +1144,6 @@
             <div id="js-addpanel">
               <div data-reactid=".1"></div>
             </div>
-		
-		<!-- Drop the alternate chart here -->
-		<div class="hidestart">
-		 <div id="chartdivb" class="highchartalt" style="height: 250px"></div>
-			<div class="chart-summary good">
-          <div class="summary-section" style="margin-bottom: 25px;"> <small class="initialism">Assets last until</small> <span class="summary-highlight">Age 100</span> </div>
-          <div class="summary-section" style="margin-bottom: 25px;"> <small class="initialism">Funding gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar"></span>4 Years</span></span></span> </div>
-          <div class="summary-section" style="margin-bottom: 25px;"> <small class="initialism">Value gained</small> <span class="summary-highlight"><span class="arrow green"><i class="fa fa-arrow-circle-up"></i> <span class="text"><span class="small-dollar">$</span>2,521,576</span></span></span> </div>
-           </div>
-			
-			<!-- end alt chart -->
-        </div>
 			  </div>
 			</div>
         <div id="popup-placeholder"></div>

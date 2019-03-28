@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chart Test</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<style type="text/css">
+/* Highcharts CSS */
+
+.highcharts-toolip {
+font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+font-size: 14px;
+color: #000;
+}
+
+.highcharts-tooltip > span {
+width: auto;
+min-width: 240px;
+max-width: 400px !important;
+overflow:auto;
+white-space:normal !important;
+padding: 10px;
+}
+
+span.tooltiplegend {
+width: 10px;
+height: 10px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+background-color: #000;
+display: inline-block;
+}
+
+.chart-tooltip-table {
+border-collapse: collapse;
+border: 0px;
+table-layout: fixed;
+}
+		
+.chart-tooltip-table th {
+padding-bottom: 10px;
+text-align: center;
+}
+
+.chart-tooltip-table td {
+text-align: left;
+word-wrap: normal;
+}
+		
+.chart-tooltip-table tr.legenditems td {
+vertical-align: top;
+}
+
+.chart-tooltip-table tr.legenditems td:nth-of-type(1) {
+padding-right: 5px;
+width: 15px;
+}
+
+.chart-tooltip-table tr.legenditems td:nth-of-type(2) {
+padding-right: 25px;
+}
+
+.chart-tooltip-table tr.legenditems td:nth-of-type(3) {
+text-align: right;
+}
+		
+		
+.chart-tooltip-table tbody > tr:last-child > td {
+padding-bottom: 5px;
+}
+
+.chart-tooltip-table .topborder {
+border-top: 2px solid #000;
+}
+
+.chart-tooltip-table .topborder td {
+padding-top: 5px;
+}
+	/* Div Table */
+	
+	.tooltip-table {
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+		border: 0px;
+		table-layout: fixed;
+		border: 1px solid #000;
+	}
+	
+	.tooltip-table .tcell {
+		display: table-cell;
+	}
+	
+	.tooltip-table .trow {
+		display: table-row;
+	}
+		
+		.highcharts-xaxis-labels {
+			position: relative !important;
+			z-index: 5;
+			top: -75px !important;
+			width: 100%;
+			font-weight: bold;
+		}
+		
+		.highcharts-xaxis-labels > span:first-of-type {
+			position: relative !important;
+			left: 8px !important;
+			right: auto !important;
+			transform: none !important;
+			top: auto !important;
+		}
+		
+		.highcharts-xaxis-labels > span:last-of-type {
+			left: auto !important;
+			position: absolute;
+			right: 8px !important;
+			transform: none !important;
+			top: auto !important;
+		}
+		
+		.highcharts-credits {
+			display: none !important;
+		}
+</style>
+</head>
+
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	
+	<div style="max-width: 600px; margin: 0 auto; margin: 0 auto;">
+	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+		</div>
+	
+<script type="application/javascript">	
+	    Highcharts.Axis.prototype.init = (function (func) {
+        return function (chart, userOptions) {
+            if (userOptions.categories) {
+                var labels = userOptions.labels || {};
+                var originalFormatter = userOptions.labels.formatter;
+                
+                this.userCategories = userOptions.categories;
+                userOptions.categories = null;
+
+                labels.formatter = function() {
+                    this.axis.options.labels.align = (this.value == this.axis.min) ? "left" : ((this.value == this.axis.max) ? "right" : "center");
+                    
+                    if (!originalFormatter) return this.axis.userCategories[this.value];
+                    
+                    this.value = this.axis.userCategories[this.value];
+                    return originalFormatter.call(this);
+                }
+                
+                userOptions.labels = labels;
+            }
+            func.apply(this, [chart, userOptions]);
+        };
+    } (Highcharts.Axis.prototype.init));
+	
+	var categ = ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'];	
+    var chart = new Highcharts.chart({
+    chart: {
+        type: 'column',
+	    renderTo: 'container',
+    },
+    title: {
+        text: 'Stacked column chart'
+    },
+    yAxis: {
+		visible: false,
+    },
+    legend: {
+        itemDistance: 50
+    },
+    tooltip: {
+                useHTML: true,
+			    formatter: function () {
+                    return "<table id='chart-tooltip-table' class='chart-tooltip-table'><tbody><tr><th colspan='3'><span class='calendar'></span> 2020 (53 / 52)</th></tr><tr class='legenditems'><td><span class='tooltiplegend'></span></td><td>Distributed Investment Income</td><td>$100,000</td></tr><tr class='legenditems'><td><span class='tooltiplegend'></span></td><td>Salary</td><td>$100,000</td></tr><tr class='legenditems'><td><span class='tooltiplegend'></span></td><td>Other Income</td><td>$100,000</td></tr><tfoot class='topborder'><tr><td colspan='2'><strong>Total Expenses</strong></td><td>$100,000</td></tr></tfoot></tbody></table>";
+                }
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+        }
+    },
+	xAxis: {
+		categories: categ,
+		tickColor: 'transparent',
+        tickWidth: 0,
+		minPadding: 0,
+        labels: {
+			useHTML: true,
+            formatter: function () {
+                if (this.isLast || this.isFirst) {
+					return this.value
+              }
+            },
+        }
+    },
+    series: [{
+        name: 'John',
+        data: [5, 3, 4, 7, 2]
+    }, {
+        name: 'Jane',
+        data: [2, 2, 3, 2, 1]
+    }, {
+        name: 'Joe',
+        data: [3, 4, 4, 2, 5]
+    }]
+});
+	</script>
+	
+</body>
+</html>
