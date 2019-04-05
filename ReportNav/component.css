@@ -29,13 +29,12 @@
 /* Menu styles */
 
 .menu {
-	position: relative;
-	/* top: 120px;
+	background: #fff;
+	position: absolute;
+	top: 120px;
 	left: 0;
 	width: 300px;
-	*/
-	height: calc(100vh - 120px);
-	background: #fff;
+	/*height: calc(100% - 120px);*/
 }
 
 .menu__wrap {
@@ -75,10 +74,10 @@
 
 .menu__link {
 	font-weight: 600;
-	position: relative;
 	display: block;
 	padding-top: 15px;
 	padding-bottom: 15px;
+	position: relative;
 	color: #3272a9;
 	-webkit-transition: color 0.1s;
 	transition: color 0.1s;
