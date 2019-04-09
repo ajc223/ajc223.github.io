@@ -339,14 +339,11 @@ background-color: #f0f8ff;
 .cd-dropdown-content .cd-dropdown-gallery > .see-all, .cd-dropdown-content .cd-dropdown-icons > .see-all {
     width: calc(100% - 60px);
 }
-.cd-dropdown-content .cd-dropdown-icons > li, .cd-dropdown-content .cd-secondary-dropdown > li {
-    width: 50%;
-    float: left;
-}
 .cd-dropdown-content .cd-secondary-dropdown {
     overflow: hidden;
-    width: 550px;
+    /* width: 550px; */
     padding-bottom: 65px;
+	display: block;
 }
 .cd-dropdown-content .cd-secondary-dropdown::before {
     /* this is the separation line in the middle of the .cd-secondary-dropdown element */
@@ -355,9 +352,16 @@ background-color: #f0f8ff;
     top: 290px;
     left: 15px;
     height: 1px;
-    width: 520px;
+    /*width: 520px;*/
     background-color: #ebebeb;
 }
+	.cd-dropdown-content .cd-secondary-dropdown {
+		margin: 0px;
+	}
+	.cd-dropdown-content .cd-secondary-dropdown > li {
+		border: 0px;
+		padding: 0px;
+	}
 .cd-dropdown-content .cd-secondary-dropdown > li > a {
     color: #1f3444;
     font-size: 1.6rem;
@@ -379,12 +383,13 @@ background-color: #f0f8ff;
     transform: translateX(0);
 }
 .cd-dropdown-content .cd-secondary-dropdown > li {
-    margin: 20px 0;
+    /* margin: 20px 0; */
     border-right-width: 1px;
     border-color: #ebebeb;
     border-style: solid;
-    padding: 0 30px;
-    height: 250px;
+    /* padding: 0 30px; */
+    /* height: 250px; */
+	padding: 20px;
 }
 .cd-dropdown-content .cd-secondary-dropdown > li:nth-of-type(2n) {
     border-right-width: 0;
@@ -398,6 +403,8 @@ background-color: #f0f8ff;
     transform: translate(0);
     position: relative;
     height: auto;
+	margin: 0px;
+	padding: 0px;
 }
 .cd-dropdown-content .cd-secondary-dropdown > li > ul > .go-back {
     display: none;
@@ -415,6 +422,8 @@ background-color: #f0f8ff;
     padding-bottom: 25px;
     overflow: hidden;
     height: auto;
+	margin: 0px;
+	padding: 0px;
 }
 .cd-dropdown-content .cd-secondary-dropdown .go-back a {
     padding-left: 20px;
@@ -484,6 +493,8 @@ background-color: #f0f8ff;
 }
 .cd-dropdown-content > .has-children > ul {
     visibility: hidden;
+	margin: 0px;
+	padding: 0px;
 }
 .cd-dropdown-content > .has-children > ul.is-active {
     /* when hover over .cd-dropdown-content items - show subnavigation */
