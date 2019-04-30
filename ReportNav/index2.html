@@ -140,11 +140,45 @@ table {
 				-webkit-border-radius: 3px;
 				border-radius: 3px;
 				background: #F9F9F9;
-				padding: 15px;
 				box-shadow: 0 2px 10px 0 rgba(0,0,0,0.27);
 				margin-bottom: 35px;
+				/*overflow: hidden;*/
 			}
 			
+			.dropdownnav .col-md-4 {
+			padding: 15px;
+			position: relative;
+  z-index: 1;
+			-webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+				border-right: 1px solid #e2e2e2;
+			}
+			
+			.dropdownnav .col-md-4:nth-of-type(2) {
+				background: #F6F6F6;
+			}
+			
+			.dropdownnav .col-md-4:nth-of-type(3) {
+				background: #f3F3F3;
+			}
+			
+			.dropdownnav .col-md-4:after {
+	 background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-60deg);
+  transform-origin: 100%;
+  z-index: -1;
+			}
+			
+			
+			border: 1px solid #DDDDDD;
 		</style>
 		
 	<!-- Dropdown & Plan Selector -->
