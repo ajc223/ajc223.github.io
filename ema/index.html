@@ -19,176 +19,191 @@
 <link href="emx-Firefly.css" type="text/css" rel="stylesheet"/>
 <link href="https://emacontent.com/bootstrap/9.5.1/css/ema.min.css" type="text/css" rel="stylesheet"/>
 <link href="styles.css" type="text/css" rel="stylesheet" />
-	<style>
-		.report-header-dropdown .btn, .plan-dropdown-container .btn {
-			font-size: 1em !important;
-		}
-		.switch-module__switch___2gVzy {
-  position: relative;
-  font-weight: normal;
-  outline: none;
-  display: block;
+<style>
+.report-header-dropdown .btn, .plan-dropdown-container . {
+font-size: 1em !important;
+}
+	ul.nomargins {
+		margin: 0px;
+		padding: 0px;
+	}
+.switch-module__switch___2gVzy {
+    position: relative;
+    font-weight: normal;
+    outline: none;
+    display: block;
 }
 .switch-module__switch___2gVzy:before {
-  content: '';
-  display: inline-block;
-  width: 43px;
-  height: 26px;
-  margin-right: 10px;
-  vertical-align: middle;
-  background-color: #f4f4f4;
-  border: 1px solid #cccccc;
-  border-radius: 13px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease-in-out;
+    content: '';
+    display: inline-block;
+    width: 43px;
+    height: 26px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-color: #f4f4f4;
+    border: 1px solid #cccccc;
+    border-radius: 13px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
 }
 .switch-module__switch___2gVzy:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 26px;
-  border: 1px solid #cccccc;
-  border-radius: 100%;
-  background-color: #fff;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #cccccc;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .switch-module__switch___2gVzy.switch-module__disabled___2Sbbi {
-  cursor: not-allowed;
+    cursor: not-allowed;
 }
 .switch-module__switch___2gVzy.switch-module__disabled___2Sbbi:before {
-  opacity: 0.35;
-  cursor: not-allowed;
+    opacity: 0.35;
+    cursor: not-allowed;
 }
 .switch-module__switch___2gVzy.switch-module__disabled___2Sbbi:after {
-  border-color: rgba(204, 204, 204, 0.35);
-  cursor: not-allowed;
+    border-color: rgba(204, 204, 204, 0.35);
+    cursor: not-allowed;
 }
-.switch-module__switch___2gVzy.switch-module__checked___3fIqc:before,
-.switch-module__switch___2gVzy.switch-module__checked___3fIqc.switch-module__focus___8Hwgz:before {
-  background-color: #3272a9;
-  border-color: #3272a9;
+.switch-module__switch___2gVzy.switch-module__checked___3fIqc:before, .switch-module__switch___2gVzy.switch-module__checked___3fIqc.switch-module__focus___8Hwgz:before {
+    background-color: #3272a9;
+    border-color: #3272a9;
 }
 .switch-module__switch___2gVzy.switch-module__checked___3fIqc:after {
-  border-color: #3272a9;
-  -webkit-transform: translateX(17px);
-          transform: translateX(17px);
+    border-color: #3272a9;
+    -webkit-transform: translateX(17px);
+    transform: translateX(17px);
 }
 .switch-module__switch___2gVzy.switch-module__checked___3fIqc.switch-module__disabled___2Sbbi:after {
-  border-color: rgba(50, 114, 169, 0.35);
+    border-color: rgba(50, 114, 169, 0.35);
 }
 .switch-module__switch___2gVzy.switch-module__focus___8Hwgz:before {
-  background-color: #ffffff;
-  border-color: #66afe9;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, 0.8);
+    background-color: #ffffff;
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, 0.8);
 }
 .has-error .switch-module__switch___2gVzy:before {
-  border-color: #d43f3a;
-  box-shadow: inset 0 0 0 1px #d43f3a;
+    border-color: #d43f3a;
+    box-shadow: inset 0 0 0 1px #d43f3a;
 }
 .has-error .switch-module__switch___2gVzy.switch-module__focus___8Hwgz:before {
-  border-color: #d43f3a;
-  box-shadow: inset 0 0 0 1px #d43f3a, 0 0 8px 2px rgba(102, 175, 233, 0.8);
+    border-color: #d43f3a;
+    box-shadow: inset 0 0 0 1px #d43f3a, 0 0 8px 2px rgba(102, 175, 233, 0.8);
 }
-		.booleanInputIcon-module__checkbox-icon___QjJq9 {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 7px;
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.15);
+.booleanInputIcon-module__checkbox-icon___QjJq9 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 .booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__disabled___3xUOQ {
-  border: 1px solid #cccccc;
-  background-color: #e7e7e7;
-  opacity: 0.35;
+    border: 1px solid #cccccc;
+    background-color: #e7e7e7;
+    opacity: 0.35;
 }
 .booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__checked___1gqhw {
-  background-color: #3272a9;
-  font-size: 14px;
-  text-align: center;
-  line-height: 18px;
-  color: #ffffff;
+    background-color: #3272a9;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    color: #ffffff;
 }
-.booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ),
-.booleanInputIcon-module__checkbox-icon___QjJq9:focus:not(.booleanInputIcon-module__disabled___3xUOQ),
-.booleanInputIcon-module__checkbox-icon___QjJq9:active:not(.booleanInputIcon-module__disabled___3xUOQ) {
-  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 8px 2px rgba(102, 175, 233, 0.8);
-  border: 1px solid #66afe9;
+.booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ), .booleanInputIcon-module__checkbox-icon___QjJq9:focus:not(.booleanInputIcon-module__disabled___3xUOQ), .booleanInputIcon-module__checkbox-icon___QjJq9:active:not(.booleanInputIcon-module__disabled___3xUOQ) {
+    box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 8px 2px rgba(102, 175, 233, 0.8);
+    border: 1px solid #66afe9;
 }
-.booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t,
-.booleanInputIcon-module__checkbox-icon___QjJq9:focus:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t,
-.booleanInputIcon-module__checkbox-icon___QjJq9:active:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t {
-  border: 2px solid #d43f3a;
+.booleanInputIcon-module__checkbox-icon___QjJq9.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t, .booleanInputIcon-module__checkbox-icon___QjJq9:focus:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t, .booleanInputIcon-module__checkbox-icon___QjJq9:active:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t {
+    border: 2px solid #d43f3a;
 }
 .has-error .booleanInputIcon-module__checkbox-icon___QjJq9 {
-  border: 2px solid #d43f3a;
+    border: 2px solid #d43f3a;
 }
 .has-error .booleanInputIcon-module__radio-icon___2-7-j:before {
-  border-color: #d43f3a;
-  box-shadow: inset 0 0 0 1px #d43f3a;
+    border-color: #d43f3a;
+    box-shadow: inset 0 0 0 1px #d43f3a;
 }
 .booleanInputIcon-module__radio-icon___2-7-j {
-  position: relative;
-  margin-right: 7px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: bottom;
+    position: relative;
+    margin-right: 7px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
 }
 .booleanInputIcon-module__radio-icon___2-7-j:before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #cccccc;
-  border-radius: 100%;
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 100%;
 }
 .booleanInputIcon-module__radio-icon___2-7-j:after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  display: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background-color: #fff;
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #fff;
 }
 .booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__checked___1gqhw:before {
-  background-color: #3272a9;
-  border-color: #3272a9;
+    background-color: #3272a9;
+    border-color: #3272a9;
 }
 .booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__checked___1gqhw:after {
-  display: inline-block;
+    display: inline-block;
 }
 .booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__disabled___3xUOQ:before {
-  opacity: 0.35;
+    opacity: 0.35;
 }
-.booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ):before,
-.booleanInputIcon-module__radio-icon___2-7-j:focus:not(.booleanInputIcon-module__disabled___3xUOQ):before,
-.booleanInputIcon-module__radio-icon___2-7-j:active:not(.booleanInputIcon-module__disabled___3xUOQ):before {
-  border-color: #66afe9;
-  box-shadow: 0 0 8px 2px rgba(102, 175, 233, 0.8);
+.booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ):before, .booleanInputIcon-module__radio-icon___2-7-j:focus:not(.booleanInputIcon-module__disabled___3xUOQ):before, .booleanInputIcon-module__radio-icon___2-7-j:active:not(.booleanInputIcon-module__disabled___3xUOQ):before {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px 2px rgba(102, 175, 233, 0.8);
 }
-.booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before,
-.booleanInputIcon-module__radio-icon___2-7-j:focus:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before,
-.booleanInputIcon-module__radio-icon___2-7-j:active:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before {
-  border-color: #d43f3a;
-  box-shadow: inset 0 0 0 1px #d43f3a, 0 0 8px 2px rgba(102, 175, 233, 0.8);
+.booleanInputIcon-module__radio-icon___2-7-j.booleanInputIcon-module__focus___1l9kj:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before, .booleanInputIcon-module__radio-icon___2-7-j:focus:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before, .booleanInputIcon-module__radio-icon___2-7-j:active:not(.booleanInputIcon-module__disabled___3xUOQ).booleanInputIcon-module__has-error___1nF9t:before {
+    border-color: #d43f3a;
+    box-shadow: inset 0 0 0 1px #d43f3a, 0 0 8px 2px rgba(102, 175, 233, 0.8);
 }
-	</style>
+	
+	/* Edit in place 2020 */
+	
+	.list-technique-group-item {
+		padding-left: 16px;
+	}
+	
+	.list-technique-group-item:before {
+		display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+		font-family: "FontAwesome";
+	content: "\f142";
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		color: #999;
+	}
+</style>
 </head>
 <body class="DefaultBody">
 <div class="with-stickyfooter js-page">
@@ -302,7 +317,142 @@
                 </div>
               </div>
             </div>
-            <div id="js-techniquelistsection" class="basictechniquelistsection"><div><div class="form-header border-top-zero"><button style="cursor: pointer; outline: currentcolor none medium;" tabindex="0" type="button" class="btn pull-right edit track-event link-module__link___3hGyp btn-link">Modify</button><strong class="text-caps">Techniques</strong></div><ul class=" "><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false"></label></div><div class="technique-text"><button title="Fin Support for Moms $60,000 x 8 Years" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Fin Support for Moms $60,000 x 8 Years</button></div></div></li><li class="list-technique-group-item"><a class="angle-icon pull-right" role="link" tabindex="0"><i class="fa fa-lg fa-angle-up"></i></a><div class="technique-header-multiple"><div class="kyber-switch-wrapper" id="ema-switch-EditLivingExpenses"><label tabindex="-1" id="ema-switch-EditLivingExpenses-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc"><input id="ema-switch-EditLivingExpenses" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked=""></label></div><div class="technique-text"><button title="Living Expenses" type="button" class="btn link-module__link___3hGyp btn-link">Living Expenses</button></div></div><ul class="list-unstyled"><li class="list-unstyled-item indented"><div class="menu-text"><label tabindex="-1" class="_label_B1__9-5-1  checked radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j booleanInputIcon-module__checked___1gqhw" aria-hidden="true"></span><input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/a9292ead-6363-436f-893e-03f1d7cde125" aria-checked="true" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/a9292ead-6363-436f-893e-03f1d7cde125" checked=""></label><button title="Living Expenses with a really long name to see if it truncates" type="button" class="btn link-module__link___3hGyp btn-link">Living Expenses with a really long name to see if it truncates</button></div></li><li class="list-unstyled-item indented"><div class="menu-text"><label tabindex="-1" class="_label_B1__9-5-1 kyber-radio-muted radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j" aria-hidden="true"></span><input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/ccd9a245-808f-4d52-9f3b-0d6cda135692" aria-checked="false" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/ccd9a245-808f-4d52-9f3b-0d6cda135692"></label><button title="Living Expenses" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Living Expenses</button></div></li><li class="list-unstyled-item indented"><div class="menu-text"><label tabindex="-1" class="_label_B1__9-5-1 kyber-radio-muted radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j" aria-hidden="true"></span><input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/dc40b71d-f086-4008-8c17-e1bb2ead3b76" aria-checked="false" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/dc40b71d-f086-4008-8c17-e1bb2ead3b76"></label><button title="Living Expenses" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Living Expenses</button></div></li></ul></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked=""></label></div><div class="technique-text"><button title="Sell Real Estate" type="button" class="btn link-module__link___3hGyp btn-link">Sell Real Estate</button></div></div></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false"></label></div><div class="technique-text"><button title="Edit Stock Options" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Edit Stock Options</button></div></div></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked=""></label></div><div class="technique-text"><button title="Rebalance Portfolios" type="button" class="btn link-module__link___3hGyp btn-link">Rebalance Portfolios</button></div></div></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false"></label></div><div class="technique-text"><button title="Sell Personal Property" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Sell Personal Property</button></div></div></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked=""></label></div><div class="technique-text"><button title="Retirement Ages" type="button" class="btn link-module__link___3hGyp btn-link">Retirement Ages</button></div></div></li><li class="list-technique-group-item"><div class="technique-header"><div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f"><label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc"><input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked=""></label></div><div class="technique-text"><button title="Add Income" type="button" class="btn link-module__link___3hGyp btn-link">Add Income</button></div></div></li></ul><div class="text-right list-footer"><button tabindex="0" type="button" class="btn text-muted link-module__link___3hGyp btn-link"><small style="cursor: pointer;">All On</small></button>&nbsp;·&nbsp;<button tabindex="0" type="button" class="btn text-muted link-module__link___3hGyp btn-link"><small style="cursor: pointer;">All Off</small></button></div></div></div>
+            <div id="js-techniquelistsection" class="basictechniquelistsection">
+              <div>
+                <div class="form-header border-top-zero">
+                  <button style="cursor: pointer; outline: currentcolor none medium;" tabindex="0" type="button" class="btn pull-right edit track-event link-module__link___3hGyp btn-link">Modify</button>
+                  <strong class="text-caps">Techniques</strong></div>
+                <ul class="nomargins">
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4bef2b66-33a1-4dbd-bc81-c1ff527a8d4f" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Fin Support for Moms $60,000 x 8 Years" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Fin Support for Moms $60,000 x 8 Years</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item"><a class="angle-icon pull-right" role="link" tabindex="0"><i class="fa fa-lg fa-angle-up"></i></a>
+                    <div class="technique-header-multiple">
+                      <div class="kyber-switch-wrapper" id="ema-switch-EditLivingExpenses">
+                        <label tabindex="-1" id="ema-switch-EditLivingExpenses-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc">
+                          <input id="ema-switch-EditLivingExpenses" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked="">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Living Expenses" type="button" class="btn link-module__link___3hGyp btn-link">Living Expenses</button>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li class="list-unstyled-item indented">
+                        <div class="menu-text">
+                          <label tabindex="-1" class="_label_B1__9-5-1  checked radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j booleanInputIcon-module__checked___1gqhw" aria-hidden="true"></span>
+                            <input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/a9292ead-6363-436f-893e-03f1d7cde125" aria-checked="true" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/a9292ead-6363-436f-893e-03f1d7cde125" checked="">
+                          </label>
+                          <button title="Living Expenses with a really long name to see if it truncates" type="button" class="btn link-module__link___3hGyp btn-link">Living Expenses with a really long name to see if it truncates</button>
+                        </div>
+                      </li>
+                      <li class="list-unstyled-item indented">
+                        <div class="menu-text">
+                          <label tabindex="-1" class="_label_B1__9-5-1 kyber-radio-muted radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j" aria-hidden="true"></span>
+                            <input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/ccd9a245-808f-4d52-9f3b-0d6cda135692" aria-checked="false" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/ccd9a245-808f-4d52-9f3b-0d6cda135692">
+                          </label>
+                          <button title="Living Expenses" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Living Expenses</button>
+                        </div>
+                      </li>
+                      <li class="list-unstyled-item indented">
+                        <div class="menu-text">
+                          <label tabindex="-1" class="_label_B1__9-5-1 kyber-radio-muted radio-module__radio___129Rm kyber-radio"><span class="booleanInputIcon-module__radio-icon___2-7-j" aria-hidden="true"></span>
+                            <input name="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/dc40b71d-f086-4008-8c17-e1bb2ead3b76" aria-checked="false" type="radio" class="sr-only input-module__input___2ljIC" value="https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/dc40b71d-f086-4008-8c17-e1bb2ead3b76">
+                          </label>
+                          <button title="Living Expenses" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Living Expenses</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/689c5aaa-3908-467d-8f8d-bfdb5e6c965b" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked="">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Sell Real Estate" type="button" class="btn link-module__link___3hGyp btn-link">Sell Real Estate</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/7b171c65-cf4c-4cac-b231-b33f2e087c5d" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Edit Stock Options" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Edit Stock Options</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/d0e6bb4d-7f29-451c-87d6-4b1e6b75257d" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked="">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Rebalance Portfolios" type="button" class="btn link-module__link___3hGyp btn-link">Rebalance Portfolios</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/4edc1d30-3e23-4c30-8db1-8ed1dfc8d3ac" aria-checked="false" type="checkbox" class="sr-only input-module__input___2ljIC" value="false">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Sell Personal Property" type="button" class="btn text-muted not-allowed link-module__link___3hGyp btn-link">Sell Personal Property</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/99f1362f-9ab5-4298-bb91-e51b55052d8c" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked="">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Retirement Ages" type="button" class="btn link-module__link___3hGyp btn-link">Retirement Ages</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-technique-group-item">
+                    <div class="technique-header">
+                      <div class="kyber-switch-wrapper" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f">
+                        <label tabindex="-1" id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f-wrapper" class="_label_B1__9-5-1 switch-module__switch___2gVzy switch-module__checked___3fIqc">
+                          <input id="ema-switch-https://api.emoneyadvisor.com//internal-api/api/clients/b5077a53-e6be-458a-97c9-c5045d48af0b/plans/43f05992-c9e1-49ff-b5fb-f318f21f580b/techniques/e57b9ca4-f532-4113-a5d4-64367c941f1f" aria-checked="true" type="checkbox" class="sr-only input-module__input___2ljIC" value="true" checked="">
+                        </label>
+                      </div>
+                      <div class="technique-text">
+                        <button title="Add Income" type="button" class="btn link-module__link___3hGyp btn-link">Add Income</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="text-right list-footer">
+                  <button tabindex="0" type="button" class="btn text-muted link-module__link___3hGyp btn-link"><small style="cursor: pointer;">All On</small></button>
+                  &nbsp;·&nbsp;
+                  <button tabindex="0" type="button" class="btn text-muted link-module__link___3hGyp btn-link"><small style="cursor: pointer;">All Off</small></button>
+                </div>
+              </div>
+            </div>
             <div id="edit-in-place">
               <div id="panel-left"></div>
             </div>
