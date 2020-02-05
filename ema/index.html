@@ -358,21 +358,6 @@
 
 
 				<ul class="list-unstyled">
-					<script>
-						window.addEventListener('load', function () {
-							var logFooterFaqLinkClick = function () {
-								eventLogger.logEvent("Core Platform",
-									"FAQ",
-									{
-										'Action': 'FAQ Link',
-										'Source': 'Footer'
-									}
-								);
-							};
-
-							$("a#FooterFaqLink").on('click', logFooterFaqLinkClick);
-						});
-					</script>
 					<li>
 						<a	href="https://content.emaplan.com/knowledgebase/interactive/faq/index.html#/"
 							target="_blank"
@@ -387,57 +372,6 @@
 					<li>
 						<a data-voice-new-connection-link href="https://emoneyadvisor.uservoice.com/forums/914074-request-a-new-connection?sso=vXkcSFCQE9VIxBOaza63YpgpSIjvOetOVcYyPBD6vYag4FZhqJb%2b9e7%2f4sRswbkZRtNOa1Dpgq9mUz7uJ14pMkkO6yPw2pxrtj12O97ZtPTHiu%2bslF5ue4LG6fXgiy7g0ccEiCE%2b7aapEXE0y%2bmjN3NnuQcOMEjiE8uIvRaaEPmmOVoXFv8AdkfF4QqI7rdKzsiaVelcxJdubAWUctw5WcA5PkAZRUTBwBM1qOphYx5pQ3p3HmZYQwyfAo7gGgiDsiWwuJbouejsnCwkVO7VAchnypzcXCiuUPhWfYqqub%2bkptE1Ckv824vVEgkVWt5CQirr2JpXXUwfBrbBrq2V%2b1eYMuOZB64oxiRRq%2f9YbLuovTHrUtyHEHAFHHaCf4%2fxOXgcjRyi66S3DeTKfDmQcO4RaLmYTtd3zMwYPs48wG0%3d" target='_blank'>Request a New Connection</a>
 					</li>
-			<script>
-				var logUserVoiceMixPanelRequestAFeature = function() {
-					eventLogger.logEvent("Core Platform",
-						"UserVoice",
-						{
-							'Action': 'Request A Feature',
-							'Source': 'Footer'
-						});
-				};
-
-				var logUserVoiceMixPanelRequestAConnection = function() {
-					eventLogger.logEvent("Core Platform",
-						"UserVoice",
-						{
-							'Action': 'Request a Connection',
-							'Source': 'Footer'
-						});
-				};
-
-				// Wait for everything to load.
-				window.addEventListener('load',
-					function() {
-						$("a[data-voice-general-link]").on('click', logUserVoiceMixPanelRequestAFeature);
-						$("a[data-voice-new-connection-link]")
-							.on('click', logUserVoiceMixPanelRequestAConnection);
-						var userVoiceCookiePresentFlagKey = 'UserVoiceCookiePresentFlag';
-						var setUserVoiceCookieData = function() {
-
-							var setCookiePresentFlag = function() {
-								sessionStorage.setItem(userVoiceCookiePresentFlagKey, 'true');
-							};
-							var uservoiceCookieUrl =
-								'https://wealth.emaplan.com/ema/UserVoice/AddCookie';
-							$.ajax({
-								url: uservoiceCookieUrl,
-								data: { EncryptedUrl: 'CABPIOIDBKCMOAHDHFKOBINLKGIELJAEINBNACLGCKPENBEAPPJFDCNKGPDCMLEHGDHKAALMFICGHCKCFGPELJJGNAJHICFOPPGDKHNOJCBJCMEOBMCGDHBBGCMFFDAIJONFDFIOMDONOEJEMELOJAENNKAEHFCFOGEFHCDFCLPKDPAFCABAOOIGADFPCMMPGBFMDJJDPECMLELEDBAEPAMPOPEILICGDFEECPCFHNPDFNBMMMKNGOEKCLFGAMPJFODCPBPDDDAEHIECAILGOEOGGEALLOBJGGACFGMCOLLABHJACALHLPFGHPOAGIMLENMIPKEIGNEOPLBDDBPEINDDFJKHOGFJ' },
-								xhrFields: { withCredentials: "true" },
-								success: setCookiePresentFlag
-							});
-						};
-
-						// If we have jQuery - use it to make tooltip beautiful.
-						window.jQuery && $('#user-voice-general-link-container').tooltip();
-						window.jQuery && $('#user-voice-connection-link-container').tooltip();
-
-						if ($("[data-voice-general-link]").length &&
-							!sessionStorage.getItem(userVoiceCookiePresentFlagKey)) {
-							setUserVoiceCookieData();
-						}
-					});
-			</script>
 			<li>
 					
 								<a href="javascript:void(0);" class="js-contactus">Contact Support</a>
